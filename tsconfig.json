@@ -1,7 +1,37 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["esnext", "dom", "DOM.Iterable"],
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types"],
+    "paths": {
+      "/opt/nodejs/falcon-runtime": [
+        "./cdk/constructs/FalconNodeJsLambda/layers/falcon-runtime/src"
+      ],
+      "/opt/nodejs/falcon-runtime-serverless": [
+        "cdk/constructs/FalconNodeJsLambda/layers/falcon-runtime/src/serverless-rds"
+      ],
+      "*": ["node_modules/*"]
+    }
+  },
+  "exclude": ["cdk.out", "**/dist/**", "node_modules"]
 }
