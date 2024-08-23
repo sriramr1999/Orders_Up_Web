@@ -77,21 +77,11 @@ export const Home: FC = () => {
 
   // Handle card click to navigate to the menu page
   const handleCardClick = (storeId: string) => {
-    navigate(`stores/${storeId}/menu`);
+    navigate(`${storeId}/menu`);
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      {/* Main Content */}
-      <Box sx={{ display: "flex", marginTop: "64px" }}>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100vh",
-            overflowY: "auto",
-            overflowX: "hidden",
-          }}
-        >
+
           <ContentArea>
             <ScrollContainer ref={scrollRef}>
               <FoodCategories
@@ -194,8 +184,6 @@ export const Home: FC = () => {
               ))}
             </Grid>
           </ContentArea>
-        </Box>
-      </Box>
-    </Box>
+
   );
 };

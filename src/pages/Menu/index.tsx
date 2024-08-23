@@ -1,10 +1,7 @@
-import { FC, useState, useRef, useEffect, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import {
   Box,
-  Button,
   Grid,
-  TextField,
-  InputAdornment,
   Typography,
   Card,
   CardContent,
@@ -12,70 +9,76 @@ import {
   List,
   ListItem,
   ListItemText,
+  InputAdornment,
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  Checkbox,
+  IconButton,
+  TextField,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import StarIcon from "@mui/icons-material/Star";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
+import { useParams } from "react-router-dom";
 import { ImageCard } from "../../components/ChickFilAHeader";
+import { AppLoader } from "../../components/AppLoader";
 
-export const Menu: FC = () => {
+export const Menu = () => {
+  const { storeId } = useParams();
+
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredItems, setFilteredItems] = useState<
-    { title: string; price: string; image: string }[]
-  >([]);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [basket, setBasket] = useState([]);
+  const [menuData, setMenuData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const [isListening, setIsListening] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const recognitionRef = useRef<InstanceType<
-    typeof window.webkitSpeechRecognition
-  > | null>(null);
+  const [activeCategory, setActiveCategory] = useState(null);
 
-  const categories = [
-    "Breakfast",
-    "Reviews",
-    "Most Ordered",
-    "Breakfast Meal Deals",
-    "Breakfast Combos",
-    "Croissants",
-    "Biscuits",
-    "Classics",
-    "Breakfast Burrito",
-    "English Muffins",
-    "Coffee",
-  ];
-
-  const featuredItems = useMemo(
-    () => [
-      {
-        title: "Briyani",
-        price: "$8.99+",
-        image: "https://via.placeholder.com/150",
-        category: "Breakfast",
-      },
-      {
-        title: "Maple Bacon Chicken Croissant Combo",
-        price: "$9.11+",
-        image: "https://via.placeholder.com/150",
-        category: "Breakfast Combos",
-      },
-      {
-        title: "Seasoned Potatoes",
-        price: "$2.49+",
-        image: "https://via.placeholder.com/150",
-        category: "Most Ordered",
-      },
-    ],
-    []
-  );
+  const recognitionRef = useRef(null);
+  const categoryRefs = useRef({});
+  const categoryListRefs = useRef({});
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    // Initialize Speech Recognition
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const data = await import(`../../json/menu/${storeId}.json`);
+        setMenuData(data.default);
+        setActiveCategory(data.default.categories[0]?.id);
+      } catch (err) {
+        console.error("Failed to load JSON:", err);
+        setMenuData(null);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [storeId]);
+
+  useEffect(() => {
+    const storedBasket = JSON.parse(localStorage.getItem("basket")) || {};
+    setBasket(storedBasket[storeId] || []);
+  }, [storeId]);
+
+  useEffect(() => {
     const recognition = new window.webkitSpeechRecognition();
     recognition.continuous = true;
-    recognition.interimResults = false; // Ensure that only the final result is used
+    recognition.interimResults = false;
     recognition.lang = "en-US";
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
+    recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript.trim().toLowerCase();
       setSearchQuery(transcript);
       setIsListening(false);
@@ -84,56 +87,169 @@ export const Menu: FC = () => {
     recognitionRef.current = recognition;
   }, []);
 
-  useEffect(() => {
-    // Set the first category as selected by default
-    if (!selectedCategory && categories.length > 0) {
-      setSelectedCategory(categories[0]);
+  const categories = useMemo(() => {
+    return menuData?.categories?.map((category) => ({
+      id: category.id,
+      name: category.name,
+    }));
+  }, [menuData]);
+
+  const filteredItemsByCategory = useMemo(() => {
+    if (!searchQuery) {
+      return menuData?.categories?.map((category) => ({
+        ...category,
+        items: menuData.subcategories
+          .filter((sub) => sub.id === category.id)
+          .flatMap((sub) =>
+            sub.items.map((itemId) =>
+              menuData.items.find((item) => item.id === itemId)
+            )
+          ),
+      }));
     }
-  }, [categories, selectedCategory]);
 
-  useEffect(() => {
-    // Filter featuredItems based on searchQuery and selectedCategory
-    let itemsToFilter = featuredItems;
+    const matchedItems = menuData?.items.filter((item) =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
-    if (selectedCategory) {
-      itemsToFilter = itemsToFilter.filter(
-        (item) => item.category === selectedCategory
+    return matchedItems.reduce((acc, item) => {
+      const subcategory = menuData?.subcategories.find((sub) =>
+        sub.items.includes(item.id)
       );
-    }
-
-    if (searchQuery.trim() === "") {
-      setFilteredItems(itemsToFilter);
-    } else {
-      const lowerCaseQuery = searchQuery.toLowerCase();
-      const filtered = itemsToFilter.filter((item) =>
-        item.title.toLowerCase().includes(lowerCaseQuery)
-      );
-      setFilteredItems(filtered);
-    }
-  }, [searchQuery, selectedCategory, featuredItems]);
+      if (subcategory) {
+        let category = acc.find((cat) => cat.id === subcategory.id);
+        if (!category) {
+          category = {
+            ...menuData.categories.find((cat) => cat.id === subcategory.id),
+            items: [],
+          };
+          acc.push(category);
+        }
+        category.items.push(item);
+      }
+      return acc;
+    }, []);
+  }, [searchQuery, menuData]);
 
   const handleMicClick = () => {
     if (recognitionRef.current) {
       if (isListening) {
         recognitionRef.current.stop();
-        setIsListening(false);
       } else {
         recognitionRef.current.start();
-        setIsListening(true);
       }
+      setIsListening(!isListening);
     }
   };
 
-  const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
-    setSearchQuery(""); // Clear the search query when the category changes
+  const modifiers = useMemo(() => {
+    if (!selectedItem) return [];
+    return selectedItem?.modifier_groups?.map((modifierGroupId) =>
+      menuData.modifier_groups.find((group) => group.id === modifierGroupId)
+    );
+  }, [selectedItem, menuData]);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setQuantity(1);
+    setOpen(true);
   };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleQuantityChange = (increment) => {
+    setQuantity((prev) => (increment ? prev + 1 : Math.max(prev - 1, 1)));
+  };
+
+  const handleAddToBasket = (selectedItem, selectedModifiers) => {
+    const basketItem = {
+      item: selectedItem,
+      quantity,
+      modifiers: selectedModifiers,
+    };
+    const storedBasket = JSON.parse(localStorage.getItem("basket")) || {};
+    const updatedBasket = {
+      ...storedBasket,
+      [storeId]: [...(storedBasket[storeId] || []), basketItem],
+    };
+
+    setBasket(updatedBasket[storeId]);
+    localStorage.setItem("basket", JSON.stringify(updatedBasket));
+    setOpen(false);
+  };
+
+  const handleCategoryClick = (categoryId) => {
+    const categoryElement = categoryRefs.current[categoryId];
+    if (categoryElement) {
+      categoryElement.scrollIntoView({ behavior: "smooth" });
+      setActiveCategory(categoryId);
+    }
+  };
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Trigger when 50% of the category is visible
+    };
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("data-id");
+          setActiveCategory(id);
+          // Scroll the left side category list to the active item
+          if (categoryListRefs.current[id]) {
+            categoryListRefs.current[id].scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }
+      });
+    }, options);
+
+    const currentObserver = observerRef.current;
+
+    Object.keys(categoryRefs.current).forEach((key) => {
+      if (categoryRefs.current[key]) {
+        currentObserver.observe(categoryRefs.current[key]);
+      }
+    });
+
+    return () => {
+      Object.keys(categoryRefs.current).forEach((key) => {
+        if (categoryRefs.current[key]) {
+          currentObserver.unobserve(categoryRefs.current[key]);
+        }
+      });
+    };
+  }, [filteredItemsByCategory]);
+
+  if (isLoading) {
+    return <AppLoader />;
+  }
+
+  if (!menuData) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        <Typography variant="h6">No menu found</Typography>
+      </Box>
+    );
+  }
 
   return (
     <>
       <Box>
         <Grid container alignItems="center" spacing={2}>
-          <Grid item xs={12} md={12}>
+          <Grid item xs={12}>
             <ImageCard />
           </Grid>
         </Grid>
@@ -173,9 +289,10 @@ export const Menu: FC = () => {
               <Box display="flex" justifyContent="flex-end" alignItems="center">
                 <TextField
                   variant="outlined"
-                  placeholder="Search"
+                  placeholder="Search for items..."
                   value={searchQuery}
                   fullWidth
+                  onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
@@ -195,18 +312,19 @@ export const Menu: FC = () => {
                     ),
                   }}
                   sx={{
-                    borderRadius: "50px", // This creates the oval shape
+                    borderRadius: "30px",
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
                     "& .MuiOutlinedInput-root": {
-                      borderRadius: "50px", // Ensures the input field is also rounded
+                      borderRadius: "30px",
                     },
                     "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#ccc", // Customize the border color
+                      borderColor: "#ddd",
                     },
                     "&:hover .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#888", // Border color on hover
+                      borderColor: "#bbb",
                     },
                     "& .MuiInputBase-input": {
-                      padding: "10px 0", // Adjusts the padding inside the input
+                      padding: "12px 20px",
                     },
                   }}
                 />
@@ -214,82 +332,325 @@ export const Menu: FC = () => {
             </Grid>
           </Grid>
         </Box>
-        <Grid container>
-          <Grid item xs={3}>
-            <Box sx={{ padding: "16px", borderRight: "1px solid #e0e0e0" }}>
-              <Typography
-                variant="h6"
-                sx={{ fontWeight: "bold", marginBottom: "16px" }}
-              >
-                Store Info
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ marginBottom: "16px" }}
-              >
-                <ArrowDropDownIcon
-                  sx={{ fontSize: "1rem", verticalAlign: "middle" }}
-                />{" "}
-                Breakfast 6:30 am - 10:25 am
-              </Typography>
-              <List>
-                {categories.map((category, index) => (
-                  <ListItem
-                    button
-                    key={index}
-                    onClick={() => handleCategoryClick(category)}
-                  >
-                    <ListItemText primary={category} />
-                  </ListItem>
-                ))}
-              </List>
-            </Box>
-          </Grid>
-          <Grid item xs={9}>
-            <Box sx={{ padding: "16px" }}>
+      </Box>
+      <Box sx={{ display: "flex" }}>
+        <Box
+          sx={{
+            width: "20%",
+            padding: "16px",
+            borderRight: "1px solid #e0e0e0",
+            position: "sticky",
+            top: "16px",
+            height: "calc(100vh - 32px)",
+            overflowY: "auto",
+          }}
+        >
+          <Box>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", marginBottom: "16px" }}
+            >
+              Categories
+            </Typography>
+            <List>
+              {categories?.map((category) => (
+                <ListItem
+                  button
+                  key={category.id}
+                  onClick={() => handleCategoryClick(category.id)}
+                  sx={{
+                    backgroundColor:
+                      activeCategory === category.id ? "#ff4c4c" : "inherit",
+                    color: activeCategory === category.id ? "#fff" : "#333",
+                    "&:hover": {
+                      backgroundColor:
+                        activeCategory === category.id ? "#ff4c4c" : "#f0f0f0",
+                    },
+                    borderRadius: "8px",
+                    marginBottom: "8px",
+                    transition: "background-color 0.2s ease",
+                  }}
+                  ref={(el) => (categoryListRefs.current[category.id] = el)}
+                >
+                  <ListItemText primary={category.name} />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+
+          <Box>
+            <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+              Quick Links
+            </Typography>
+            <List>
+              <ListItem button>
+                <ListItemText primary="Top Rated" />
+              </ListItem>
+              <ListItem button>
+                <ListItemText primary="Popular" />
+              </ListItem>
+              <ListItem button>
+                <ListItemText primary="New Arrivals" />
+              </ListItem>
+              <ListItem button>
+                <ListItemText primary="Discounts" />
+              </ListItem>
+            </List>
+          </Box>
+        </Box>
+
+        <Box sx={{ width: "80%", padding: "16px" }}>
+          {filteredItemsByCategory?.map((category) => (
+            <Box
+              key={category.id}
+              ref={(el) => (categoryRefs.current[category.id] = el)}
+              data-id={category.id}
+            >
               <Typography
                 variant="h5"
-                sx={{ fontWeight: "bold", marginBottom: "16px" }}
+                sx={{
+                  fontWeight: "bold",
+                  marginBottom: "16px",
+                  marginTop: "16px",
+                }}
               >
-                Featured Items
+                {category.name}
               </Typography>
               <Grid container spacing={2}>
-                {filteredItems.map((item, index) => (
-                  <Grid item xs={12} sm={6} md={4} key={index}>
-                    <Card>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={item.image}
-                        alt={item.title}
-                      />
-                      <CardContent>
-                        <Typography variant="h6">{item.title}</Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {item.price}
-                        </Typography>
-                        <Button variant="outlined" sx={{ marginTop: "8px" }}>
-                          Add to Order
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
+                {category.items.map(
+                  (item, index) =>
+                    item && (
+                      <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Card
+                          onClick={() => handleItemClick(item)}
+                          sx={{
+                            borderRadius: "10px",
+                            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
+                            "&:hover": {
+                              transform: "scale(1.05)",
+                              transition: "transform 0.2s ease-in-out",
+                            },
+                          }}
+                        >
+                          <CardMedia
+                            component="img"
+                            height="160"
+                            image={
+                              item.image ||
+                              "https://via.placeholder.com/400x300?text=No+Image+Available"
+                            }
+                            alt={item.name}
+                            sx={{ borderRadius: "10px 10px 0 0" }}
+                          />
+                          <CardContent>
+                            <Typography
+                              variant="h6"
+                              sx={{ fontWeight: "bold", color: "#333" }}
+                            >
+                              {item.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              ${item.price / 100}
+                            </Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                    )
+                )}
               </Grid>
-              {filteredItems.length === 0 && (
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  sx={{ marginTop: "16px" }}
-                >
-                  No items match your search.
-                </Typography>
-              )}
             </Box>
-          </Grid>
-        </Grid>
+          ))}
+        </Box>
       </Box>
+      <ItemDialog
+        open={open}
+        handleClose={handleClose}
+        selectedItem={selectedItem}
+        modifiers={modifiers}
+        quantity={quantity}
+        handleQuantityChange={handleQuantityChange}
+        handleAddToBasket={handleAddToBasket}
+        menuData={menuData}
+      />
     </>
+  );
+};
+
+const ItemDialog = ({
+  open,
+  handleClose,
+  selectedItem,
+  modifiers,
+  quantity,
+  handleQuantityChange,
+  handleAddToBasket,
+  menuData,
+}) => {
+  const [selectedModifiers, setSelectedModifiers] = useState({});
+
+  const handleModifierChange = (groupId, modifierId) => {
+    setSelectedModifiers((prev) => ({
+      ...prev,
+      [groupId]: modifierId,
+    }));
+  };
+
+  return (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      sx={{
+        "& .MuiPaper-root": {
+          borderRadius: "10px",
+          maxWidth: "500px",
+          width: "100%",
+        },
+      }}
+    >
+      <DialogTitle
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "16px",
+          borderBottom: "1px solid #e0e0e0",
+          backgroundColor: "#f8f9fa",
+        }}
+      >
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          {selectedItem?.name}
+        </Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          ${(selectedItem?.price / 100).toFixed(2)}
+        </Typography>
+      </DialogTitle>
+
+      <DialogContent sx={{ padding: "16px" }}>
+        {selectedModifiers && (
+          <>
+            <Typography
+              variant="body1"
+              sx={{ marginBottom: "16px", color: "#555" }}
+            >
+              {selectedItem?.description}
+            </Typography>
+            {modifiers?.map(
+              (modifierGroup, index) =>
+                modifierGroup && (
+                  <Box key={index} sx={{ marginBottom: "16px" }}>
+                    <Typography
+                      variant="subtitle1"
+                      sx={{ fontWeight: "600", marginBottom: "8px" }}
+                    >
+                      {modifierGroup.name}{" "}
+                      {modifierGroup.min_permitted === 1 && (
+                        <span style={{ color: "#f00" }}>Required</span>
+                      )}
+                    </Typography>
+                    {modifierGroup.min_permitted === 1 ? (
+                      <RadioGroup
+                        onChange={(e) =>
+                          handleModifierChange(modifierGroup.id, e.target.value)
+                        }
+                      >
+                        {modifierGroup?.modifiers.map((modifierId) => {
+                          const modifier = menuData?.modifiers.find(
+                            (mod) => mod.id === modifierId
+                          );
+                          return (
+                            <FormControlLabel
+                              key={modifierId}
+                              value={modifierId}
+                              control={<Radio sx={{ color: "#f06" }} />}
+                              label={modifier?.name}
+                              sx={{ marginBottom: "4px", color: "#555" }}
+                            />
+                          );
+                        })}
+                      </RadioGroup>
+                    ) : (
+                      <Box>
+                        {modifierGroup?.modifiers.map((modifierId) => {
+                          const modifier = menuData?.modifiers.find(
+                            (mod) => mod.id === modifierId
+                          );
+                          return (
+                            <FormControlLabel
+                              key={modifierId}
+                              control={
+                                <Checkbox
+                                  sx={{ color: "#f06" }}
+                                  onChange={() =>
+                                    handleModifierChange(
+                                      modifierGroup.id,
+                                      modifierId
+                                    )
+                                  }
+                                />
+                              }
+                              label={modifier?.name}
+                              sx={{ marginBottom: "4px", color: "#555" }}
+                            />
+                          );
+                        })}
+                      </Box>
+                    )}
+                  </Box>
+                )
+            )}
+          </>
+        )}
+      </DialogContent>
+
+      <DialogActions
+        sx={{
+          padding: "16px",
+          borderTop: "1px solid #e0e0e0",
+          backgroundColor: "#f8f9fa",
+        }}
+      >
+        <Box display="flex" alignItems="center" sx={{ marginRight: "auto" }}>
+          <IconButton
+            onClick={() => handleQuantityChange(false)}
+            sx={{ color: "#333" }}
+          >
+            <RemoveIcon />
+          </IconButton>
+          <Typography
+            variant="body1"
+            sx={{
+              margin: "0 16px",
+              fontSize: "18px",
+              fontWeight: "500",
+              color: "#333",
+            }}
+          >
+            {quantity}
+          </Typography>
+          <IconButton
+            onClick={() => handleQuantityChange(true)}
+            sx={{ color: "#333" }}
+          >
+            <AddIcon />
+          </IconButton>
+        </Box>
+        <Button
+          onClick={() => handleAddToBasket(selectedItem, selectedModifiers)}
+          variant="contained"
+          sx={{
+            backgroundColor: "#ff4c4c",
+            color: "#fff",
+            borderRadius: "30px",
+            padding: "10px 20px",
+            fontWeight: "bold",
+            "&:hover": {
+              backgroundColor: "#ff3333",
+            },
+          }}
+        >
+          Add to Basket - ${((selectedItem?.price * quantity) / 100).toFixed(2)}
+        </Button>
+      </DialogActions>
+    </Dialog>
   );
 };

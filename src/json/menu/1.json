@@ -1,0 +1,3759 @@
+{
+  "id": "",
+  "name": "KFC",
+  "modifier_groups": [
+    {
+      "id": "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49",
+      "name": "Pizza Addon Three",
+      "modifiers": [
+        "953941c9-c7f0-468a-a5d0-42e6c93223c8",
+        "7de7859f-b308-470e-a617-cea09771c4aa",
+        "00cbd32c-207a-459f-93ce-ff3e3c838972"
+      ],
+      "description": "",
+      "min_permitted": 3
+    },
+    {
+      "id": "7cc9056a-0fae-4e91-ac53-0e7520e88a39",
+      "name": "Modifier Group Two",
+      "modifiers": [
+        "8d38f10d-a75e-40ac-b178-da95ca28d736",
+        "8932f6a4-09a3-4e5c-8401-6c076ff7d951",
+        "3bf8fd41-d24b-406d-b2a6-f2cdc4f264e9",
+        "21324583-7f93-4a08-97d6-019d69b9fc7e",
+        "9d72d35e-8045-43e7-866f-628ab9b1284c"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 3
+    },
+    {
+      "id": "1ce400ae-27ed-4673-9974-75464830bd4b",
+      "name": "Pizza Extras One",
+      "modifiers": [
+        "5b4aa338-2e66-4a28-8f70-560580cbd4f2",
+        "a0a5f21d-f7a7-42b5-9dcb-6dffe3e7c1d6",
+        "12ad409f-a959-417c-ab67-754b4b932936",
+        "8cd18e03-f73a-41d7-be1a-55cff55eaa68",
+        "c785099a-d413-445b-a608-2cba39e46add",
+        "103f3e58-68f9-43d2-9d01-8455d6d0cb6e",
+        "5632587b-4cd3-4dd7-93c8-4ec739fd8a93",
+        "8c8e06b0-50e0-416f-a143-fff2dc259b13",
+        "bdf07072-3604-48c6-bc6f-88472ab128cd",
+        "3cb5ebe9-9e41-4079-a37d-2f4fefd83699",
+        "ca60f686-e8bf-4c85-a632-8e67d27e6c5d",
+        "2340a071-9703-482f-91a8-2ced38e1ff28",
+        "52437559-bcaf-4345-8da0-d083b5a4e873",
+        "8307806d-6c6e-4c8b-bc6a-1c84571d1132",
+        "e05ff7f3-44c8-40cf-b229-b1d0c403f78f",
+        "5cd4b419-71b0-44db-91ea-efcda6f77c3b",
+        "f43e158d-23d7-4cee-b4ed-fbd96b439274",
+        "344f6a47-4e6e-4da7-bfcd-7e7b2617ab2a",
+        "05164169-197a-41bf-878e-c663361a9272",
+        "574012b3-9ae0-4835-a64c-26c18bda4468",
+        "46d78070-700a-4632-85fe-41b0169b87bb",
+        "b1242305-74d8-4bf7-9d22-d945f67f588e",
+        "5a8164fa-4fb1-474e-93ca-06f19394f79f",
+        "f9c1ed63-9deb-4a4b-9479-c8db549a00f0",
+        "503b5e06-74f0-4e1b-84cf-5c8cd5aee39a",
+        "d43d9016-5796-482a-8d4f-c166337fdef2",
+        "f253a8be-c8ce-43d6-8692-b235c91e0cd4"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 2
+    },
+    {
+      "id": "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+      "name": "Salads Addon",
+      "modifiers": [
+        "a88424d1-ec8f-4106-809a-882329b686a4",
+        "e479cca9-5f98-42e5-a684-eb40a4420fe9",
+        "b8119903-d44d-408f-95df-f56b72a5dff2"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 3
+    },
+    {
+      "id": "a4b021c4-5fab-40bd-b058-b2e5ad55c5b0",
+      "name": "Friday MG2",
+      "modifiers": [
+        "dac8b0ff-ffac-4fca-ade6-0005899324a4",
+        "36c02fe2-09db-48c7-8402-79887ff2d52d"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 0
+    },
+    {
+      "id": "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+      "name": "Pizza Addon Two",
+      "modifiers": [
+        "1a7e2904-65fc-4de4-a3b3-e6bca0413af8",
+        "34ef095a-2695-4819-9a1a-fe5f8a1a2f45",
+        "7d325a92-00d6-4a82-8f7c-76715a5981b5"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 3
+    },
+    {
+      "id": "30ce9c55-292b-428f-9c1c-cc8e312abaca",
+      "name": "Burger Addon",
+      "modifiers": [
+        "2585d68a-6bd4-4469-8611-fbd6ab89cdf0",
+        "0196ec6c-9354-4279-9f98-fad51c885ec3",
+        "1004f579-22bc-41b0-b9cf-fd79351a8706"
+      ],
+      "description": "",
+      "min_permitted": 1
+    },
+    {
+      "id": "381774eb-eb65-4781-9959-e42d98755d88",
+      "name": "Crust",
+      "modifiers": [
+        "af1b6a27-2ccb-4983-b4cd-f170af543f44",
+        "c70443fa-07d4-4c9a-be38-695cd4bf573e",
+        "64a520da-49af-4709-a5e5-6871a0dd1223"
+      ],
+      "description": "",
+      "min_permitted": 1
+    },
+    {
+      "id": "88bbf80b-42c4-4154-bc19-15122c5d922f",
+      "name": "Toppings",
+      "modifiers": [
+        "199e1736-5b03-4512-b927-f49a6039329f",
+        "de15211b-2a49-42b0-9c82-6e42a1edd7e9",
+        "a30cd1d8-2188-41cb-8c10-8659ecad3775"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 3
+    },
+    {
+      "id": "ac4e9e88-8c65-403c-b6e2-b2b4acab0d92",
+      "name": "Choice Of Bagel",
+      "modifiers": [
+        "44685bd4-d418-4035-a95d-7a20ee1d2893",
+        "aa4a2910-baf4-4e4b-af10-49c45b6603af",
+        "f200f2bd-9659-4d4c-9f7d-5830a5681b6f",
+        "ab4521a5-c34c-40c6-9aa2-41957ca9fec9"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 1
+    },
+    {
+      "id": "7d589a57-7cf0-4c0a-886d-357f10353c3b",
+      "name": "Dips",
+      "modifiers": [
+        "6a23326d-0419-4d87-887d-1b3430dae90b",
+        "eed38832-f168-43e2-a6e4-71558d2012d3",
+        "875281e5-ec8c-4dee-9751-326ef3424a36",
+        "a1b7b212-87e8-4738-87d5-f030098f17e7",
+        "c379cf31-1702-409b-8220-ab834781fa31",
+        "d7e76f41-7303-476a-bf7d-761f84741aed"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 0
+    },
+    {
+      "id": "986f918a-4048-4f13-8902-6046795b67d8",
+      "name": "Sauce",
+      "modifiers": [
+        "927bd748-05f9-41db-b1a1-f702c24d8093",
+        "50a064a3-639f-4bfb-ac7d-396f7023a756",
+        "c8338843-fde9-4c53-ac44-00ec71275d42"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 3
+    },
+    {
+      "id": "5e7900eb-4207-404a-b12a-52791bf5ff07",
+      "name": "Friday MG1",
+      "modifiers": [
+        "16dfb755-29a7-4834-82da-f6ac8f359da7",
+        "ac6ebfb1-54a2-4202-8b7c-4fcbdec62b1b"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 0
+    },
+    {
+      "id": "db2d46ce-a915-4f74-b3f2-e2af4e4de3c2",
+      "name": "Monday MG2",
+      "modifiers": [
+        "0afe49d8-9cef-4cf7-90ff-450dee085e35",
+        "0954804c-ab11-4b0f-801a-9e96e8de8e4d"
+      ],
+      "description": ""
+    },
+    {
+      "id": "91a73cb1-b046-4f51-b08e-d1add440a13e",
+      "name": "Monday MG 1",
+      "modifiers": [
+        "34d5a34c-e550-4744-b204-c55a6e668308",
+        "bc175cf8-fa47-411a-87df-4d40e2f326af"
+      ],
+      "description": ""
+    }
+  ],
+  "categories": [
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Friday Category",
+      "id": "f02990a2-c6b9-4a60-b12b-4de2f55cc25f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["f02990a2-c6b9-4a60-b12b-4de2f55cc25f"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Special Meals",
+      "id": "8438d516-56e5-4ad9-b93a-2c3f209144b0",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["8438d516-56e5-4ad9-b93a-2c3f209144b0"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Icecream",
+      "id": "df8d46af-5bb8-4a48-bc7e-8ee2eaaebc2b",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["df8d46af-5bb8-4a48-bc7e-8ee2eaaebc2b"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Mocktails",
+      "id": "98467649-1e6a-4c03-8017-c4135cae5e1e",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["98467649-1e6a-4c03-8017-c4135cae5e1e"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pos Item",
+      "id": "1e5ad7b0-925c-4231-9c22-fc21a24cf838",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["1e5ad7b0-925c-4231-9c22-fc21a24cf838"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Milkshake",
+      "id": "f51fac46-1e78-4f2b-94a4-377332e33671",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["f51fac46-1e78-4f2b-94a4-377332e33671"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pizza",
+      "id": "55f9ecc8-2859-43d2-ac64-43872b19dd94",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["55f9ecc8-2859-43d2-ac64-43872b19dd94"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Starters",
+      "id": "67ac05b2-35a2-48e9-b6f8-36a1fb872dc6",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["67ac05b2-35a2-48e9-b6f8-36a1fb872dc6"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Clover Catalog",
+      "id": "37d81008-09a7-41ca-a93a-7c6b5b391a5f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["37d81008-09a7-41ca-a93a-7c6b5b391a5f"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Burger",
+      "id": "49163c1d-b715-40a7-81f8-c95f9c80bb79",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["49163c1d-b715-40a7-81f8-c95f9c80bb79"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Non Veg Soups",
+      "id": "abe3e456-90dd-494f-9392-8fb845513062",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["abe3e456-90dd-494f-9392-8fb845513062"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Breakfast",
+      "id": "a0693c0b-b236-4979-a5c7-ac19cf5c98b1",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["a0693c0b-b236-4979-a5c7-ac19cf5c98b1"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Fruits",
+      "id": "065b52d7-d8aa-474d-ae37-38c572cd4076",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["065b52d7-d8aa-474d-ae37-38c572cd4076"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Delete Categoriesssssss",
+      "id": "ae34f61f-6dcd-457e-8ce2-907868586a29",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["ae34f61f-6dcd-457e-8ce2-907868586a29"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Summer Special",
+      "id": "3a8fb307-2455-40af-85da-aa78bfe48e59",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["3a8fb307-2455-40af-85da-aa78bfe48e59"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Veg Soups",
+      "id": "63517ff5-69e8-44bc-8ad7-100d75a95dac",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["63517ff5-69e8-44bc-8ad7-100d75a95dac"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Juices",
+      "id": "cd8ea3dd-1f17-48d6-9771-adcb1614c4d8",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["cd8ea3dd-1f17-48d6-9771-adcb1614c4d8"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Empty Category",
+      "id": "a4e6ca81-a9fc-45ea-86b8-fcedccc93e7c",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["a4e6ca81-a9fc-45ea-86b8-fcedccc93e7c"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Non Veg Pizza",
+      "id": "49484a6c-45fc-42dc-9573-33f52556a385",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["49484a6c-45fc-42dc-9573-33f52556a385"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Chaat Items",
+      "id": "732cb47a-b146-4320-a910-42753996d639",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["732cb47a-b146-4320-a910-42753996d639"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Biryani",
+      "id": "32259e53-c8cd-49b4-8be9-e593529020e5",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["32259e53-c8cd-49b4-8be9-e593529020e5"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Clover Items",
+      "id": "6b6a3c62-6a67-4bfb-b21b-2eed778177fe",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["6b6a3c62-6a67-4bfb-b21b-2eed778177fe"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Sugar Free Sweets",
+      "id": "de12cfe9-8e4d-4411-ba63-30b08e89448d",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["de12cfe9-8e4d-4411-ba63-30b08e89448d"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Cake",
+      "id": "4a343df5-b40d-4293-8c4f-8e4a7f36a4ee",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["4a343df5-b40d-4293-8c4f-8e4a7f36a4ee"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Item Category",
+      "id": "8075dc0b-5b02-49d6-ad77-1a6ba7b56a60",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["8075dc0b-5b02-49d6-ad77-1a6ba7b56a60"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pasta",
+      "id": "1fc6bdb7-7d19-4abe-bf43-33fa7cce2c42",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["1fc6bdb7-7d19-4abe-bf43-33fa7cce2c42"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Noodles",
+      "id": "b59c8dda-b9ba-4ca1-bc48-460b5616a085",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["b59c8dda-b9ba-4ca1-bc48-460b5616a085"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Monday Category",
+      "id": "b3d22a5d-6d01-4055-9c68-40ee9cce625e",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["b3d22a5d-6d01-4055-9c68-40ee9cce625e"],
+      "show_online": true
+    }
+  ],
+  "subcategories": [
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Friday Category",
+      "description": "",
+      "id": "f02990a2-c6b9-4a60-b12b-4de2f55cc25f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "2fa2bfd7-0317-4a44-874a-76d833970491",
+        "07faa5f3-e079-44de-8e61-4d0b6714e7ce"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Special Meals",
+      "description": "",
+      "id": "8438d516-56e5-4ad9-b93a-2c3f209144b0",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "1e857156-b46c-4962-b0af-a174ea8d44ff",
+        "73ecc8d4-9c5b-43a3-96ac-20f353ef9406"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Icecream",
+      "description": "",
+      "id": "df8d46af-5bb8-4a48-bc7e-8ee2eaaebc2b",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "c85de20f-5d1c-4834-a7d6-ea3008208a85",
+        "61f5ef0d-877a-47e3-8ac9-c8b5423657ab",
+        "86f4c011-c331-4b62-baa4-23680d20bebb"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Mocktails",
+      "description": "",
+      "id": "98467649-1e6a-4c03-8017-c4135cae5e1e",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "daf9fff5-657f-4431-8673-99a738d42e51",
+        "973c642f-2325-4dec-a07a-98b7cdc184a9",
+        "d9e04df8-61ef-48f2-82d7-c7ed2bcecf2c",
+        "248261f5-b071-4f65-90b3-ec9415206e76",
+        "8c4bd02e-6138-4648-bfea-63d517345f8d"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pos Item",
+      "description": "",
+      "id": "1e5ad7b0-925c-4231-9c22-fc21a24cf838",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "97d6e840-470d-4a79-8ac0-e919d212ab34",
+        "516cdf1a-ac70-4861-813b-1473fca912e9",
+        "38ef39df-6ff4-45e4-8ba4-8022dde4059e",
+        "25ac52df-5403-494f-97d1-37d4b8c882f8",
+        "62b004e7-4321-419a-8cd7-d60510786cde"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Milkshake",
+      "description": "",
+      "id": "f51fac46-1e78-4f2b-94a4-377332e33671",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "6baf06fd-b11b-4db4-93d5-b858206d9fff",
+        "5521bf9e-d07f-442f-9382-50f08f03c20c",
+        "80f40c4a-f247-40ff-9be1-6d566b43a245",
+        "fa1ddbac-9d67-44e9-a1a2-c9ec7f8a0bc8",
+        "bea8c4ec-ab1e-449e-9d11-d11b87589da1",
+        "5cb5be36-6e87-47a2-bdc4-94b2d59574b2",
+        "18022837-098e-444a-84ab-3d6ed0133579",
+        "5b802fd0-d7a1-412d-b4cf-0896acd31a9f",
+        "61d5a84e-94d3-4943-a9f3-e2ed79ee5ac4",
+        "9fd45340-2f25-44f0-aef2-0a25b6d1b328",
+        "306c6fca-3588-46c2-97d7-0ad8a0bd7976"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pizza",
+      "description": "",
+      "id": "55f9ecc8-2859-43d2-ac64-43872b19dd94",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "077f4d60-cd58-4fbc-be9b-b2100d071747",
+        "acce2c9c-6f8e-44a5-b9a9-4eefb79a5032",
+        "3042eedc-dc1d-47bb-b927-50f25dcfb153",
+        "4ab774ad-196d-41ef-bacf-0e041883bcfd",
+        "f7fa6258-cd92-4355-82e2-b7102ff44d39"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Starters",
+      "description": "",
+      "id": "67ac05b2-35a2-48e9-b6f8-36a1fb872dc6",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "a5dec814-6969-474c-b89e-d990f5bdaed9",
+        "2c01bc43-de95-4655-b35e-703df0f6c1fc",
+        "d502ffa6-2ef0-4d3b-9be4-189a4b6bbfbc",
+        "6fb413cc-7c38-45a8-9741-9a5a72533d11"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Clover Catalog",
+      "description": "",
+      "id": "37d81008-09a7-41ca-a93a-7c6b5b391a5f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "0c000de7-96aa-4ab8-aa92-323bd0fc4565",
+        "4e1d9f7b-6be7-4c36-a34b-7df2bd2766cc",
+        "934cdc78-54f9-4866-8ccb-f328a4007277",
+        "72a39108-a91c-40bb-ad58-a520917c45a5"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Burger",
+      "description": "",
+      "id": "49163c1d-b715-40a7-81f8-c95f9c80bb79",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "0ea12d3d-5472-486a-8490-2482a0b21906",
+        "553b07ff-25d4-493c-a2f7-05507c5fe4e5",
+        "37e86a10-e14a-4f16-aacb-07869c8c8a28",
+        "7dc1699b-ea5e-4ad5-a922-20e6e66dfaee",
+        "2781c845-24e5-42b9-908b-26c5a13265fd",
+        "da37dd32-46d5-4b96-b78a-3a679b3fd0bc",
+        "53b0f06c-b00a-4b65-88aa-2fb052e9941d",
+        "cbb83b28-e385-400b-b8c8-a8819e570a5b",
+        "6afff1fd-6f99-467d-aca1-24b380bac8e3",
+        "68248ccc-ebe0-4be1-89ce-d87ed8d20b6c"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Non Veg Soups",
+      "description": "",
+      "id": "abe3e456-90dd-494f-9392-8fb845513062",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "8f98a04f-3db7-4180-b793-1ca9f95f06e6",
+        "22f1ba93-3501-496b-aa49-d9970486a434",
+        "75e154ed-0469-4cd3-abd9-adc76f1bff7e",
+        "00039a17-9135-4857-911f-56a71b8d0ed2",
+        "b9d6dcc5-ae1b-4f71-9e81-97adfa719f6e",
+        "988d0e50-0a59-48fe-8be6-410491043c6e",
+        "c632c9b2-c8d3-499b-868f-82b6636d7198",
+        "c5db1890-e6b2-426f-ade7-b8522f528429",
+        "a5f57a1d-cad3-4b74-b37a-214bffa432f7",
+        "49d6cee1-fbcc-4e9e-a1fb-6d21c5c87572"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Breakfast",
+      "description": "",
+      "id": "a0693c0b-b236-4979-a5c7-ac19cf5c98b1",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "86f95a6e-af3a-48c7-8ac8-92bf98b081da",
+        "72bda96f-6ecc-4990-ac74-8dafbbf499a0",
+        "7bdd3f45-eb42-4177-82fd-5f3e9c9be65c",
+        "e1048f19-1d34-48dc-978a-7ab265f39a87",
+        "9e2fe137-0e0f-43fa-8d88-fcf7c67bf8ad",
+        "dc116c3f-b4bf-4153-a46d-5b6c9d86a0eb",
+        "bf23d2ba-75fa-4f24-935a-1a3fa0df0c78",
+        "cb30b472-c57f-450d-9162-b5c069bc1212",
+        "1622bdb5-dff3-491e-9278-fac18dafdb49",
+        "423c4b82-7f81-4422-9f46-014cf1441984"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Fruits",
+      "description": "",
+      "id": "065b52d7-d8aa-474d-ae37-38c572cd4076",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "df02fc2b-64e1-4ed2-bd25-e7723c0203c4",
+        "24c8cf0c-8aa0-439d-938e-c9c01f4b780f",
+        "14c7b3d7-72bb-4142-a5ba-5f12feeb1ad6",
+        "1ec13a95-6971-44b9-afa8-7cc0020ed576",
+        "f05d6e46-62ab-404b-b279-7bb20d913bae",
+        "753ab32d-7128-49d5-b07c-8764a3eb9cdf",
+        "4eaa181b-6cdb-4440-ac4e-8f87869501bd",
+        "199e78ee-2415-4974-a09f-82e323431aa1",
+        "9f138b18-a6ab-4418-88f2-af3ecbd52d95",
+        "a967edc5-1a95-4be8-bf37-d62aa02939f0"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Delete Categoriesssssss",
+      "description": "",
+      "id": "ae34f61f-6dcd-457e-8ce2-907868586a29",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": ["ff792ad3-5364-40b5-9622-0610eb7f7b52"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Summer Special",
+      "description": "",
+      "id": "3a8fb307-2455-40af-85da-aa78bfe48e59",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "6202cfff-9b20-4c84-afa8-5ba26e0bf742",
+        "bbf7b638-39e8-4696-932d-905b55f94dcb"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Veg Soups",
+      "description": "",
+      "id": "63517ff5-69e8-44bc-8ad7-100d75a95dac",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "5120edcb-a053-439b-a3f9-ec5a62a79759",
+        "12f354fc-8b47-4a3b-a1e3-6498cf8cedb3",
+        "9487c4b1-a04c-44d5-a589-6784a56ca992",
+        "01fddc03-733d-46f3-a9b2-aa1284f27338",
+        "03fa9626-4d09-44c8-9866-8a76e51cffaf",
+        "f2212f80-3f67-45d0-8299-419da6bf241d",
+        "4154cafd-81df-4ea5-8828-f03eea3166e5",
+        "62286ab6-f5e8-43a5-8fed-559557e42785",
+        "63e9edff-4a36-4f6f-aae9-f1ed254a98c5",
+        "1e69da62-cf38-40a4-87d6-be7686729559"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Juices",
+      "description": "",
+      "id": "cd8ea3dd-1f17-48d6-9771-adcb1614c4d8",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "be3b3012-32cf-4c25-93e2-3106ed105ae7",
+        "1e9ac1ea-eea3-4bb6-8f70-392fd520a870",
+        "776c35bd-f5d3-400d-82c6-1164a5cba0da",
+        "cd8af3ea-b1ea-465e-96a4-42599c4e6fca",
+        "a0bd4691-5e7a-4f13-bb59-01751cc5c1e8",
+        "2e61dc4b-ca72-41dd-a7e0-1322f3ec922b",
+        "e7a12b31-d6bf-404a-b563-b3f3155ad29c",
+        "139244f2-3572-4604-8ab7-ed7c16588bb4",
+        "292dae8f-d575-4fb2-9180-58e05b620709",
+        "59dff0a2-1e39-4b6c-be17-cc7f4e5ee35a"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Empty Category",
+      "description": "",
+      "id": "a4e6ca81-a9fc-45ea-86b8-fcedccc93e7c",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": ["6260d622-3f64-49a3-8fed-b445a818e170"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Non Veg Pizza",
+      "description": "",
+      "id": "49484a6c-45fc-42dc-9573-33f52556a385",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "c8548441-00b5-4f6d-b17f-337f1079c7e0",
+        "aaa22fee-049a-4e45-b344-00d36a6496f2",
+        "bda1f7be-b389-450f-b21e-86ba0b05003e",
+        "c010fd54-2576-4937-88ee-138df25e569c",
+        "a6f4a80e-9f27-49a7-a99c-b9779dd0b54c",
+        "5e07d6e8-80f5-4bcf-a1b4-a42099c8aba0",
+        "06472763-cf36-49cf-963c-addc1093a68c",
+        "0fe6db31-47e9-425b-8d44-53138a08daa1",
+        "05245daf-9bc6-4b86-8db2-53e1f3ba0e5f",
+        "751d69a3-259a-424f-9c87-8406a56cce89",
+        "b2937171-86fe-452a-8a46-b5660b8afa8e"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Chaat Items",
+      "description": "",
+      "id": "732cb47a-b146-4320-a910-42753996d639",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "5f99f1b3-494c-4f68-a6be-eb28634b8860",
+        "66cd18bf-f324-47b5-9f98-de2e650fcf33",
+        "8bb9d6f1-0ad9-4e21-b9f9-9921b7688bf6",
+        "d3817f14-79c8-4ae9-9c95-584d1839cc82",
+        "3d96982e-2e40-4d7f-89d3-d6265533bb41",
+        "949d5b59-40d8-4349-95b2-8fabe040bd87",
+        "93f22348-e60b-4ac9-afee-d21bd270bb17",
+        "dc4e3f2a-3208-4c3a-85f9-dbbca97be3c5",
+        "057a2800-2b59-4f7b-b9a2-da048a8c3f17",
+        "225c1a12-c60d-4d5f-b1f2-c15e04b53f20"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Biryani",
+      "description": "",
+      "id": "32259e53-c8cd-49b4-8be9-e593529020e5",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "c448996b-b804-42f8-8e92-f0ea5c8c0358",
+        "c74820ab-06ba-4a75-8581-e0a91a163121",
+        "257b46c4-3548-47cf-a807-adf6aac20aba",
+        "f99784ce-fc3c-4765-b902-cf25427902bc",
+        "0b8223b9-f4cd-4dcf-8acd-df9f70de8f3b",
+        "f78a59ae-5846-441a-bbcc-b7185e9f6797"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Clover Items",
+      "description": "",
+      "id": "6b6a3c62-6a67-4bfb-b21b-2eed778177fe",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "98eb0835-6f7a-4cb1-8645-75c27c7547f3",
+        "ac0895f3-81fb-4451-98fc-8af35804211a",
+        "eb8c4a4b-9f92-430a-95f6-35a1aad80bad",
+        "c295b1e3-86be-4f12-9ec7-2f65b337008a"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Sugar Free Sweets",
+      "description": "",
+      "id": "de12cfe9-8e4d-4411-ba63-30b08e89448d",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "55a81b9f-d9c6-4f61-8651-36feb97ad3ff",
+        "f925afa7-4b09-48e9-876c-ae7aa4e366db",
+        "9ba6ec99-f8d8-44e3-8713-dbb7e7f0e99e",
+        "a835bf64-98eb-468a-b615-b80b9cc9891b",
+        "d473ecc8-573a-483e-a380-796a44fc7f5a",
+        "1138667b-2397-4730-aa9c-5e45e0596171"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Cake",
+      "description": "",
+      "id": "4a343df5-b40d-4293-8c4f-8e4a7f36a4ee",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "58252445-fafb-4333-9b9b-99fe6d9c0b79",
+        "33e9844f-6737-4fbf-9efa-8a2693785e09",
+        "88a37f23-a68f-420f-813a-ad39d509cc4f",
+        "89fffb69-cf00-44b3-956b-29b60df5c774",
+        "91e76319-58ba-4151-8cd4-9f8dc1d29a56",
+        "4477f343-4e14-438f-b7ff-e95f298c947b",
+        "ad097b4f-4af9-45fc-8e38-b4e313c9dfa9",
+        "33acc71a-2e27-4de7-b645-7e1f31a1a77c",
+        "9ffaac59-724c-40ae-a6df-13898bc9a4a2",
+        "13aec39e-9da9-4237-807a-935faa8e2b2f"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Item Category",
+      "description": "",
+      "id": "8075dc0b-5b02-49d6-ad77-1a6ba7b56a60",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "b0d827c0-db43-4436-826c-406d6126e1b1",
+        "e4907079-904b-4123-abdb-7cae5c14f532",
+        "d0e467b8-6ea8-4cef-9f03-48df790a0cc2",
+        "494303b2-f353-44c0-8e9d-61f3e78189c2",
+        "abf38904-2b03-4b60-855b-03d44ab31f6b",
+        "a398974e-0d4b-4225-be95-ac278cf430e5",
+        "c9d7a9dc-5038-47f4-86fc-dba7cb375d2e"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pasta",
+      "description": "",
+      "id": "1fc6bdb7-7d19-4abe-bf43-33fa7cce2c42",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "e71b1781-c6d6-4e51-a173-d16842f401bf",
+        "054477e3-f0ff-4005-815b-07b85a1db7c8",
+        "8d029c82-f917-41f9-940b-56d83ce708c7",
+        "6221d92c-c905-4d89-8bca-0d046b4065a6",
+        "b0e80f7d-326d-4d6c-85ea-ece0bf2bd7eb",
+        "68f33870-4ff1-41e8-ae01-943841bba780",
+        "c72e72b3-5107-41c5-bb76-9baaed60f35d",
+        "7dd4e446-c646-486c-b813-c9532e276074",
+        "638b421e-1661-48ad-af47-7648923f7685",
+        "385b23bd-4a32-4c63-8458-61233abbf9c8"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Noodles",
+      "description": "",
+      "id": "b59c8dda-b9ba-4ca1-bc48-460b5616a085",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "8f31eec8-6695-48a0-8779-fb34aa0ac8a6",
+        "2b10e07e-4c33-4b4f-b638-a953b0686c89",
+        "fdf68b71-5a53-4789-b23c-1f08d04c7a63",
+        "43906414-00ef-4a3f-bfd0-b04c8b5073b0",
+        "634f3104-b45e-4763-bba8-9a95d81bf96b",
+        "dfe941e0-182e-4882-a5a5-9e74f00fdd28",
+        "591a7f4c-f61a-455f-b26d-39ac58123013",
+        "1661c4bd-5eeb-4fc9-a9ca-f0c2440696f1",
+        "bed0a9eb-ca0a-43c7-b425-4a47e2f0fd00",
+        "32b00d63-6204-4367-9129-01abea24f6ed"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Monday Category",
+      "description": "",
+      "id": "b3d22a5d-6d01-4055-9c68-40ee9cce625e",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "a68425f6-b5a4-4304-a26f-e65d38d4c725",
+        "2b090dba-1311-4c90-9303-9841296dd837"
+      ],
+      "show_online": true
+    }
+  ],
+  "modifiers": [
+    {
+      "price": 5,
+      "name": "Friday Modifier2",
+      "id": "ac6ebfb1-54a2-4202-8b7c-4fcbdec62b1b",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 125,
+      "name": "Cheese Burst",
+      "id": "64a520da-49af-4709-a5e5-6871a0dd1223",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1,
+      "name": "Slilced Cheese",
+      "id": "2585d68a-6bd4-4469-8611-fbd6ab89cdf0",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 0,
+      "name": "Coleslaw",
+      "id": "9d72d35e-8045-43e7-866f-628ab9b1284c",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 3,
+      "name": "Dill Pickle Slices",
+      "id": "1004f579-22bc-41b0-b9cf-fd79351a8706",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 150,
+      "name": "Fried Egg",
+      "id": "21324583-7f93-4a08-97d6-019d69b9fc7e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 3,
+      "name": "Poppy Bagel",
+      "id": "f200f2bd-9659-4d4c-9f7d-5830a5681b6f",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 400,
+      "name": "Edited Addonnnnnnn",
+      "id": "5b4aa338-2e66-4a28-8f70-560580cbd4f2",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 5,
+      "name": "Friday Modifier1",
+      "id": "16dfb755-29a7-4834-82da-f6ac8f359da7",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 10,
+      "name": "Friday Modifier3",
+      "id": "dac8b0ff-ffac-4fca-ade6-0005899324a4",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 5,
+      "name": "Tandoori sauce",
+      "id": "c379cf31-1702-409b-8220-ab834781fa31",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 2,
+      "name": "Friday Modifier4",
+      "id": "36c02fe2-09db-48c7-8402-79887ff2d52d",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 5,
+      "name": "Mayo",
+      "id": "a1b7b212-87e8-4738-87d5-f030098f17e7",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1650,
+      "name": "Beta Addon A",
+      "id": "d43d9016-5796-482a-8d4f-c166337fdef2",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1550,
+      "name": "Alpha Addon C",
+      "id": "f9c1ed63-9deb-4a4b-9479-c8db549a00f0",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 2,
+      "name": "Fresh Red Onions",
+      "id": "0196ec6c-9354-4279-9f98-fad51c885ec3",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "Single Addon A One",
+      "id": "05164169-197a-41bf-878e-c663361a9272",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 2,
+      "name": "Green Chilly Sauce",
+      "id": "eed38832-f168-43e2-a6e4-71558d2012d3",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "Single Addon A Two",
+      "id": "574012b3-9ae0-4835-a64c-26c18bda4468",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 650,
+      "name": "SS Addon One",
+      "id": "8307806d-6c6e-4c8b-bc6a-1c84571d1132",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 347,
+      "name": "207 Garlic Sauce To 204",
+      "id": "3cb5ebe9-9e41-4079-a37d-2f4fefd83699",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 347,
+      "name": "207 Chilly Sauce To 204",
+      "id": "ca60f686-e8bf-4c85-a632-8e67d27e6c5d",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 3,
+      "name": "Soy Sauce",
+      "id": "875281e5-ec8c-4dee-9751-326ef3424a36",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 100,
+      "name": "Red Chilli Sauce",
+      "id": "6a23326d-0419-4d87-887d-1b3430dae90b",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 225,
+      "name": "Wheat Thin Crust",
+      "id": "c70443fa-07d4-4c9a-be38-695cd4bf573e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 300,
+      "name": "Chicken fry",
+      "id": "8c8e06b0-50e0-416f-a143-fff2dc259b13",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 50,
+      "name": "Red Crushed Chillies",
+      "id": "a0a5f21d-f7a7-42b5-9dcb-6dffe3e7c1d6",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 150,
+      "name": "Beta Addon C",
+      "id": "f253a8be-c8ce-43d6-8692-b235c91e0cd4",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 8,
+      "name": "Co-op Sweetcorn Twinpack",
+      "id": "953941c9-c7f0-468a-a5d0-42e6c93223c8",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "Multi Addon B Two",
+      "id": "e05ff7f3-44c8-40cf-b229-b1d0c403f78f",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 10,
+      "name": "Nando's Medium Peri-Peri Sauce 125g",
+      "id": "00cbd32c-207a-459f-93ce-ff3e3c838972",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 18,
+      "name": "Tomato Sauce",
+      "id": "d7e76f41-7303-476a-bf7d-761f84741aed",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1000,
+      "name": "Barbecue Sauce",
+      "id": "927bd748-05f9-41db-b1a1-f702c24d8093",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 300,
+      "name": "Prawn fry",
+      "id": "bdf07072-3604-48c6-bc6f-88472ab128cd",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 375,
+      "name": "Cold water Edited Addon",
+      "id": "103f3e58-68f9-43d2-9d01-8455d6d0cb6e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 50,
+      "name": "Hash Brown",
+      "id": "8932f6a4-09a3-4e5c-8401-6c076ff7d951",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1450,
+      "name": "Alpha Addon B",
+      "id": "503b5e06-74f0-4e1b-84cf-5c8cd5aee39a",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 9,
+      "name": "Frozen Co-op British Garden Peas 750g",
+      "id": "7de7859f-b308-470e-a617-cea09771c4aa",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 125,
+      "name": "Green Jalapenos",
+      "id": "c785099a-d413-445b-a608-2cba39e46add",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 100,
+      "name": "Frozen Co-op American Fries 750g",
+      "id": "1a7e2904-65fc-4de4-a3b3-e6bca0413af8",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 100,
+      "name": "Herbs",
+      "id": "12ad409f-a959-417c-ab67-754b4b932936",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 6,
+      "name": "Chilled Co-op Skinny Fries 250g",
+      "id": "7d325a92-00d6-4a82-8f7c-76715a5981b5",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 200,
+      "name": "Chilled Co-op Mashed Potato 400g",
+      "id": "34ef095a-2695-4819-9a1a-fe5f8a1a2f45",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 150,
+      "name": "Red Peprika",
+      "id": "de15211b-2a49-42b0-9c82-6e42a1edd7e9",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 503,
+      "name": "A1 Sauce",
+      "id": "c8338843-fde9-4c53-ac44-00ec71275d42",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 125,
+      "name": "Baby Corn",
+      "id": "199e1736-5b03-4512-b927-f49a6039329f",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 175,
+      "name": "Rosemary Chicken",
+      "id": "a30cd1d8-2188-41cb-8c10-8659ecad3775",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 25,
+      "name": "Sweet Salads",
+      "id": "a88424d1-ec8f-4106-809a-882329b686a4",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1815,
+      "name": "Spicy Salads",
+      "id": "e479cca9-5f98-42e5-a684-eb40a4420fe9",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 200,
+      "name": "Mixed Veg Salads",
+      "id": "b8119903-d44d-408f-95df-f56b72a5dff2",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 0,
+      "name": "Pickles",
+      "id": "3bf8fd41-d24b-406d-b2a6-f2cdc4f264e9",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 200,
+      "name": "Sesame Bagael",
+      "id": "aa4a2910-baf4-4e4b-af10-49c45b6603af",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 4,
+      "name": "Onion Bagel",
+      "id": "ab4521a5-c34c-40c6-9aa2-41957ca9fec9",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 250,
+      "name": "Yogurt Feta Sauce",
+      "id": "50a064a3-639f-4bfb-ac7d-396f7023a756",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 125,
+      "name": "New Hand Tossed",
+      "id": "af1b6a27-2ccb-4983-b4cd-f170af543f44",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 100,
+      "name": "Plain Bagel",
+      "id": "44685bd4-d418-4035-a95d-7a20ee1d2893",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "SS Addon Three",
+      "id": "52437559-bcaf-4345-8da0-d083b5a4e873",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 75,
+      "name": "Avocado",
+      "id": "8d38f10d-a75e-40ac-b178-da95ca28d736",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1750,
+      "name": "Beta Addon B",
+      "id": "5a8164fa-4fb1-474e-93ca-06f19394f79f",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 347,
+      "name": "207 Soy Sauce To 204",
+      "id": "2340a071-9703-482f-91a8-2ced38e1ff28",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1350,
+      "name": "Alpha Addon A",
+      "id": "b1242305-74d8-4bf7-9d22-d945f67f588e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1250,
+      "name": "Single Addon A Three",
+      "id": "46d78070-700a-4632-85fe-41b0169b87bb",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 300,
+      "name": "Hot water",
+      "id": "5632587b-4cd3-4dd7-93c8-4ec739fd8a93",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "Multi Addon B One",
+      "id": "344f6a47-4e6e-4da7-bfcd-7e7b2617ab2a",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "SS Addon Two",
+      "id": "f43e158d-23d7-4cee-b4ed-fbd96b439274",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 350,
+      "name": "Multi Addon B Three",
+      "id": "5cd4b419-71b0-44db-91ea-efcda6f77c3b",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 150,
+      "name": "Sautéed Potato Slices",
+      "id": "8cd18e03-f73a-41d7-be1a-55cff55eaa68",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 5,
+      "name": "Monday Modifier 1",
+      "id": "34d5a34c-e550-4744-b204-c55a6e668308",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 20,
+      "name": "Monday Modifier 3",
+      "id": "0afe49d8-9cef-4cf7-90ff-450dee085e35",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 35,
+      "name": "Monday Modifier 4",
+      "id": "0954804c-ab11-4b0f-801a-9e96e8de8e4d",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 15,
+      "name": "Monday Modifier 2",
+      "id": "bc175cf8-fa47-411a-87df-4d40e2f326af",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    }
+  ],
+  "items": [
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Nen Veg Special Meal",
+      "id": "1e857156-b46c-4962-b0af-a174ea8d44ff",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "5e7900eb-4207-404a-b12a-52791bf5ff07",
+        "a4b021c4-5fab-40bd-b058-b2e5ad55c5b0"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Friday Item 2",
+      "id": "2fa2bfd7-0317-4a44-874a-76d833970491",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "5e7900eb-4207-404a-b12a-52791bf5ff07",
+        "a4b021c4-5fab-40bd-b058-b2e5ad55c5b0"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Friday Item 1",
+      "id": "07faa5f3-e079-44de-8e61-4d0b6714e7ce",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Paneer 65",
+      "id": "a5dec814-6969-474c-b89e-d990f5bdaed9",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Clover Item Threeeeeeee",
+      "id": "98eb0835-6f7a-4cb1-8645-75c27c7547f3",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Gobi 65",
+      "id": "2c01bc43-de95-4655-b35e-703df0f6c1fc",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Manual Item",
+      "id": "ac0895f3-81fb-4451-98fc-8af35804211a",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Veg Special Meals",
+      "id": "73ecc8d4-9c5b-43a3-96ac-20f353ef9406",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Chicken 65",
+      "id": "d502ffa6-2ef0-4d3b-9be4-189a4b6bbfbc",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Mango Icecream",
+      "id": "c85de20f-5d1c-4834-a7d6-ea3008208a85",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Butterscotch",
+      "id": "61f5ef0d-877a-47e3-8ac9-c8b5423657ab",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Mushroom 65",
+      "id": "6fb413cc-7c38-45a8-9741-9a5a72533d11",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Strawberry",
+      "id": "86f4c011-c331-4b62-baa4-23680d20bebb",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1002,
+      "name": "Summer Ice Cream",
+      "id": "6202cfff-9b20-4c84-afa8-5ba26e0bf742",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Organic Mango",
+      "id": "df02fc2b-64e1-4ed2-bd25-e7723c0203c4",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Organic Banana",
+      "id": "24c8cf0c-8aa0-439d-938e-c9c01f4b780f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Delete Item Two",
+      "id": "ff792ad3-5364-40b5-9622-0610eb7f7b52",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Item Two",
+      "id": "b0d827c0-db43-4436-826c-406d6126e1b1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Summer Cold Coffee",
+      "id": "bbf7b638-39e8-4696-932d-905b55f94dcb",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Testing Item Two",
+      "id": "86f95a6e-af3a-48c7-8ac8-92bf98b081da",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Testing Item Three",
+      "id": "72bda96f-6ecc-4990-ac74-8dafbbf499a0",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Testing Item One",
+      "id": "7bdd3f45-eb42-4177-82fd-5f3e9c9be65c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Banana",
+      "id": "14c7b3d7-72bb-4142-a5ba-5f12feeb1ad6",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Testing Item Four",
+      "id": "e1048f19-1d34-48dc-978a-7ab265f39a87",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": false,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 500,
+      "name": "item One",
+      "id": "9e2fe137-0e0f-43fa-8d88-fcf7c67bf8ad",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Copy of item 1",
+      "id": "dc116c3f-b4bf-4153-a46d-5b6c9d86a0eb",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Green Apple",
+      "id": "1ec13a95-6971-44b9-afa8-7cc0020ed576",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Ice Apple",
+      "id": "f05d6e46-62ab-404b-b279-7bb20d913bae",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Strawberry",
+      "id": "753ab32d-7128-49d5-b07c-8764a3eb9cdf",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Kiwi",
+      "id": "4eaa181b-6cdb-4440-ac4e-8f87869501bd",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3500,
+      "name": "Lemon Mint Cooler",
+      "id": "daf9fff5-657f-4431-8673-99a738d42e51",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Pineapple",
+      "id": "199e78ee-2415-4974-a09f-82e323431aa1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Jackfruit",
+      "id": "9f138b18-a6ab-4418-88f2-af3ecbd52d95",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Poori",
+      "id": "bf23d2ba-75fa-4f24-935a-1a3fa0df0c78",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Mango Fruit",
+      "id": "a967edc5-1a95-4be8-bf37-d62aa02939f0",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Kiwi Mint Cooler",
+      "id": "973c642f-2325-4dec-a07a-98b7cdc184a9",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Mango Cinnamon Coolers",
+      "id": "d9e04df8-61ef-48f2-82d7-c7ed2bcecf2c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Green Apple Mojito",
+      "id": "248261f5-b071-4f65-90b3-ec9415206e76",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Orange Mint Cooler",
+      "id": "8c4bd02e-6138-4648-bfea-63d517345f8d",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "986f918a-4048-4f13-8902-6046795b67d8",
+        "381774eb-eb65-4781-9959-e42d98755d88",
+        "88bbf80b-42c4-4154-bc19-15122c5d922f"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Roasted Chicken & Corn",
+      "id": "c8548441-00b5-4f6d-b17f-337f1079c7e0",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "986f918a-4048-4f13-8902-6046795b67d8",
+        "30ce9c55-292b-428f-9c1c-cc8e312abaca",
+        "381774eb-eb65-4781-9959-e42d98755d88",
+        "88bbf80b-42c4-4154-bc19-15122c5d922f"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Roasted Chicken In Mushroom Sauce",
+      "id": "aaa22fee-049a-4e45-b344-00d36a6496f2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Bbq Sausage",
+      "id": "bda1f7be-b389-450f-b21e-86ba0b05003e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Classic Chicken Tikka",
+      "id": "c010fd54-2576-4937-88ee-138df25e569c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "986f918a-4048-4f13-8902-6046795b67d8",
+        "381774eb-eb65-4781-9959-e42d98755d88",
+        "88bbf80b-42c4-4154-bc19-15122c5d922f"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Cheesy Chicken Delight",
+      "id": "a6f4a80e-9f27-49a7-a99c-b9779dd0b54c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Green Chilli & Roasted Chicken",
+      "id": "5e07d6e8-80f5-4bcf-a1b4-a42099c8aba0",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Chicken Sausage & Corn",
+      "id": "06472763-cf36-49cf-963c-addc1093a68c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Chicken Sausage & Mushroom",
+      "id": "0fe6db31-47e9-425b-8d44-53138a08daa1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Chicken Tikka Delight",
+      "id": "05245daf-9bc6-4b86-8db2-53e1f3ba0e5f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Pos Item B",
+      "id": "97d6e840-470d-4a79-8ac0-e919d212ab34",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "986f918a-4048-4f13-8902-6046795b67d8"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Creamy Chicken Delight",
+      "id": "751d69a3-259a-424f-9c87-8406a56cce89",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Empty Item",
+      "id": "6260d622-3f64-49a3-8fed-b445a818e170",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 10,
+      "name": "Bacon Burger",
+      "id": "0ea12d3d-5472-486a-8490-2482a0b21906",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7cc9056a-0fae-4e91-ac53-0e7520e88a39"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Classic Burger",
+      "id": "553b07ff-25d4-493c-a2f7-05507c5fe4e5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Avacoda Juices",
+      "id": "be3b3012-32cf-4c25-93e2-3106ed105ae7",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Item Five",
+      "id": "e4907079-904b-4123-abdb-7cae5c14f532",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7cc9056a-0fae-4e91-ac53-0e7520e88a39"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Chicken Burger",
+      "id": "37e86a10-e14a-4f16-aacb-07869c8c8a28",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "986f918a-4048-4f13-8902-6046795b67d8"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Ham Burger",
+      "id": "7dc1699b-ea5e-4ad5-a922-20e6e66dfaee",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "7cc9056a-0fae-4e91-ac53-0e7520e88a39"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Lamb Burger",
+      "id": "2781c845-24e5-42b9-908b-26c5a13265fd",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "986f918a-4048-4f13-8902-6046795b67d8",
+        "30ce9c55-292b-428f-9c1c-cc8e312abaca"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Turkey Burger",
+      "id": "da37dd32-46d5-4b96-b78a-3a679b3fd0bc",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3500,
+      "name": "Chicken And Rice Soup",
+      "id": "8f98a04f-3db7-4180-b793-1ca9f95f06e6",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Chicken Tortilla Soup",
+      "id": "22f1ba93-3501-496b-aa49-d9970486a434",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5500,
+      "name": "Italian Wedding Soup",
+      "id": "75e154ed-0469-4cd3-abd9-adc76f1bff7e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Moong Soup",
+      "id": "00039a17-9135-4857-911f-56a71b8d0ed2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["ff1fc84f-483b-4653-ba28-a03d9fa2d9d7"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Cheese Burger",
+      "id": "53b0f06c-b00a-4b65-88aa-2fb052e9941d",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Corn Chowder",
+      "id": "5120edcb-a053-439b-a3f9-ec5a62a79759",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Carrot Soup",
+      "id": "12f354fc-8b47-4a3b-a1e3-6498cf8cedb3",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Cauliflower Soup",
+      "id": "9487c4b1-a04c-44d5-a589-6784a56ca992",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Beef And Barley Soup",
+      "id": "b9d6dcc5-ae1b-4f71-9e81-97adfa719f6e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Mutton Noddle Soup",
+      "id": "988d0e50-0a59-48fe-8be6-410491043c6e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Chicken Soup",
+      "id": "c632c9b2-c8d3-499b-868f-82b6636d7198",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4500,
+      "name": "Chicken Noodle Soup",
+      "id": "c5db1890-e6b2-426f-ade7-b8522f528429",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Potato Soup",
+      "id": "01fddc03-733d-46f3-a9b2-aa1284f27338",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Vegetable Soup",
+      "id": "03fa9626-4d09-44c8-9866-8a76e51cffaf",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Mutton Soup",
+      "id": "a5f57a1d-cad3-4b74-b37a-214bffa432f7",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Mushroom Soup",
+      "id": "f2212f80-3f67-45d0-8299-419da6bf241d",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Tomato Soup",
+      "id": "4154cafd-81df-4ea5-8828-f03eea3166e5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Miso Soup",
+      "id": "49d6cee1-fbcc-4e9e-a1fb-6d21c5c87572",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Butternut Squash Soup",
+      "id": "62286ab6-f5e8-43a5-8fed-559557e42785",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "French Onion Soup",
+      "id": "63e9edff-4a36-4f6f-aae9-f1ed254a98c5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Broccoli Cheddar Soup",
+      "id": "1e69da62-cf38-40a4-87d6-be7686729559",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Black Forest Cake",
+      "id": "58252445-fafb-4333-9b9b-99fe6d9c0b79",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Banbury Cake",
+      "id": "33e9844f-6737-4fbf-9efa-8a2693785e09",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Pound Cake",
+      "id": "88a37f23-a68f-420f-813a-ad39d509cc4f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Chocolate Cake",
+      "id": "89fffb69-cf00-44b3-956b-29b60df5c774",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Cheese Cake",
+      "id": "91e76319-58ba-4151-8cd4-9f8dc1d29a56",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": false,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Angel Food Cake",
+      "id": "4477f343-4e14-438f-b7ff-e95f298c947b",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/a235843b-8b55-496b-87c9-97da036e7a0c/940fb95d-3857-4fd7-b2c8-95d83718f37c/927085f8-7f97-4ee5-806d-b9bba97098da"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Coffee Cake",
+      "id": "ad097b4f-4af9-45fc-8e38-b4e313c9dfa9",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Red Velvet Cake",
+      "id": "33acc71a-2e27-4de7-b645-7e1f31a1a77c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Clover Item Two",
+      "id": "eb8c4a4b-9f92-430a-95f6-35a1aad80bad",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "381774eb-eb65-4781-9959-e42d98755d88",
+        "88bbf80b-42c4-4154-bc19-15122c5d922f"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Chicken Smokey Salads",
+      "id": "b2937171-86fe-452a-8a46-b5660b8afa8e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["ff1fc84f-483b-4653-ba28-a03d9fa2d9d7"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1050,
+      "name": "VEG BURGER",
+      "id": "cbb83b28-e385-400b-b8c8-a8819e570a5b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 500,
+      "name": "Clover Item One",
+      "id": "c295b1e3-86be-4f12-9ec7-2f65b337008a",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1075,
+      "name": "Beetroot Cake",
+      "id": "9ffaac59-724c-40ae-a6df-13898bc9a4a2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Classic Victoria Sandwich",
+      "id": "5f99f1b3-494c-4f68-a6be-eb28634b8860",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Batata Vada Receipe",
+      "id": "0c000de7-96aa-4ab8-aa92-323bd0fc4565",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Masala Pav Receipe",
+      "id": "4e1d9f7b-6be7-4c36-a34b-7df2bd2766cc",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Misal Pav Receipe",
+      "id": "934cdc78-54f9-4866-8ccb-f328a4007277",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Carrot Cake",
+      "id": "13aec39e-9da9-4237-807a-935faa8e2b2f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2005,
+      "name": "Bhelpuri",
+      "id": "66cd18bf-f324-47b5-9f98-de2e650fcf33",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Jhal Muri Receipe",
+      "id": "8bb9d6f1-0ad9-4e21-b9f9-9921b7688bf6",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Pav Bhaji Receipe",
+      "id": "72a39108-a91c-40bb-ad58-a520917c45a5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Pani Puri",
+      "id": "d3817f14-79c8-4ae9-9c95-584d1839cc82",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 200,
+      "name": "Corn Chaat",
+      "id": "3d96982e-2e40-4d7f-89d3-d6265533bb41",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Samosa Chaat",
+      "id": "949d5b59-40d8-4349-95b2-8fabe040bd87",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Egg Chaat",
+      "id": "93f22348-e60b-4ac9-afee-d21bd270bb17",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1005,
+      "name": "Papdi Chaat",
+      "id": "dc4e3f2a-3208-4c3a-85f9-dbbca97be3c5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Dahi Vada",
+      "id": "057a2800-2b59-4f7b-b9a2-da048a8c3f17",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Pina Colada",
+      "id": "6baf06fd-b11b-4db4-93d5-b858206d9fff",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Cool Mint Milkshake",
+      "id": "5521bf9e-d07f-442f-9382-50f08f03c20c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Neapolitan",
+      "id": "80f40c4a-f247-40ff-9be1-6d566b43a245",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Choc Malt rob",
+      "id": "fa1ddbac-9d67-44e9-a1a2-c9ec7f8a0bc8",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["7d589a57-7cf0-4c0a-886d-357f10353c3b"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Dahi Poori",
+      "id": "225c1a12-c60d-4d5f-b1f2-c15e04b53f20",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Triple Nut Caramel",
+      "id": "bea8c4ec-ab1e-449e-9d11-d11b87589da1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Vanilla Special Milkshake",
+      "id": "5cb5be36-6e87-47a2-bdc4-94b2d59574b2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Badam Juice",
+      "id": "1e9ac1ea-eea3-4bb6-8f70-392fd520a870",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1005,
+      "name": "Kitkat Milkshake",
+      "id": "18022837-098e-444a-84ab-3d6ed0133579",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "White Sauce Noodles",
+      "id": "8f31eec8-6695-48a0-8779-fb34aa0ac8a6",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Carrot Halwa",
+      "id": "55a81b9f-d9c6-4f61-8651-36feb97ad3ff",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Strawberry Milkshake",
+      "id": "5b802fd0-d7a1-412d-b4cf-0896acd31a9f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Strawberry Juice",
+      "id": "776c35bd-f5d3-400d-82c6-1164a5cba0da",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Mushroom Noodles",
+      "id": "2b10e07e-4c33-4b4f-b638-a953b0686c89",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Mixed Fruit Juice",
+      "id": "cd8af3ea-b1ea-465e-96a4-42599c4e6fca",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Fried Corn Noodles",
+      "id": "fdf68b71-5a53-4789-b23c-1f08d04c7a63",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1200,
+      "name": "Chicken Noodles ram",
+      "id": "43906414-00ef-4a3f-bfd0-b04c8b5073b0",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Turkey Pasta",
+      "id": "e71b1781-c6d6-4e51-a173-d16842f401bf",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Macroni Cheese Noodles",
+      "id": "634f3104-b45e-4763-bba8-9a95d81bf96b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2050,
+      "name": "Mixed Veg Pasta",
+      "id": "054477e3-f0ff-4005-815b-07b85a1db7c8",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Macroni Cheese Pasta",
+      "id": "8d029c82-f917-41f9-940b-56d83ce708c7",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2005,
+      "name": "Red Sauce Noodles",
+      "id": "dfe941e0-182e-4882-a5a5-9e74f00fdd28",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Mixed Sauce Noodles",
+      "id": "591a7f4c-f61a-455f-b26d-39ac58123013",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Paneer Noodles",
+      "id": "1661c4bd-5eeb-4fc9-a9ca-f0c2440696f1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "ChickenWings",
+      "id": "6221d92c-c905-4d89-8bca-0d046b4065a6",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Mushroom Pasta",
+      "id": "b0e80f7d-326d-4d6c-85ea-ece0bf2bd7eb",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Kiwi Juice",
+      "id": "a0bd4691-5e7a-4f13-bb59-01751cc5c1e8",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Mixed Veg Pasta Noodle",
+      "id": "bed0a9eb-ca0a-43c7-b425-4a47e2f0fd00",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Fried Corn Pasta",
+      "id": "68f33870-4ff1-41e8-ae01-943841bba780",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": false,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Mixed Sauce Pasta",
+      "id": "c72e72b3-5107-41c5-bb76-9baaed60f35d",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Pos Item F",
+      "id": "516cdf1a-ac70-4861-813b-1473fca912e9",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2005,
+      "name": "Bread Halwa",
+      "id": "f925afa7-4b09-48e9-876c-ae7aa4e366db",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1200,
+      "name": "Pos Item E",
+      "id": "38ef39df-6ff4-45e4-8ba4-8022dde4059e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Rasagula",
+      "id": "9ba6ec99-f8d8-44e3-8713-dbb7e7f0e99e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1005,
+      "name": "White Cheese Pasta",
+      "id": "7dd4e446-c646-486c-b813-c9532e276074",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Palkova",
+      "id": "a835bf64-98eb-468a-b615-b80b9cc9891b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1005,
+      "name": "White Sauce Pasta",
+      "id": "638b421e-1661-48ad-af47-7648923f7685",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1299,
+      "name": "Choco Milkshake",
+      "id": "61d5a84e-94d3-4943-a9f3-e2ed79ee5ac4",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 8000,
+      "name": "Fish Biryani",
+      "id": "c448996b-b804-42f8-8e92-f0ea5c8c0358",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Pos Item D",
+      "id": "25ac52df-5403-494f-97d1-37d4b8c882f8",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 20,
+      "name": "Rose Milk",
+      "id": "2e61dc4b-ca72-41dd-a7e0-1322f3ec922b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Orange Juice",
+      "id": "e7a12b31-d6bf-404a-b563-b3f3155ad29c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 4000,
+      "name": "Mixed Veg Biryani",
+      "id": "c74820ab-06ba-4a75-8581-e0a91a163121",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 220,
+      "name": "Item Seven",
+      "id": "d0e467b8-6ea8-4cef-9f03-48df790a0cc2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1250,
+      "name": "Veg Masala Dosa",
+      "id": "cb30b472-c57f-450d-9162-b5c069bc1212",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 10000,
+      "name": "Prawn Biryani",
+      "id": "257b46c4-3548-47cf-a807-adf6aac20aba",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Paneer Biryani",
+      "id": "f99784ce-fc3c-4765-b902-cf25427902bc",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Chicken Biryani",
+      "id": "0b8223b9-f4cd-4dcf-8acd-df9f70de8f3b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Item One",
+      "id": "494303b2-f353-44c0-8e9d-61f3e78189c2",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Item Three",
+      "id": "abf38904-2b03-4b60-855b-03d44ab31f6b",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49",
+        "ac4e9e88-8c65-403c-b6e2-b2b4acab0d92"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1050,
+      "name": "Paneer Pizza Chilli Flavour Green Chilli 14",
+      "id": "077f4d60-cd58-4fbc-be9b-b2100d071747",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "1ce400ae-27ed-4673-9974-75464830bd4b",
+        "986f918a-4048-4f13-8902-6046795b67d8"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Pepper Burger",
+      "id": "6afff1fd-6f99-467d-aca1-24b380bac8e3",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49",
+        "ac4e9e88-8c65-403c-b6e2-b2b4acab0d92"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1250,
+      "name": "Pepper Pizza Toppings 16 Green Chilli",
+      "id": "acce2c9c-6f8e-44a5-b9a9-4eefb79a5032",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "1ce400ae-27ed-4673-9974-75464830bd4b",
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Mixed Veg Pizza",
+      "id": "3042eedc-dc1d-47bb-b927-50f25dcfb153",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49",
+        "ac4e9e88-8c65-403c-b6e2-b2b4acab0d92"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Cheese & Tometo pizza",
+      "id": "4ab774ad-196d-41ef-bacf-0e041883bcfd",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "1ce400ae-27ed-4673-9974-75464830bd4b",
+        "d3477688-b18e-4903-9547-1fa9dbb70c2d",
+        "9d81a1db-2f2a-4ab6-bb52-2bfebefb1c49"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2025,
+      "name": "Gobi Pizza Onion 12",
+      "id": "f7fa6258-cd92-4355-82e2-b7102ff44d39",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Idly",
+      "id": "1622bdb5-dff3-491e-9278-fac18dafdb49",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Gulab Jamun",
+      "id": "d473ecc8-573a-483e-a380-796a44fc7f5a",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3500,
+      "name": "Item Four",
+      "id": "a398974e-0d4b-4225-be95-ac278cf430e5",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Veg Dosa",
+      "id": "423c4b82-7f81-4422-9f46-014cf1441984",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 25,
+      "name": "Mango Juice",
+      "id": "139244f2-3572-4604-8ab7-ed7c16588bb4",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 5000,
+      "name": "Raspberry and Whitechocolate Milkshake",
+      "id": "9fd45340-2f25-44f0-aef2-0a25b6d1b328",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 30,
+      "name": "Pineapple Juice",
+      "id": "292dae8f-d575-4fb2-9180-58e05b620709",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3500,
+      "name": "White Cheese Noodles",
+      "id": "32b00d63-6204-4367-9129-01abea24f6ed",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Pos Item C",
+      "id": "62b004e7-4321-419a-8cd7-d60510786cde",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": false,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Mushroom Biryani",
+      "id": "f78a59ae-5846-441a-bbcc-b7185e9f6797",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Red Sauce Pasta",
+      "id": "385b23bd-4a32-4c63-8458-61233abbf9c8",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3000,
+      "name": "Blueberry Cheesecake Milkshake",
+      "id": "306c6fca-3588-46c2-97d7-0ad8a0bd7976",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2500,
+      "name": "Pomogranet Juice",
+      "id": "59dff0a2-1e39-4b6c-be17-cc7f4e5ee35a",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 3356,
+      "name": "Beetroot Halwa",
+      "id": "1138667b-2397-4730-aa9c-5e45e0596171",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Item Six",
+      "id": "c9d7a9dc-5038-47f4-86fc-dba7cb375d2e",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "ff1fc84f-483b-4653-ba28-a03d9fa2d9d7",
+        "ac4e9e88-8c65-403c-b6e2-b2b4acab0d92"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 7000,
+      "name": "Double Cheese Burger",
+      "id": "68248ccc-ebe0-4be1-89ce-d87ed8d20b6c",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "91a73cb1-b046-4f51-b08e-d1add440a13e",
+        "db2d46ce-a915-4f74-b3f2-e2af4e4de3c2"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Monday Item 2",
+      "id": "a68425f6-b5a4-4304-a26f-e65d38d4c725",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [
+        "91a73cb1-b046-4f51-b08e-d1add440a13e",
+        "db2d46ce-a915-4f74-b3f2-e2af4e4de3c2"
+      ],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Monday Item 1",
+      "id": "2b090dba-1311-4c90-9303-9841296dd837",
+      "is_tax_included": true,
+      "image": ""
+    }
+  ]
+}
