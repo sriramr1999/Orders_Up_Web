@@ -81,6 +81,7 @@ export const FoodCategories: FC<FoodCategoriesProps> = ({ onSelectCategory, sele
               backgroundColor: selectedCategory === category.label ? "#f0f0f0" : "transparent", // Add grey background if selected
               "&:hover": {
                 backgroundColor: "#f0f0f0", // Grey background on hover
+                transform: "rotate(-10deg)", // Tilt the icon on hover
               },
               borderRadius: "50%", // To make the grey background circular
             }}
