@@ -56,8 +56,8 @@ export const Header: FC<HeaderProps> = ({
   const totalItems = Object.keys(storedBasket || {}).length;
 
   useEffect(() => {
-    setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
-  }, [JSON.parse(localStorage.getItem("basket") as any)]);
+    setStoreBasket(JSON.parse(localStorage.getItem("basket")));
+  }, [JSON.parse(localStorage.getItem("basket"))]);
 
   return (
     <>

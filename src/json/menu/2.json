@@ -89,6 +89,15 @@
   "categories": [
     {
       "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Burgers",
+      "id": "5cf32495-7e4c-4301-8205-abd6cbbdb940",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["5cf32495-7e4c-4301-8205-abd6cbbdb940"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
       "name": "Beverages",
       "id": "fe25686e-31f0-416b-823e-31f4d3a87988",
       "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
@@ -123,15 +132,7 @@
       "subcategories": ["554148dc-d347-4d2e-9d46-86ab41f67b43"],
       "show_online": true
     },
-    {
-      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
-      "name": "Burgers",
-      "id": "5cf32495-7e4c-4301-8205-abd6cbbdb940",
-      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
-      "is_tax_included": true,
-      "subcategories": ["5cf32495-7e4c-4301-8205-abd6cbbdb940"],
-      "show_online": true
-    },
+
     {
       "fulfillment_modes": ["DELIVERY", "COLLECTION"],
       "name": "Breads",

@@ -73,6 +73,15 @@
   "categories": [
     {
       "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Briyani",
+      "id": "212cba2b-f8c1-4736-8aba-76df3fcbb4c9",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["212cba2b-f8c1-4736-8aba-76df3fcbb4c9"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
       "name": "Beverages",
       "id": "eab0c343-c47d-45d6-b725-54c20c494797",
       "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
@@ -126,15 +135,7 @@
       "subcategories": ["5cc6c52d-36a0-4c29-9305-a998b072c6a9"],
       "show_online": true
     },
-    {
-      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
-      "name": "Briyani",
-      "id": "212cba2b-f8c1-4736-8aba-76df3fcbb4c9",
-      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
-      "is_tax_included": true,
-      "subcategories": ["212cba2b-f8c1-4736-8aba-76df3fcbb4c9"],
-      "show_online": true
-    },
+
     {
       "fulfillment_modes": ["DELIVERY", "COLLECTION"],
       "name": "Burger",
