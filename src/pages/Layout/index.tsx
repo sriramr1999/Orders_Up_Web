@@ -28,15 +28,16 @@ export const Layout: React.FC = () => {
   );
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [storedBasket, setStoredBasket] = useState(
-    JSON.parse(localStorage.getItem("basket") as any) || {}
+    JSON.parse(localStorage.getItem("basket")) || {}
   );
+  const [searchQuery, setSearchQuery] = useState<string>(""); // New state for search query
 
   const handleOptionChange = (option: "delivery" | "pickup") => {
     setSelectedOption(option);
   };
 
   const handleCartClick = () => {
-    setStoredBasket(JSON.parse(localStorage.getItem("basket") as any));
+    setStoredBasket(JSON.parse(localStorage.getItem("basket")));
     setIsDrawerOpen(true);
   };
 
@@ -119,6 +120,7 @@ export const Layout: React.FC = () => {
         selectedOption={selectedOption}
         handleOptionChange={handleOptionChange}
         onCartClick={handleCartClick}
+        onSearchChange={(query) => setSearchQuery(query)} // Pass search query to Header
       />
       <Box sx={{ display: "flex", marginTop: "64px" }}>
         <Box
@@ -129,7 +131,7 @@ export const Layout: React.FC = () => {
             overflowX: "hidden",
           }}
         >
-          <Outlet />
+          <Outlet context={{ searchQuery }} /> {/* Pass searchQuery to Outlet */}
         </Box>
       </Box>
 
