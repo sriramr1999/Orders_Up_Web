@@ -1,0 +1,11 @@
+{
+    "id" : 10,
+    "name": "Starbucks",
+    "image": "https://example.com/starbucks.png",
+    "rating": 4.6,
+    "reviews": "10k+",
+    "distance": "3.5 mi",
+    "time": "22 min",
+    "deliveryFee": "$2.49 delivery fee",
+    "cuisine": ["Coffee", "Breakfast"]
+}

@@ -1,0 +1,11 @@
+{
+  "id" : 5,
+  "name": "Taco Bell",
+  "image": "https://example.com/tacobell.png",
+  "rating": 4.2,
+  "reviews": "9.1k+",
+  "distance": "5.5 mi",
+  "time": "32 min",
+  "deliveryFee": "$3.99 delivery fee",
+  "cuisine": ["Mexican", "Fast Food"]
+}

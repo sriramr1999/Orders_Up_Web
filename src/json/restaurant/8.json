@@ -1,0 +1,11 @@
+{
+    "id" : 8,
+    "name": "Chick-fil-A",
+    "image": "https://example.com/chickfila.png",
+    "rating": 4.5,
+    "reviews": "8.5k+",
+    "distance": "5.0 mi",
+    "time": "30 min",
+    "deliveryFee": "$3.49 delivery fee",
+    "cuisine": ["Chicken", "Sandwiches"]
+}

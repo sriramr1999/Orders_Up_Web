@@ -1,5 +1,11 @@
 {
-  "name": "McDonald's",
-  "image": "https://img.cdn4dd.com/cdn-cgi/image/fit=contain,format=auto,width=800,quality=50/https://doordash-static.s3.amazonaws.com/media/photos/98a6f342-aa36-453e-ab97-33e377f52cfb-retina-large-png",
-  "rating": 4.2
+  "id" : 2,
+  "name": "Burger King",
+  "image": "https://example.com/burgerking.png",
+  "rating": 4.0,
+  "reviews": "6k+",
+  "distance": "4.2 mi",
+  "time": "28 min",
+  "deliveryFee": "$3.99 delivery fee",
+  "cuisine": ["Burgers", "Fast Food"]
 }
