@@ -1,0 +1,21 @@
+@keyframes throwToCart {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(200px, -200px) scale(0); /* Adjust these values */
+    }
+  }
+  
+  .thrown-item {
+    position: fixed; /* Make sure the item is positioned relative to the viewport */
+    z-index: 9999;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    animation: throwToCart 0.15s ease-in-out forwards;
+  }
+  
