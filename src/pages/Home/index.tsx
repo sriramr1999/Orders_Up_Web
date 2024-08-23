@@ -121,7 +121,6 @@ export const Home: FC = () => {
                         borderBottomRightRadius: 0,
                       }}
                     />
-                    console.log(restaurant.image);
                     <CardContent sx={{ padding: "16px" }}>
                       <Box
                         sx={{
