@@ -27,7 +27,7 @@ import StarIcon from "@mui/icons-material/Star";
 import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
-import GroupsIcon from '@mui/icons-material/Groups';
+import GroupsIcon from "@mui/icons-material/Groups";
 import BikeScooterIcon from "@mui/icons-material/BikeScooter";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useParams } from "react-router-dom";
@@ -174,8 +174,9 @@ export const Menu = () => {
     setQuantity((prev) => (increment ? prev + 1 : Math.max(prev - 1, 1)));
   };
 
-  const handleAddToBasket = (selectedItem, selectedModifiers) => {
+  const handleAddToBasket = (menuName, selectedItem, selectedModifiers) => {
     const basketItem = {
+      name: menuName,
       item: {
         id: selectedItem.id,
         name: selectedItem.name,
@@ -205,6 +206,7 @@ export const Menu = () => {
           modifierPrice: modifier.price, // Assuming price is stored in cents
         };
       }),
+
       orderType, // Add the selected order type to the basket item
     };
 
@@ -315,14 +317,14 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     transition: "background-color 0.2s ease",
                   }}
                   onClick={() => handleOrderTypeChange("delivery")}
                 >
-                   <BikeScooterIcon sx={{ marginRight: "8px" }} />
- Delivery
+                  <BikeScooterIcon sx={{ marginRight: "8px" }} />
+                  Delivery
                 </Button>
                 <Button
                   variant={orderType === "pickup" ? "contained" : "outlined"}
@@ -331,7 +333,7 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     marginLeft: "8px",
                     transition: "background-color 0.2s ease",
@@ -339,7 +341,7 @@ export const Menu = () => {
                   onClick={() => handleOrderTypeChange("pickup")}
                 >
                   <ShoppingBagIcon sx={{ marginRight: "8px" }} />
-  Pickup
+                  Pickup
                 </Button>
                 <Button
                   variant={orderType === "group" ? "contained" : "outlined"}
@@ -348,7 +350,7 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     marginLeft: "8px",
                     transition: "background-color 0.2s ease",
@@ -356,7 +358,7 @@ export const Menu = () => {
                   onClick={() => handleOrderTypeChange("group")}
                 >
                   <GroupsIcon sx={{ marginRight: "8px" }} />
-  Group Order
+                  Group Order
                 </Button>
               </Box>
             </Grid>
@@ -725,7 +727,9 @@ const ItemDialog = ({
           </IconButton>
         </Box>
         <Button
-          onClick={() => handleAddToBasket(selectedItem, selectedModifiers)}
+          onClick={() =>
+            handleAddToBasket(menuData?.name, selectedItem, selectedModifiers)
+          }
           variant="contained"
           sx={{
             backgroundColor: canAddToBasket ? "#ff4c4c" : "#ccc",
