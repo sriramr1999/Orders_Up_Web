@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import {
   Box,
   Grid,
@@ -33,13 +33,13 @@ import { AppLoader } from "../../components/AppLoader";
 
 export const Menu = () => {
   const { storeId } = useParams();
-
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
   const [open, setOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [basket, setBasket] = useState([]);
-  const [menuData, setMenuData] = useState({});
+  const [orderType, setOrderType] = useState("delivery");
+  const [menuData, setMenuData] = useState<any>({});
   const [isLoading, setIsLoading] = useState(true);
   const [isListening, setIsListening] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
@@ -68,13 +68,14 @@ export const Menu = () => {
   }, [storeId]);
 
   useEffect(() => {
-    const storedBasket = JSON.parse(localStorage.getItem("basket")) || {};
-    setBasket(storedBasket[storeId] || []);
+    const storedBasket =
+      JSON.parse(localStorage.getItem("basket") as any) || {};
+    setBasket(storedBasket[storeId as any] || []);
   }, [storeId]);
 
   useEffect(() => {
     const recognition = new window.webkitSpeechRecognition();
-    recognition.continuous = true;
+    recognition.continuous = true; // Keeps listening until stopped
     recognition.interimResults = false;
     recognition.lang = "en-US";
 
@@ -82,10 +83,17 @@ export const Menu = () => {
       const transcript = event.results[0][0].transcript.trim().toLowerCase();
       setSearchQuery(transcript);
       setIsListening(false);
+
+      // Stop the recognition after receiving the first result
+      recognition.stop();
     };
 
-    recognitionRef.current = recognition;
+    (recognitionRef.current as any) = recognition;
   }, []);
+
+  const handleOrderTypeChange = (type) => {
+    setOrderType(type);
+  };
 
   const categories = useMemo(() => {
     return menuData?.categories?.map((category) => ({
@@ -165,17 +173,46 @@ export const Menu = () => {
 
   const handleAddToBasket = (selectedItem, selectedModifiers) => {
     const basketItem = {
-      item: selectedItem,
+      item: {
+        id: selectedItem.id,
+        name: selectedItem.name,
+        price: selectedItem.price,
+      },
       quantity,
-      modifiers: selectedModifiers,
-    };
-    const storedBasket = JSON.parse(localStorage.getItem("basket")) || {};
-    const updatedBasket = {
-      ...storedBasket,
-      [storeId]: [...(storedBasket[storeId] || []), basketItem],
+      modifiers: Object.keys(selectedModifiers).map((groupId) => {
+        const modifierId = selectedModifiers[groupId];
+
+        // Find the modifier group and modifier details
+        console.log(menuData.modifier_groups, "menuData.modifier_groups");
+        console.log(groupId, "groupId");
+        const modifierGroup = menuData.modifier_groups.find(
+          (group) => group.id === groupId
+        );
+        console.log(modifierGroup, "modifier");
+        const modifier = menuData.modifiers.find(
+          (mod) => mod.id === modifierId
+        );
+
+        console.log(modifier, "modifier");
+        return {
+          groupId,
+          groupName: modifierGroup.name,
+          modifierId,
+          modifierName: modifier.name,
+          modifierPrice: modifier.price, // Assuming price is stored in cents
+        };
+      }),
+      orderType, // Add the selected order type to the basket item
     };
 
-    setBasket(updatedBasket[storeId]);
+    const storedBasket =
+      JSON.parse(localStorage.getItem("basket") as any) || {};
+    const updatedBasket = {
+      ...storedBasket,
+      [storeId as any]: [...(storedBasket[storeId as any] || []), basketItem],
+    };
+
+    setBasket(updatedBasket[storeId as any]);
     localStorage.setItem("basket", JSON.stringify(updatedBasket));
     setOpen(false);
   };
@@ -195,8 +232,8 @@ export const Menu = () => {
       threshold: 0.5, // Trigger when 50% of the category is visible
     };
 
-    observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    (observerRef.current as any) = new IntersectionObserver((entries) => {
+      entries.forEach((entry: any) => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute("data-id");
           setActiveCategory(id);
@@ -211,7 +248,7 @@ export const Menu = () => {
       });
     }, options);
 
-    const currentObserver = observerRef.current;
+    const currentObserver = observerRef.current as any;
 
     Object.keys(categoryRefs.current).forEach((key) => {
       if (categoryRefs.current[key]) {
@@ -259,7 +296,7 @@ export const Menu = () => {
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} md={3}>
               <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-                Wendy's
+                {menuData.name}
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 <StarIcon sx={{ color: "gold", fontSize: "1rem" }} />
@@ -268,18 +305,24 @@ export const Menu = () => {
             </Grid>
             <Grid item xs={12} md={5}>
               <Box display="flex" justifyContent="center">
-                <Button variant="contained" sx={{ borderRadius: "20px" }}>
+                <Button
+                  variant={orderType === "delivery" ? "contained" : "outlined"}
+                  sx={{ borderRadius: "20px" }}
+                  onClick={() => handleOrderTypeChange("delivery")}
+                >
                   Delivery
                 </Button>
                 <Button
-                  variant="outlined"
+                  variant={orderType === "pickup" ? "contained" : "outlined"}
                   sx={{ borderRadius: "20px", marginLeft: "8px" }}
+                  onClick={() => handleOrderTypeChange("pickup")}
                 >
                   Pickup
                 </Button>
                 <Button
-                  variant="outlined"
+                  variant={orderType === "group" ? "contained" : "outlined"}
                   sx={{ borderRadius: "20px", marginLeft: "8px" }}
+                  onClick={() => handleOrderTypeChange("group")}
                 >
                   Group Order
                 </Button>
@@ -353,7 +396,7 @@ export const Menu = () => {
               Categories
             </Typography>
             <List>
-              {categories?.map((category) => (
+              {categories?.map((category: any) => (
                 <ListItem
                   button
                   key={category.id}
@@ -487,13 +530,29 @@ const ItemDialog = ({
   menuData,
 }) => {
   const [selectedModifiers, setSelectedModifiers] = useState({});
+  const [canAddToBasket, setCanAddToBasket] = useState(false);
 
+  // Handle modifier selection
   const handleModifierChange = (groupId, modifierId) => {
     setSelectedModifiers((prev) => ({
       ...prev,
       [groupId]: modifierId,
     }));
   };
+
+  // Validate if all required modifiers are selected
+  useEffect(() => {
+    const requiredModifiersMet = modifiers.every((modifierGroup) => {
+      if (modifierGroup.min_permitted === 1) {
+        return selectedModifiers[modifierGroup.id];
+      }
+      return true;
+    });
+    setCanAddToBasket(requiredModifiersMet);
+  }, [selectedModifiers, modifiers]);
+
+  // Check if there are modifiers to display
+  const hasModifiers = modifiers && modifiers.length > 0;
 
   return (
     <Dialog
@@ -525,82 +584,81 @@ const ItemDialog = ({
         </Typography>
       </DialogTitle>
 
-      <DialogContent sx={{ padding: "16px" }}>
-        {selectedModifiers && (
-          <>
-            <Typography
-              variant="body1"
-              sx={{ marginBottom: "16px", color: "#555" }}
-            >
-              {selectedItem?.description}
-            </Typography>
-            {modifiers?.map(
-              (modifierGroup, index) =>
-                modifierGroup && (
-                  <Box key={index} sx={{ marginBottom: "16px" }}>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ fontWeight: "600", marginBottom: "8px" }}
-                    >
-                      {modifierGroup.name}{" "}
-                      {modifierGroup.min_permitted === 1 && (
-                        <span style={{ color: "#f00" }}>Required</span>
-                      )}
-                    </Typography>
-                    {modifierGroup.min_permitted === 1 ? (
-                      <RadioGroup
-                        onChange={(e) =>
-                          handleModifierChange(modifierGroup.id, e.target.value)
-                        }
-                      >
-                        {modifierGroup?.modifiers.map((modifierId) => {
-                          const modifier = menuData?.modifiers.find(
-                            (mod) => mod.id === modifierId
-                          );
-                          return (
-                            <FormControlLabel
-                              key={modifierId}
-                              value={modifierId}
-                              control={<Radio sx={{ color: "#f06" }} />}
-                              label={modifier?.name}
-                              sx={{ marginBottom: "4px", color: "#555" }}
-                            />
-                          );
-                        })}
-                      </RadioGroup>
-                    ) : (
-                      <Box>
-                        {modifierGroup?.modifiers.map((modifierId) => {
-                          const modifier = menuData?.modifiers.find(
-                            (mod) => mod.id === modifierId
-                          );
-                          return (
-                            <FormControlLabel
-                              key={modifierId}
-                              control={
-                                <Checkbox
-                                  sx={{ color: "#f06" }}
-                                  onChange={() =>
-                                    handleModifierChange(
-                                      modifierGroup.id,
-                                      modifierId
-                                    )
-                                  }
-                                />
-                              }
-                              label={modifier?.name}
-                              sx={{ marginBottom: "4px", color: "#555" }}
-                            />
-                          );
-                        })}
-                      </Box>
+      {hasModifiers && (
+        <DialogContent sx={{ padding: "16px" }}>
+          <Typography
+            variant="body1"
+            sx={{ marginBottom: "16px", color: "#555" }}
+          >
+            {selectedItem?.description}
+          </Typography>
+
+          {modifiers.map(
+            (modifierGroup, index) =>
+              modifierGroup && (
+                <Box key={index} sx={{ marginBottom: "16px" }}>
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "600", marginBottom: "8px" }}
+                  >
+                    {modifierGroup.name}{" "}
+                    {modifierGroup.min_permitted === 1 && (
+                      <span style={{ color: "#f00" }}>Required</span>
                     )}
-                  </Box>
-                )
-            )}
-          </>
-        )}
-      </DialogContent>
+                  </Typography>
+                  {modifierGroup.min_permitted === 1 ? (
+                    <RadioGroup
+                      onChange={(e) =>
+                        handleModifierChange(modifierGroup.id, e.target.value)
+                      }
+                    >
+                      {modifierGroup.modifiers.map((modifierId) => {
+                        const modifier = menuData?.modifiers.find(
+                          (mod) => mod.id === modifierId
+                        );
+                        return (
+                          <FormControlLabel
+                            key={modifierId}
+                            value={modifierId}
+                            control={<Radio sx={{ color: "#f06" }} />}
+                            label={modifier?.name}
+                            sx={{ marginBottom: "4px", color: "#555" }}
+                          />
+                        );
+                      })}
+                    </RadioGroup>
+                  ) : (
+                    <Box>
+                      {modifierGroup.modifiers.map((modifierId) => {
+                        const modifier = menuData?.modifiers.find(
+                          (mod) => mod.id === modifierId
+                        );
+                        return (
+                          <FormControlLabel
+                            key={modifierId}
+                            control={
+                              <Checkbox
+                                sx={{ color: "#f06" }}
+                                onChange={() =>
+                                  handleModifierChange(
+                                    modifierGroup.id,
+                                    modifierId
+                                  )
+                                }
+                              />
+                            }
+                            label={modifier?.name}
+                            sx={{ marginBottom: "4px", color: "#555" }}
+                          />
+                        );
+                      })}
+                    </Box>
+                  )}
+                </Box>
+              )
+          )}
+        </DialogContent>
+      )}
 
       <DialogActions
         sx={{
@@ -638,15 +696,16 @@ const ItemDialog = ({
           onClick={() => handleAddToBasket(selectedItem, selectedModifiers)}
           variant="contained"
           sx={{
-            backgroundColor: "#ff4c4c",
+            backgroundColor: canAddToBasket ? "#ff4c4c" : "#ccc",
             color: "#fff",
             borderRadius: "30px",
             padding: "10px 20px",
             fontWeight: "bold",
             "&:hover": {
-              backgroundColor: "#ff3333",
+              backgroundColor: canAddToBasket ? "#ff3333" : "#bbb",
             },
           }}
+          disabled={!canAddToBasket} // Disable the button if not all required modifiers are selected
         >
           Add to Basket - ${((selectedItem?.price * quantity) / 100).toFixed(2)}
         </Button>

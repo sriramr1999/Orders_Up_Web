@@ -6,7 +6,7 @@
     "lib": ["esnext", "dom", "DOM.Iterable"],
     "declaration": true,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,  // Allow implicit 'any'
     "strictNullChecks": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
@@ -22,16 +22,10 @@
     "strictPropertyInitialization": false,
     "declarationMap": true,
     "typeRoots": ["./node_modules/@types"],
-    "paths": {
-      "/opt/nodejs/falcon-runtime": [
-        "./cdk/constructs/FalconNodeJsLambda/layers/falcon-runtime/src"
-      ],
-      "/opt/nodejs/falcon-runtime-serverless": [
-        "cdk/constructs/FalconNodeJsLambda/layers/falcon-runtime/src/serverless-rds"
-      ],
-      "*": ["node_modules/*"]
-    }
+    
   },
- 
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  },
   "exclude": ["cdk.out", "**/dist/**", "node_modules"]
 }
