@@ -147,10 +147,16 @@ export const Layout: React.FC = () => {
     updateLocalStorage(newBasket);
   };
 
-  // const handleViewEntireMenu = (storeId) => {
-  //   handleCloseDrawer(); // Close the drawer
-  //   navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
-  // };
+  const handleViewEntireMenu = (storeId) => {
+    handleCloseDrawer(); // Close the drawer
+    navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
+  };
+
+  const handleDiscardMenu = (storeId) => {
+    const newBasket = { ...storedBasket };
+    delete newBasket[storeId]; // Remove all items for the store
+    updateLocalStorage(newBasket);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -230,7 +236,7 @@ export const Layout: React.FC = () => {
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Shadow effect
                     borderRadius: "20px", // Rounded corners
                     marginBottom: "8px", // Space between accordions
-                    marginTop: "8px", // Space between accordions
+                    marginTop: "20px", // Space between accordions
                     overflow: "hidden", // Prevent shadow clipping
                   }}
                 >
@@ -245,7 +251,7 @@ export const Layout: React.FC = () => {
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
-                      borderRadius: "20px", // Apply rounded corners to summary
+                      borderRadius: "50px", // Apply rounded corners to summary
                       "&.Mui-expanded": {
                         minHeight: 0,
                         borderBottomLeftRadius: 0, // Remove bottom corners when expanded
@@ -256,26 +262,58 @@ export const Layout: React.FC = () => {
                       },
                     }}
                   >
-                    <Box>
-                      <Typography
-                        variant="subtitle1"
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        flexGrow: 1,
+                      }}
+                    >
+                      <Avatar
+                        src={`/path/to/store-images/${storeId}.jpg`} // Adjust the path to your store images
+                        alt={`${restaurantNames[storeId]} logo`}
                         sx={{
-                          fontWeight: "bold",
-                          fontSize: "1rem",
-                          textAlign: "center",
+                          width: 50, // Increased size of the store image
+                          height: 50, // Increased size of the store image
+                          marginLeft: "10px", // Small gap between image and border
+                          marginRight: "10px", // Space between the image and the store name
+                          borderRadius: 2,
                         }}
-                      >
-                        {restaurantNames[storeId] || `Store ID: ${storeId}`}
-                      </Typography>
-                      {/* <Button
-                        variant="text"
-                        sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
-                        onClick={() => handleViewEntireMenu(storeId)}
-                      >
-                        View Entire Menu
-                      </Button> */}
+                      />
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            fontWeight: "bold",
+                            fontSize: "1rem",
+                            textAlign: "left", // Align the name to the left
+                          }}
+                        >
+                          {restaurantNames[storeId] || `Store ID: ${storeId}`}
+                        </Typography>
+                        <Button
+                          variant="text"
+                          sx={{
+                            textTransform: "none",
+                            color: "#d82927",
+                            marginTop: "2px", // Reduced space between the name and the button
+                            padding: 0, // Remove any padding to bring it closer
+                            minHeight: "unset", // Ensure it doesn't have extra height
+                          }}
+                          onClick={() => handleViewEntireMenu(storeId)}
+                        >
+                          View Menu
+                        </Button>
+                      </Box>
                     </Box>
+                    <IconButton
+                      onClick={() => handleDiscardMenu(storeId)} // Discard button moved before the expand icon
+                      sx={{ color: "error.main" }}
+                    >
+                      <CloseIcon />
+                    </IconButton>
                   </AccordionSummary>
+
                   <AccordionDetails sx={{ padding: 0 }}>
                     {/* Items for the Store */}
                     <List>
@@ -293,8 +331,8 @@ export const Layout: React.FC = () => {
                             alt={item.item.name}
                             variant="rounded"
                             sx={{
-                              width: 60,
-                              height: 60,
+                              width: 40, // Smaller size for item image
+                              height: 40, // Smaller size for item image
                               marginRight: 2,
                               borderRadius: 2,
                             }}
@@ -302,10 +340,11 @@ export const Layout: React.FC = () => {
                           <ListItemText
                             primary={
                               <Typography
-                                variant="subtitle1"
+                                variant="subtitle2"
+                                noWrap // Ensures the name is on one line
                                 sx={{
-                                  fontWeight: "bold",
-                                  fontSize: "1rem",
+                                  overflow: "hidden", // Ensures overflow content is hidden
+                                  textOverflow: "ellipsis", // Adds ellipsis at the end if content overflows
                                 }}
                               >
                                 {item.item.name}

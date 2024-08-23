@@ -192,7 +192,7 @@ export const CheckoutPage = () => {
           <Box display="flex" justifyContent="center" mt={4}>
             <Button
               variant="contained"
-              color="primary"
+              color="error"
               fullWidth
               onClick={handleOnclick}
               sx={{
