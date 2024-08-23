@@ -13,7 +13,7 @@ import { FoodCategories } from "../../components/FoodCategories";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarIcon from "@mui/icons-material/Star";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";  // Import useNavigate
+import { useNavigate, useOutletContext } from "react-router-dom"; // Import useOutletContext
 
 const ContentArea = styled(Box)({
   backgroundColor: "#ffffff",
@@ -38,7 +38,8 @@ export const Home: FC = () => {
   const [restaurantData, setRestaurantData] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const scrollRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();  // Initialize useNavigate
+  const navigate = useNavigate(); 
+  const { searchQuery } = useOutletContext<{ searchQuery: string }>(); // Use context to get searchQuery
 
   useEffect(() => {
     const fetchRestaurantData = async () => {
@@ -66,14 +67,15 @@ export const Home: FC = () => {
     }
   };
 
-  // Filter the restaurants based on selected category
-  const filteredRestaurants = selectedCategory
-    ? restaurantData.filter((restaurant) =>
-        restaurant.cuisine?.some((cuisine: string) =>
+  // Filter the restaurants based on selected category and search query
+  const filteredRestaurants = restaurantData.filter((restaurant) =>
+    restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+    (selectedCategory
+      ? restaurant.cuisine?.some((cuisine: string) =>
           cuisine.trim().toLowerCase() === selectedCategory.trim().toLowerCase()
         )
-      )
-    : restaurantData;
+      : true)
+  );
 
   // Handle card click to navigate to the menu page
   const handleCardClick = (storeId: string) => {
@@ -81,109 +83,107 @@ export const Home: FC = () => {
   };
 
   return (
+    <ContentArea>
+      <ScrollContainer ref={scrollRef}>
+        <FoodCategories
+          onSelectCategory={(category: string) => setSelectedCategory(category)}
+          selectedCategory={selectedCategory} // Pass the selected category to FoodCategories
+        />
+      </ScrollContainer>
 
-          <ContentArea>
-            <ScrollContainer ref={scrollRef}>
-              <FoodCategories
-                onSelectCategory={(category: string) => setSelectedCategory(category)}
-                selectedCategory={selectedCategory} // Pass the selected category to FoodCategories
+      <Grid container spacing={3}>
+        {filteredRestaurants.map((restaurant, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Card
+              onClick={() => handleCardClick(restaurant.id)} // Add onClick handler here
+              sx={{
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                  cursor: "pointer",
+                },
+                "&:active": {
+                  transform: "scale(0.95)",
+                  transition: "transform 0.1s ease",
+                },
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="140"
+                image={restaurant.image}
+                alt={restaurant.name}
+                sx={{
+                  borderBottomLeftRadius: 0,
+                  borderBottomRightRadius: 0,
+                }}
               />
-            </ScrollContainer>
-
-            <Grid container spacing={3}>
-              {filteredRestaurants.map((restaurant, index) => (
-                <Grid item xs={12} sm={6} md={3} key={index}>
-                  <Card
-                    onClick={() => handleCardClick(restaurant.id)} // Add onClick handler here
+              <CardContent sx={{ padding: "16px" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Typography variant="h6" gutterBottom>
+                    {restaurant.name}
+                  </Typography>
+                  <FavoriteBorderIcon
+                    sx={{ color: "#ff1744", fontSize: "1rem" }}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "8px",
+                  }}
+                >
+                  <StarIcon sx={{ color: "gold", fontSize: "0.9rem" }} />
+                  <Typography
+                    variant="body2"
+                    sx={{ marginLeft: "4px", color: "text.secondary" }}
+                  >
+                    {restaurant.rating} ({restaurant.reviews}) •{" "}
+                    {restaurant.distance} • {restaurant.time}
+                  </Typography>
+                </Box>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", fontSize: "0.85rem" }}
+                >
+                  {restaurant.deliveryFee}
+                </Typography>
+                {restaurant.promo && (
+                  <Button
+                    variant="contained"
                     sx={{
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                      marginTop: "8px",
+                      backgroundColor: "#ff5722",
+                      color: "#ffffff",
+                      textTransform: "none",
+                      fontSize: "0.8rem",
+                      padding: "4px 8px",
+                      width: "100%",
                       "&:hover": {
-                        transform: "scale(1.05)",
-                        boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
-                        cursor: "pointer",
-                      },
-                      "&:active": {
-                        transform: "scale(0.95)",
-                        transition: "transform 0.1s ease",
+                        backgroundColor: "#e64a19",
                       },
                     }}
+                    size="small"
                   >
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={restaurant.image}
-                      alt={restaurant.name}
-                      sx={{
-                        borderBottomLeftRadius: 0,
-                        borderBottomRightRadius: 0,
-                      }}
-                    />
-                    <CardContent sx={{ padding: "16px" }}>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Typography variant="h6" gutterBottom>
-                          {restaurant.name}
-                        </Typography>
-                        <FavoriteBorderIcon
-                          sx={{ color: "#ff1744", fontSize: "1rem" }}
-                        />
-                      </Box>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          marginBottom: "8px",
-                        }}
-                      >
-                        <StarIcon sx={{ color: "gold", fontSize: "0.9rem" }} />
-                        <Typography
-                          variant="body2"
-                          sx={{ marginLeft: "4px", color: "text.secondary" }}
-                        >
-                          {restaurant.rating} ({restaurant.reviews}) •{" "}
-                          {restaurant.distance} • {restaurant.time}
-                        </Typography>
-                      </Box>
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "text.secondary", fontSize: "0.85rem" }}
-                      >
-                        {restaurant.deliveryFee}
-                      </Typography>
-                      {restaurant.promo && (
-                        <Button
-                          variant="contained"
-                          sx={{
-                            marginTop: "8px",
-                            backgroundColor: "#ff5722",
-                            color: "#ffffff",
-                            textTransform: "none",
-                            fontSize: "0.8rem",
-                            padding: "4px 8px",
-                            width: "100%",
-                            "&:hover": {
-                              backgroundColor: "#e64a19",
-                            },
-                          }}
-                          size="small"
-                        >
-                          {restaurant.promo}
-                        </Button>
-                      )}
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </ContentArea>
-
+                    {restaurant.promo}
+                  </Button>
+                )}
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </ContentArea>
   );
 };
