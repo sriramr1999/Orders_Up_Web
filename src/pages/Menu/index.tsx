@@ -176,11 +176,13 @@ export const Menu = () => {
 
   const handleAddToBasket = (menuName, selectedItem, selectedModifiers) => {
     const basketItem = {
-      name: menuName,
+      name: menuName?.name,
+      image: menuName?.logo,
       item: {
         id: selectedItem.id,
         name: selectedItem.name,
         price: selectedItem.price,
+        image: selectedItem.image,
       },
       quantity,
       modifiers: Object.keys(selectedModifiers).map((groupId) => {
@@ -284,29 +286,27 @@ export const Menu = () => {
 
   return (
     <>
-      {isItemThrown && (
-        <div
-          className="thrown-item"
-          style={{
-            top: "50%",
-            left: "50%",
-            backgroundImage: `url(${
-              selectedItem?.image || "https://images.app.goo.gl/TaSZYYUuJShMj8rv8"
-            })`,
-            backgroundSize: "cover",
-            width: "50px",
-            height: "50px",
-            position: "fixed",
-            zIndex: 1000,
-            pointerEvents: "none",
-            animation: "throwToCart 0.7s ease-in-out forwards",
-          }}
-        />
-      )}
-      <Box>
+      <Box sx={{ mt: 2 }}>
+        {isItemThrown && (
+          <div
+            className="thrown-item"
+            style={{
+              top: "50%",
+              left: "50%",
+              backgroundImage: `url(${"https://images.app.goo.gl/TaSZYYUuJShMj8rv8"})`,
+              backgroundSize: "cover",
+              width: "50px",
+              height: "50px",
+              position: "fixed",
+              zIndex: 1000,
+              pointerEvents: "none",
+              animation: "throwToCart 0.7s ease-in-out forwards",
+            }}
+          />
+        )}
         <Grid container alignItems="center" spacing={2}>
           <Grid item xs={12}>
-            <ImageCard />
+            <ImageCard logo={menuData.logo} bgImage={menuData.bgImage} />
           </Grid>
         </Grid>
       </Box>
@@ -468,7 +468,6 @@ export const Menu = () => {
               ))}
             </List>
           </Box>
-
           <Box>
             <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
               Quick Links
@@ -739,7 +738,7 @@ const ItemDialog = ({
         </Box>
         <Button
           onClick={() =>
-            handleAddToBasket(menuData?.name, selectedItem, selectedModifiers)
+            handleAddToBasket(menuData, selectedItem, selectedModifiers)
           }
           variant="contained"
           sx={{
@@ -758,6 +757,5 @@ const ItemDialog = ({
         </Button>
       </DialogActions>
     </Dialog>
-    
   );
 };
