@@ -1,11 +1,11 @@
 {
-  "id" : 3,
-  "name": "Subway",
-  "image": "src/assets/images/subway.jpg",
-  "rating": 4.3,
-  "reviews": "5.2k+",
-  "distance": "3.8 mi",
-  "time": "25 min",
-  "deliveryFee": "$2.99 delivery fee",
-  "cuisine": ["Sandwiches", "Salads"]
+  "id" : 6,
+  "name": "KFC",
+  "image": "src/assets/images/KFC.jpg",
+  "rating": 4.0,
+  "reviews": "6.8k+",
+  "distance": "4.7 mi",
+  "time": "29 min",
+  "deliveryFee": "$4.29 delivery fee",
+  "cuisine": ["Chicken", "Fast Food"]
 }
