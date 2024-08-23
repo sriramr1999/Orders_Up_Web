@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import {
   Box,
   Container,
@@ -37,7 +37,7 @@ const calculateSubtotal = (orders: any[]) => {
   }, 0);
 };
 
-export const CheckoutPage = () => {
+export const Cart: FC = () => {
   const [orderData, setOrderData] = useState(
     JSON.parse(localStorage.getItem("basket") as any) || {}
   );

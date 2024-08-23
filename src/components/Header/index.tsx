@@ -15,7 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { FC, useEffect, useState } from "react";
 import { styled } from "@mui/system";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const HeaderButton = styled(Button, {
@@ -51,9 +51,13 @@ export const Header: FC<HeaderProps> = ({
   onSearchChange, // Receiving the search change function
 }) => {
   const { storeId } = useParams();
-
+  const navigate = useNavigate();
   const [storedBasket, setStoreBasket] = useState("");
   const totalItems = Object.keys(storedBasket || {}).length;
+
+  const handleLogoClick = () => {
+    navigate("/stores"); // Replace "/desired-path" with your target route
+  };
 
   useEffect(() => {
     setStoreBasket(JSON.parse(localStorage.getItem("basket")));
@@ -77,11 +81,14 @@ export const Header: FC<HeaderProps> = ({
               <Grid item xs={3}>
                 <Typography
                   variant="h6"
-                  sx={{ fontWeight: "bold", color: "black" }}
+                  sx={{ fontWeight: "bold", color: "black", cursor: "pointer" }}
+                  onClick={handleLogoClick}
                 >
-                  <img
+                  <Box
+                    component="img"
                     src="https://foodhub.co.uk/compressed_images/logo.svg"
                     alt="Logo"
+                    sx={{ maxWidth: "150px" }} // Adjust size as needed
                   />
                 </Typography>
               </Grid>
