@@ -39,26 +39,26 @@ interface HeaderProps {
   selectedOption: "delivery" | "pickup";
   handleOptionChange: (option: "delivery" | "pickup") => void;
   onCartClick: () => void;
+  onSearchChange: (query: string) => void; // New prop for handling search input
 }
 
 export const Header: FC<HeaderProps> = ({
   selectedOption,
   handleOptionChange,
   onCartClick,
+  onSearchChange, // Receiving the search change function
 }) => {
   const { storeId } = useParams();
   const [storedBasket, setStoreBasket] = useState("");
-  console.log(storedBasket, "storedBasket");
-  // Calculate the total number of items in the basket
-  const totalItems = Object.keys(storedBasket || {}).length;
+  const totalItems = Object.values(storedBasket || {}).reduce(
+    (acc, items: any) =>
+      acc + items?.reduce((sum, item) => sum + item.quantity, 0),
+    0
+  );
 
   useEffect(() => {
-    setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
-  }, [JSON.parse(localStorage.getItem("basket") as any)]);
-
-  // useEffect(() => {
-  //   setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
-  // }, []);
+    setStoreBasket(JSON.parse(localStorage.getItem("basket")));
+  }, [JSON.parse(localStorage.getItem("basket"))]);
 
   return (
     <AppBar
@@ -99,6 +99,7 @@ export const Header: FC<HeaderProps> = ({
                     maxWidth: 600,
                     boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.1)",
                   }}
+                  onChange={(e) => onSearchChange(e.target.value)}
                 />
               </Box>
             )}
@@ -112,6 +113,7 @@ export const Header: FC<HeaderProps> = ({
             justifyContent="flex-end"
             alignItems="center"
           >
+            {/* New Button with Location Icon */}
             <HeaderButton onClick={() => console.log("New button clicked")}>
               <LocationOnIcon htmlColor="#d82927" sx={{ mr: 1 }} />
               <b>Stoke-on-Trent</b>
