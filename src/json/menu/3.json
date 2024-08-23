@@ -1,0 +1,785 @@
+{
+  "id": "3",
+  "name": "KFC",
+  "logo": "https://www.shutterstock.com/shutterstock/photos/2269871217/display_1500/stock-vector-kfc-logo-icon-art-design-vector-isolated-head-face-people-person-illustration-american-store-bernie-2269871217.jpg",
+  "bgImage": " https://cdn4.singleinterface.com/files/enterprise/coverphoto/34404/KFC-BAnner-20-02-24-05-04-08.jpg",
+  "modifier_groups": [
+    {
+      "id": "19d1ff32-6909-4c1a-a3be-0bd493ef35e1",
+      "name": "Syrups and sauces",
+      "modifiers": [
+        "80017198-9d46-4ad4-8582-59bf0083fff3",
+        "546d7309-a0ae-4423-aab3-23e982b6652a",
+        "93664bab-fdd1-4820-8d7a-8cc731c02437",
+        "dfa6d869-c116-492f-bab7-069651c98bd4",
+        "e5750ec0-182d-442e-961a-a9e4455d6d8a"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 2
+    },
+    {
+      "id": "baec0e08-e06a-4b14-93cd-eb0c2ea6d2c9",
+      "name": "Addons",
+      "modifiers": [
+        "dba39194-d02b-43c9-958c-98a0fcdd87d9",
+        "251ebcfa-952a-4cbe-9bc2-57f84159a6f2",
+        "115feb32-6b2b-41ad-8adb-c3b5b7d55720",
+        "6f11cecc-054c-46e0-a531-b7784151f750",
+        "0b86b2d4-8899-4e5a-a975-388793e24907",
+        "7ba11d13-ccb2-42d8-ad39-a2f9634037b2"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 2
+    },
+    {
+      "id": "1720677a-05cc-4238-97b3-ff5aa99ce768",
+      "name": "Extra Toppings",
+      "modifiers": [
+        "251ebcfa-952a-4cbe-9bc2-57f84159a6f2",
+        "b3c3bf3b-bcc8-47cb-ace3-4bac04bb7df6",
+        "df130859-94d4-4042-95cd-7c74a62f915d",
+        "4455b33f-e634-4b34-9cba-c1f6425312c8"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 3
+    },
+    {
+      "id": "78ec1618-beca-4239-bce6-5c6ec0bd11f8",
+      "name": "Choice of sauces",
+      "modifiers": [
+        "5ad7827f-8b45-4e75-a4cb-b37963fd70d6",
+        "1da082df-da6b-43bf-9d53-581c214a1acd"
+      ],
+      "description": "",
+      "min_permitted": 0,
+      "max_permitted": 2
+    },
+    {
+      "id": "40d03c54-9a4e-40a9-a137-66dfe1102399",
+      "name": "Drinks",
+      "modifiers": [
+        "7a4e8e77-f996-41af-8790-84102ec9e01e",
+        "59260af6-6809-48b9-948c-64d4e48ef03e",
+        "7ba11d13-ccb2-42d8-ad39-a2f9634037b2"
+      ],
+      "description": "",
+      "min_permitted": 1,
+      "max_permitted": 1
+    }
+  ],
+  "categories": [
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Beverages",
+      "id": "eab0c343-c47d-45d6-b725-54c20c494797",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["eab0c343-c47d-45d6-b725-54c20c494797"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Snacks",
+      "id": "abf35ec9-58d9-46aa-bd7c-ea2e86cae984",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["abf35ec9-58d9-46aa-bd7c-ea2e86cae984"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Fresh Fruits",
+      "id": "0b30cb3d-3707-4499-8006-30b97be5b71f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["0b30cb3d-3707-4499-8006-30b97be5b71f"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Lunch",
+      "id": "bb270b84-6aa1-4527-ae9c-f8f5249272e6",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["bb270b84-6aa1-4527-ae9c-f8f5249272e6"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Breakfast3",
+      "id": "59978e51-f7d6-482e-9aae-a58b82438078",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["59978e51-f7d6-482e-9aae-a58b82438078"],
+      "show_online": true
+    },
+
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Drinks",
+      "id": "5cc6c52d-36a0-4c29-9305-a998b072c6a9",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["5cc6c52d-36a0-4c29-9305-a998b072c6a9"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Briyani",
+      "id": "212cba2b-f8c1-4736-8aba-76df3fcbb4c9",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["212cba2b-f8c1-4736-8aba-76df3fcbb4c9"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Burger",
+      "id": "f77274d1-4fbb-4ffc-9c01-726dce919bc0",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "subcategories": ["f77274d1-4fbb-4ffc-9c01-726dce919bc0"],
+      "show_online": true
+    }
+  ],
+  "subcategories": [
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Pure Veg",
+      "description": "",
+      "id": "5e7e962e-62c0-4f14-979c-d67e8c683562",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": ["5daa343a-ce87-412e-930d-abd1565e112f"],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Snacks",
+      "description": "",
+      "id": "abf35ec9-58d9-46aa-bd7c-ea2e86cae984",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "4c525de7-55a6-4a73-8822-a5ecc3c97c66",
+        "e50ca9af-1dc9-4fb9-bdee-cc4796569638",
+        "47df0657-a5a1-453a-b6f3-ccaf5b328ec5",
+        "f1037512-e9d1-493a-b775-e094268fd202",
+        "17eb36c1-a39c-4386-87e0-987bd8aedbe2"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Fresh Fruits",
+      "description": "",
+      "id": "0b30cb3d-3707-4499-8006-30b97be5b71f",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "e6c0b32d-3a74-48ec-be06-c8705d0468dd",
+        "c17221cc-c3e4-43a9-bff3-e7e153794881"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Lunch",
+      "description": "",
+      "id": "bb270b84-6aa1-4527-ae9c-f8f5249272e6",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "4adade63-55fb-43e6-82de-c228037df485",
+        "ba3a8559-e28b-4ce1-83df-a5c3b982ac03",
+        "65322497-cb26-464f-a3dc-c1e629e34374"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Breakfast3",
+      "description": "",
+      "id": "59978e51-f7d6-482e-9aae-a58b82438078",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "ebaebd78-b0af-47b8-9d5f-896fe5d356b1",
+        "a74b5e85-bb9f-41f7-afce-af71b140d0e1",
+        "1ccf6d5b-4f42-4784-a473-c7423f3bf1ad",
+        "e735d53b-bdc1-45c7-a3fe-9d2db8e4b720"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Beverages",
+      "description": "",
+      "id": "eab0c343-c47d-45d6-b725-54c20c494797",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "a3cfa14f-f592-489c-bf36-00d3adf5fe2c",
+        "cbe6f739-5b1e-498d-9e85-a4878175c55f",
+        "9ce6cad1-80f4-40b7-9285-5760fa0e5333"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Drinks",
+      "description": "",
+      "id": "5cc6c52d-36a0-4c29-9305-a998b072c6a9",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "2ebf123e-c510-4337-b47c-869e080784de",
+        "1a9d37a6-b765-4a69-ac7c-2b996f92d6c1",
+        "be280037-5e04-49a5-9e6e-98b4e0452140"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Briyani",
+      "description": "",
+      "id": "212cba2b-f8c1-4736-8aba-76df3fcbb4c9",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "5cb58d7e-51ee-4b1c-b2cd-5ef0fadce082",
+        "c9020e8d-3bc3-4d61-b164-14a3adbf60ab",
+        "01a1223c-eade-4aca-96a8-2aa4e8a0fa84"
+      ],
+      "show_online": true
+    },
+    {
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "name": "Burger",
+      "description": "",
+      "id": "f77274d1-4fbb-4ffc-9c01-726dce919bc0",
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "is_tax_included": true,
+      "items": [
+        "3a9b4a5e-4d3e-4d83-b9c9-a794e7c48a6a",
+        "4682200b-3d86-41af-90b4-683b777daaaa",
+        "35297f98-47c2-4f44-ae89-f5d3710657e7",
+        "3586dd36-93f7-43ea-8ac8-19fda003766d",
+        "4205122b-67a0-4214-8c6e-146afb3b3a16",
+        "ffceb321-7270-469b-8a34-93f6c568097f"
+      ],
+      "show_online": true
+    }
+  ],
+  "modifiers": [
+    {
+      "price": 1500,
+      "name": "Gralic Sauce",
+      "id": "115feb32-6b2b-41ad-8adb-c3b5b7d55720",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 187,
+      "name": "mocha sauce",
+      "id": "dfa6d869-c116-492f-bab7-069651c98bd4",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 186,
+      "name": "hazelnut syrup",
+      "id": "546d7309-a0ae-4423-aab3-23e982b6652a",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 187,
+      "name": "caramel syrup",
+      "id": "93664bab-fdd1-4820-8d7a-8cc731c02437",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 250,
+      "name": "Garlic Sauce",
+      "id": "6f11cecc-054c-46e0-a531-b7784151f750",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 178,
+      "name": "vanilla syrup",
+      "id": "80017198-9d46-4ad4-8582-59bf0083fff3",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 297,
+      "name": "Gulab Jamun",
+      "id": "251ebcfa-952a-4cbe-9bc2-57f84159a6f2",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 167,
+      "name": "Bread halwa",
+      "id": "7ba11d13-ccb2-42d8-ad39-a2f9634037b2",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 1400,
+      "name": "Anchoive",
+      "id": "0b86b2d4-8899-4e5a-a975-388793e24907",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 10,
+      "name": "Soy Sauce",
+      "id": "1da082df-da6b-43bf-9d53-581c214a1acd",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 10,
+      "name": "Chilly Sauce",
+      "id": "5ad7827f-8b45-4e75-a4cb-b37963fd70d6",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 187,
+      "name": "Extra raita",
+      "id": "dba39194-d02b-43c9-958c-98a0fcdd87d9",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 176,
+      "name": "white mocha sauce",
+      "id": "e5750ec0-182d-442e-961a-a9e4455d6d8a",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 175,
+      "name": "Pepesi",
+      "id": "59260af6-6809-48b9-948c-64d4e48ef03e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 167,
+      "name": "Asorted Nuts",
+      "id": "4455b33f-e634-4b34-9cba-c1f6425312c8",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 225,
+      "name": "Coca Cola",
+      "id": "7a4e8e77-f996-41af-8790-84102ec9e01e",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 167,
+      "name": "Choco chips",
+      "id": "b3c3bf3b-bcc8-47cb-ace3-4bac04bb7df6",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    },
+    {
+      "price": 256,
+      "name": "Almonds",
+      "id": "df130859-94d4-4042-95cd-7c74a62f915d",
+      "is_tax_included": true,
+      "image": "",
+      "show_online": true
+    }
+  ],
+  "items": [
+    {
+      "modifier_groups": ["19d1ff32-6909-4c1a-a3be-0bd493ef35e1"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 250,
+      "name": "Coffeess",
+      "id": "a3cfa14f-f592-489c-bf36-00d3adf5fe2c",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/952bfbb3-dfd6-4339-893c-b6255f89372c/4973a2fc-ddee-4747-8342-28c5e905c5fb"
+    },
+    {
+      "modifier_groups": ["19d1ff32-6909-4c1a-a3be-0bd493ef35e1"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 200,
+      "name": "Hot Coffee",
+      "id": "cbe6f739-5b1e-498d-9e85-a4878175c55f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["baec0e08-e06a-4b14-93cd-eb0c2ea6d2c9"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1500,
+      "name": "Kadai mutton",
+      "id": "4adade63-55fb-43e6-82de-c228037df485",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/bbb0d18e-e8ae-4d37-a58a-0d2debd608e5/2fca1259-8d3b-4f59-b3ec-3c883cc22807"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Chicken Biriyani",
+      "id": "5cb58d7e-51ee-4b1c-b2cd-5ef0fadce082",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/47d8b5ca-2d56-4141-bc9a-270fc0276d6c/c7e2344c-a943-4665-8ae0-768f898a4d81"
+    },
+    {
+      "modifier_groups": ["baec0e08-e06a-4b14-93cd-eb0c2ea6d2c9"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1056,
+      "name": "Mutton Dum Biriyani spl",
+      "id": "c9020e8d-3bc3-4d61-b164-14a3adbf60ab",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/a96610e8-3a40-4ed3-9e65-d6ca26c0441c/d6ee884e-9941-4a73-a5dc-7e130e0b56f6"
+    },
+    {
+      "modifier_groups": ["19d1ff32-6909-4c1a-a3be-0bd493ef35e1"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 300,
+      "name": "Hot Tea",
+      "id": "9ce6cad1-80f4-40b7-9285-5760fa0e5333",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 100,
+      "name": "Onion Raitha",
+      "id": "5daa343a-ce87-412e-930d-abd1565e112f",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "Single Patty",
+      "id": "3a9b4a5e-4d3e-4d83-b9c9-a794e7c48a6a",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/126c32e1-1571-4290-93fe-4442e4f2577f/9dcd1556-269a-4cf2-8196-63e44b614421"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 900,
+      "name": "Mutton Briyani",
+      "id": "01a1223c-eade-4aca-96a8-2aa4e8a0fa84",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/80fa2c01-e7cc-46ba-a606-ad4523e0af71/d8faa2d8-f2ba-4346-a532-49dbea6754bc"
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 576,
+      "name": "Strawberry Ice cream",
+      "id": "4c525de7-55a6-4a73-8822-a5ecc3c97c66",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/e4dfa6f9-d1d0-44ad-a22b-3d306c7e6321/cb7ae87b-9f21-46e5-bd38-f487a4b4adb1"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 10,
+      "name": "Mayo",
+      "id": "4682200b-3d86-41af-90b4-683b777daaaa",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/2ad11ef2-b0ac-4f86-abe4-536c3c4850de/d9b69087-bcde-4dbb-9ecc-67f5c2dd6537"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 2000,
+      "name": "Curd",
+      "id": "ebaebd78-b0af-47b8-9d5f-896fe5d356b1",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/045871da-fd36-4575-8f78-bc94401edf11/fbd110b4-1de5-42d5-b2d1-5e5a3a9af29e"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 335,
+      "name": "Red Grapes",
+      "id": "e6c0b32d-3a74-48ec-be06-c8705d0468dd",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/d0a81484-f8cc-4516-b44e-de6c60028854/3723cdea-fcda-49c3-bce7-aee2a6b8b01f"
+    },
+    {
+      "modifier_groups": ["40d03c54-9a4e-40a9-a137-66dfe1102399"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 575,
+      "name": "Sandwich with Drinks",
+      "id": "e50ca9af-1dc9-4fb9-bdee-cc4796569638",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 500,
+      "name": "Chocolate Ice cream",
+      "id": "47df0657-a5a1-453a-b6f3-ccaf5b328ec5",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/f48b0531-d1ba-4689-9f9c-d052a80e8089/2eb61865-798b-4482-bbd3-8fc28e08bd83"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 10,
+      "name": "Ketchup",
+      "id": "35297f98-47c2-4f44-ae89-f5d3710657e7",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/7dec89b8-eddd-4f88-9a95-018b866a6896/6bbbfd56-fddd-4213-be06-5d9f367cc96e"
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Strawberry milkshake",
+      "id": "2ebf123e-c510-4337-b47c-869e080784de",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/46f11f22-1c11-427e-a913-02e86909a789/5ddbf7f5-e55c-4acb-8791-3ee744529ef6"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 300,
+      "name": "Any Pizza Any Size",
+      "id": "a74b5e85-bb9f-41f7-afce-af71b140d0e1",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["78ec1618-beca-4239-bce6-5c6ec0bd11f8"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1200,
+      "name": "Custom Burger",
+      "id": "3586dd36-93f7-43ea-8ac8-19fda003766d",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/ec15f72f-558e-43ec-ab4b-b1fe8db3d12d/fb1b8734-b238-4fc0-8657-2191975826ea"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "BBQ Base",
+      "id": "ba3a8559-e28b-4ce1-83df-a5c3b982ac03",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/829c0855-82f3-4479-84d0-df7e1354d1fb/d9cb2dcb-acd5-4f90-b35c-462b93138ea5"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 225,
+      "name": "Green Grapes",
+      "id": "c17221cc-c3e4-43a9-bff3-e7e153794881",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/4bbe5ccb-8906-4146-8d62-bfee2d0b8146/0448dca7-1ac9-41db-bc58-5a53b9e9eccb"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 750,
+      "name": "Fruit Salads",
+      "id": "1ccf6d5b-4f42-4784-a473-c7423f3bf1ad",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 0,
+      "name": "BBQ Chickensad",
+      "id": "65322497-cb26-464f-a3dc-c1e629e34374",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/b9bf0c6d-a795-4a1f-bf97-7eb38a8d1a40/f3e541c2-cbad-4b0c-bfd9-05e98b920ff0"
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Chocolate milkshake",
+      "id": "1a9d37a6-b765-4a69-ac7c-2b996f92d6c1",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/40ae1171-b8fb-4ada-8281-530b76f22f21/34461e3d-2efc-4109-91c3-2440d39b04cf"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 589,
+      "name": "Mixed Milshake",
+      "id": "f1037512-e9d1-493a-b775-e094268fd202",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/20eb95c6-3adf-4dfb-bd2d-a732576fdc85/24293d62-3171-4d44-94bc-2efcfa49f671"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 150,
+      "name": "Double Patty",
+      "id": "4205122b-67a0-4214-8c6e-146afb3b3a16",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/72e6cfad-fb13-48f0-8f5e-894d66991751/5f45b02e-253d-4ec8-a0e5-285d77ffcba9"
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 500,
+      "name": "Pista Ice cream",
+      "id": "17eb36c1-a39c-4386-87e0-987bd8aedbe2",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/aecc7dee-3c5d-46be-bb7e-c12876edf761/3379902a-1ed9-4fcc-baea-895e58c5e8b9"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1250,
+      "name": "Hot Drinks",
+      "id": "e735d53b-bdc1-45c7-a3fe-9d2db8e4b720",
+      "is_tax_included": true,
+      "image": ""
+    },
+    {
+      "modifier_groups": ["1720677a-05cc-4238-97b3-ff5aa99ce768"],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 1000,
+      "name": "Pista Milkshake",
+      "id": "be280037-5e04-49a5-9e6e-98b4e0452140",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/d0252376-c1a3-453b-bdc5-c06f4aed6979/a68ced4f-1a92-4601-b9a7-dba19a2a2167"
+    },
+    {
+      "modifier_groups": [],
+      "description": "",
+      "show_online": true,
+      "availability": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
+      "fulfillment_modes": ["DELIVERY", "COLLECTION"],
+      "price": 300,
+      "name": "Triple Patty",
+      "id": "ffceb321-7270-469b-8a34-93f6c568097f",
+      "is_tax_included": true,
+      "image": "https://media-sit-dr.stage.tryposhub.com/thumbs/media/product/b930670b-f905-4d66-9392-87addb15c2a8/093c2d21-e25e-4cfe-9298-a92ff3b220ac/c007f572-4fed-43c8-b029-e1bb5ef741ac"
+    }
+  ]
+}

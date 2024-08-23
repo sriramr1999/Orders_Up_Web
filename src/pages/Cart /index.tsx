@@ -18,7 +18,6 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { useNavigate } from "react-router-dom";
 
 const DELIVERY_FEE = 349; // in cents, adjust this value as needed
 const TAX_RATE = 0.1; // 10% tax rate, adjust this value as needed
@@ -39,10 +38,12 @@ const calculateSubtotal = (orders: any[]) => {
 };
 
 export const CheckoutPage = () => {
-  const nav = useNavigate();
   const [orderData, setOrderData] = useState(
     JSON.parse(localStorage.getItem("basket") as any) || {}
   );
+
+  const [orderStatus, setStatus] = useState(false);
+  const [orderId, setOrderId] = useState<string | null>(null); // New state for order ID
 
   const [expanded, setExpanded] = useState<string | false>("panel0");
 
@@ -51,8 +52,9 @@ export const CheckoutPage = () => {
   }, []);
 
   const handleOnclick = () => {
+    setStatus(true);
+    setOrderId("ORD123456"); // Set a dummy order ID or generate one
     localStorage.removeItem("basket");
-    nav("/orderStatus");
   };
 
   const handleAccordionChange =
@@ -75,51 +77,68 @@ export const CheckoutPage = () => {
       <Grid container spacing={4}>
         {/* Left Side - Account & Shipping Details */}
         <Grid item xs={12} md={7}>
-          {/* Account Details */}
-          <Box mb={4}>
-            <Typography variant="h6">1. Account details</Typography>
-            <TextField
-              fullWidth
-              variant="outlined"
-              defaultValue="sriramr1488@gmail.com"
-              InputProps={{
-                readOnly: true,
-              }}
-              sx={{ mt: 2 }}
-            />
-          </Box>
+          {!orderStatus ? (
+            <>
+              {/* Account Details */}
+              <Box mb={4}>
+                <Typography variant="h6">1. Account details</Typography>
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  defaultValue="sriramr1488@gmail.com"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  sx={{ mt: 2 }}
+                />
+              </Box>
 
-          {/* Shipping Details */}
-          <Box mb={4}>
-            <Typography variant="h6">2. Shipping details</Typography>
-            <Card variant="outlined" sx={{ mt: 2 }}>
-              <CardContent>
-                <Box display="flex" alignItems="center">
-                  <LocationOnIcon sx={{ mr: 1 }} />
-                  <Typography>
-                    3966 Rosebay Ct, Fairfax, VA 22033, USA
-                  </Typography>
-                </Box>
-                {/* Dummy Google Map Image */}
-                <Box mt={2}>
-                  <img
-                    src="https://developers.google.com/static/maps/images/landing/hero_maps_static_api.png"
-                    alt="Map location"
-                    style={{ width: "100%", borderRadius: "8px" }}
-                  />
-                </Box>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  sx={{ mt: 1 }}
-                >
-                  Leave it at my door
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-
-          {/* Oval Button for Overall Total */}
+              {/* Shipping Details */}
+              <Box mb={4}>
+                <Typography variant="h6">2. Shipping details</Typography>
+                <Card variant="outlined" sx={{ mt: 2 }}>
+                  <CardContent>
+                    <Box display="flex" alignItems="center">
+                      <LocationOnIcon sx={{ mr: 1 }} />
+                      <Typography>
+                        3966 Rosebay Ct, Fairfax, VA 22033, USA
+                      </Typography>
+                    </Box>
+                    {/* Dummy Google Map Image */}
+                    <Box mt={2}>
+                      <img
+                        src="https://developers.google.com/static/maps/images/landing/hero_maps_static_api.png"
+                        alt="Map location"
+                        style={{ width: "100%", borderRadius: "8px" }}
+                      />
+                    </Box>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      sx={{ mt: 1 }}
+                    >
+                      Leave it at my door
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Box>
+            </>
+          ) : (
+            <Box textAlign="center" mt={4}>
+              <Typography variant="h4" color="success.main" sx={{ mb: 2 }}>
+                Order Successful!
+              </Typography>
+              <Typography variant="h6">
+                Your order has been placed successfully. Your order ID is:
+              </Typography>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mt: 1 }}>
+                {orderId}
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 2 }}>
+                Thank you for shopping with us!
+              </Typography>
+            </Box>
+          )}
         </Grid>
 
         {/* Right Side - Store Name & Item Details as Accordions */}
@@ -189,21 +208,23 @@ export const CheckoutPage = () => {
               </Accordion>
             );
           })}
-          <Box display="flex" justifyContent="center" mt={4}>
-            <Button
-              variant="contained"
-              color="error"
-              fullWidth
-              onClick={handleOnclick}
-              sx={{
-                borderRadius: "50px",
-                padding: "10px 30px",
-                fontSize: "16px",
-              }}
-            >
-              Place Your Order - {formatPrice(overallTotal)}
-            </Button>
-          </Box>
+          {!orderStatus && (
+            <Box display="flex" justifyContent="center" mt={4}>
+              <Button
+                variant="contained"
+                color="error"
+                fullWidth
+                onClick={handleOnclick}
+                sx={{
+                  borderRadius: "50px",
+                  padding: "10px 30px",
+                  fontSize: "16px",
+                }}
+              >
+                Place Your Order - {formatPrice(overallTotal)}
+              </Button>
+            </Box>
+          )}
         </Grid>
       </Grid>
     </Container>
