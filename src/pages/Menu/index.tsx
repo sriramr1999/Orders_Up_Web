@@ -728,13 +728,13 @@ const ItemDialog = ({
           onClick={() => handleAddToBasket(selectedItem, selectedModifiers)}
           variant="contained"
           sx={{
-            backgroundColor: canAddToBasket ? "#ff4c4c" : "#ccc",
+            backgroundColor: canAddToBasket ? "#d82927" : "#ccc",
             color: "#fff",
             borderRadius: "30px",
             padding: "10px 20px",
             fontWeight: "bold",
             "&:hover": {
-              backgroundColor: canAddToBasket ? "#ff3333" : "#bbb",
+              backgroundColor: canAddToBasket ? "#d82927" : "#bbb",
             },
           }}
           disabled={!canAddToBasket} // Disable the button if not all required modifiers are selected
