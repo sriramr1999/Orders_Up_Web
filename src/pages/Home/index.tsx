@@ -9,8 +9,6 @@ import {
 } from "@mui/material";
 import { FC, useEffect, useRef, useState } from "react";
 import { styled } from "@mui/system";
-import { SidebarMenu } from "../../components/SidebarMenu";
-import { Header } from "../../components/Header";
 import { FoodCategories } from "../../components/FoodCategories";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarIcon from "@mui/icons-material/Star";
@@ -20,10 +18,10 @@ import { useNavigate } from "react-router-dom";  // Import useNavigate
 const ContentArea = styled(Box)({
   backgroundColor: "#ffffff",
   padding: "20px",
-  overflowY: "auto",
-  overflowX: "hidden",
-  height: "100vh",
-  boxSizing: "border-box",
+  overflowY: "auto", // Enable vertical scrolling
+  overflowX: "hidden", // Disable horizontal scrolling
+  height: "100vh", // Full viewport height to allow scrolling
+  boxSizing: "border-box", // Ensure padding doesn't affect height
 });
 
 const ScrollContainer = styled(Box)({
@@ -59,18 +57,6 @@ export const Home: FC = () => {
     fetchRestaurantData();
   }, []);
 
-  const handleOptionChange = (option: "delivery" | "pickup") => {
-    setSelectedOption(option);
-  };
-
-  const handleMouseEnter = () => {
-    setIsSidebarOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsSidebarOpen(false);
-  };
-
   const handleArrowClick = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
@@ -79,8 +65,6 @@ export const Home: FC = () => {
       });
     }
   };
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Filter the restaurants based on selected category
   const filteredRestaurants = selectedCategory
@@ -98,36 +82,10 @@ export const Home: FC = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Header
-        selectedOption={selectedOption}
-        handleOptionChange={handleOptionChange}
-      />
-
       {/* Main Content */}
       <Box sx={{ display: "flex", marginTop: "64px" }}>
         <Box
           sx={{
-            width: isSidebarOpen ? "240px" : "60px",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            height: "100vh",
-            zIndex: 1000,
-            backgroundColor: "#f0f0f0",
-            transition: "width 0.3s ease-in-out",
-          }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <SidebarMenu
-            open={isSidebarOpen}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          />
-        </Box>
-        <Box
-          sx={{
-            marginLeft: isSidebarOpen ? "240px" : "60px",
             width: "100%",
             height: "100vh",
             overflowY: "auto",
