@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import {
   Box,
@@ -31,6 +31,25 @@ export const Layout: React.FC = () => {
     JSON.parse(localStorage.getItem("basket")) || {}
   );
   const [searchQuery, setSearchQuery] = useState<string>(""); // New state for search query
+  const [restaurantNames, setRestaurantNames] = useState<Record<string, string>>({}); // State for storing restaurant names
+
+  useEffect(() => {
+    const fetchRestaurantNames = async () => {
+      const names: Record<string, string> = {};
+      for (const storeId of Object.keys(storedBasket)) {
+        try {
+          const response = await import(`../../json/restaurant/${storeId}.json`);
+          names[storeId] = response.name;
+        } catch (error) {
+          console.error(`Failed to load restaurant data for storeId: ${storeId}`, error);
+          names[storeId] = `Store ID: ${storeId}`; // Fallback to storeId if the fetch fails
+        }
+      }
+      setRestaurantNames(names);
+    };
+
+    fetchRestaurantNames();
+  }, [storedBasket]);
 
   const handleOptionChange = (option: "delivery" | "pickup") => {
     setSelectedOption(option);
@@ -208,7 +227,7 @@ export const Layout: React.FC = () => {
                       variant="subtitle1"
                       sx={{ fontWeight: "bold", fontSize: "1rem" }}
                     >
-                      Store ID : {storeId}
+                      {restaurantNames[storeId] || `Store ID: ${storeId}`}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{ padding: 0 }}>
