@@ -78,7 +78,7 @@ export const Home: FC = () => {
 
   return (
     <ContentArea>
-      <ScrollContainer ref={scrollRef}>
+      <ScrollContainer ref={scrollRef} sx={{  "justify-content":'center'}}>
         <FoodCategories
           onSelectCategory={(category: string) => setSelectedCategory(category)}
           selectedCategory={selectedCategory} // Pass the selected category to FoodCategories
