@@ -1,8 +1,8 @@
 {
   "id": "3",
   "name": "Pizza Hut",
-  "logo": "https://www.shutterstock.com/shutterstock/photos/2269871217/display_1500/stock-vector-kfc-logo-icon-art-design-vector-isolated-head-face-people-person-illustration-american-store-bernie-2269871217.jpg",
-  "bgImage": "src/assets/images/pizza hut.png",
+  "logo": "https://static.wikia.nocookie.net/ultraverse/images/8/83/Pizza_Hut_Logo.png/revision/latest?cb=20200213181428",
+  "bgImage": "https://media.cnn.com/api/v1/images/stellar/prod/220126081833-pizza-hut-spicy-lover.jpg?c=16x9&q=h_833,w_1480,c_fill",
   "modifier_groups": [
     {
       "id": "19d1ff32-6909-4c1a-a3be-0bd493ef35e1",
