@@ -34,17 +34,22 @@ export const Layout: React.FC = () => {
   const [restaurantNames, setRestaurantNames] = useState<
     Record<string, string>
   >({}); // State for storing restaurant names
+  const [restaurantImages, setRestaurantImages] = useState<
+    Record<string, string>
+  >({}); 
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchRestaurantNames = async () => {
       const names: Record<string, string> = {};
+      const images: Record<string, string> = {};
       for (const storeId of Object.keys(storedBasket)) {
         try {
           const response = await import(
-            `../../json/restaurant/${storeId}.json`
+            `../../json/menu/${storeId}.json`
           );
           names[storeId] = response.name;
+          images[storeId] = response.logo
         } catch (error) {
           console.error(
             `Failed to load restaurant data for storeId: ${storeId}`,
@@ -54,10 +59,12 @@ export const Layout: React.FC = () => {
         }
       }
       setRestaurantNames(names);
+      setRestaurantImages(images)
     };
 
     fetchRestaurantNames();
   }, [storedBasket]);
+
 
   const handleOptionChange = (option: "delivery" | "pickup") => {
     setSelectedOption(option);
@@ -270,7 +277,7 @@ export const Layout: React.FC = () => {
                       }}
                     >
                       <Avatar
-                        src={`/path/to/store-images/${storeId}.jpg`} // Adjust the path to your store images
+                        src={`${restaurantImages[storeId]}`} 
                         alt={`${restaurantNames[storeId]} logo`}
                         sx={{
                           width: 50, // Increased size of the store image
