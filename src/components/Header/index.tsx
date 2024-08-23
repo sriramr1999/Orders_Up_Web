@@ -39,7 +39,7 @@ interface HeaderProps {
   selectedOption: "delivery" | "pickup";
   handleOptionChange: (option: "delivery" | "pickup") => void;
   onCartClick: () => void;
-  onProfileClick: () => void;
+  onAccountClick: () => void;
   onSearchChange: (query: string) => void; // New prop for handling search input
 }
 
@@ -47,7 +47,7 @@ export const Header: FC<HeaderProps> = ({
   selectedOption,
   handleOptionChange,
   onCartClick,
-  onProfileClick,
+  onAccountClick,
   onSearchChange, // Receiving the search change function
 }) => {
   const { storeId } = useParams();
@@ -142,7 +142,7 @@ export const Header: FC<HeaderProps> = ({
                 <ShoppingCartIcon sx={{ color: "#d82927" }} />
               </Badge>
             </IconButton>
-            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onProfileClick}>
+            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onAccountClick}>
               {/* <Badge badgeContent={totalItems} color="primary"> */}
               <AccountCircleIcon sx={{ color: "#d82927" }} />
               {/* </Badge> */}
