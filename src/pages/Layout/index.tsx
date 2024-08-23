@@ -383,7 +383,10 @@ export const Layout: React.FC = () => {
                 borderRadius: "30px",
                 fontWeight: "bold",
                 color: "#fafafa",
-                backgroundColor: "#d82927"
+                backgroundColor: "#d82927",
+                "&:hover": {
+                  backgroundColor: "#d82927" ,
+                },
               }}
             >
               Checkout - ${calculateTotal().toFixed(2)}
