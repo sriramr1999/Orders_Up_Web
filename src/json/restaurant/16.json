@@ -1,0 +1,14 @@
+{
+    "id": 16,
+    "name": "Chipotle",
+    "image": "src/assets/images/chipotle.jpg",
+    "rating": 4.4,
+    "reviews": "8.2k+",
+    "distance": "4.3 mi",
+    "time": "27 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": [
+        "Mexican",
+        "Healthy"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": 18,
+    "name": "Arby's",
+    "image": "src/assets/images/arbys.jpg",
+    "rating": 4.2,
+    "reviews": "6.1k+",
+    "distance": "4.0 mi",
+    "time": "26 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": [
+        "Sandwiches",
+        "Fast Food"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": 13,
+    "name": "Five Guys",
+    "image": "src/assets/images/Five guys.jpg",
+    "rating": 4.4,
+    "reviews": "4.8k+",
+    "distance": "4.6 mi",
+    "time": "29 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": [
+        "Burgers",
+        "Fast Food"
+    ]
+}

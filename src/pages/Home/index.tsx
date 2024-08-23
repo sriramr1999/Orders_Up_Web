@@ -44,7 +44,7 @@ export const Home: FC = () => {
     const fetchRestaurantData = async () => {
       try {
         const fetchedData: any[] = [];
-        for (let i = 1; i <= 11; i++) {
+        for (let i = 1; i <= 20; i++) {
           const response = await axios.get(`/src/json/restaurant/${i}.json`);
           fetchedData.push(response.data);
         }
@@ -121,6 +121,7 @@ export const Home: FC = () => {
                         borderBottomRightRadius: 0,
                       }}
                     />
+                    console.log(restaurant.image);
                     <CardContent sx={{ padding: "16px" }}>
                       <Box
                         sx={{

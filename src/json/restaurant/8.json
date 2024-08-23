@@ -1,7 +1,7 @@
 {
     "id" : 8,
     "name": "Chick-fil-A",
-    "image": "https://example.com/chickfila.png",
+    "image": "src/assets/images/Chick-fil-A.jpg",
     "rating": 4.5,
     "reviews": "8.5k+",
     "distance": "5.0 mi",
