@@ -1,5 +1,11 @@
 {
-  "name": "McDonald's",
-  "image": "https://img.cdn4dd.com/cdn-cgi/image/fit=contain,format=auto,width=800,quality=50/https://doordash-static.s3.amazonaws.com/media/photos/98a6f342-aa36-453e-ab97-33e377f52cfb-retina-large-png",
-  "rating": 4.2
+  "id" : 3,
+  "name": "Subway",
+  "image": "https://example.com/subway.png",
+  "rating": 4.3,
+  "reviews": "5.2k+",
+  "distance": "3.8 mi",
+  "time": "25 min",
+  "deliveryFee": "$2.99 delivery fee",
+  "cuisine": ["Sandwiches", "Salads"]
 }

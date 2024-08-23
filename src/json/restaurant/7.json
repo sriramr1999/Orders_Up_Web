@@ -1,0 +1,11 @@
+{
+    "id" : 7,
+    "name": "Domino's Pizza",
+    "image": "https://example.com/dominos.png",
+    "rating": 4.3,
+    "reviews": "7.7k+",
+    "distance": "5.1 mi",
+    "time": "31 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": ["Pizza", "Italian"]
+}

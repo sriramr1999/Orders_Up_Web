@@ -1,0 +1,11 @@
+{
+    "id" : 12,
+    "name": "Dunkin'",
+    "image": "https://example.com/dunkin.png",
+    "rating": 4.3,
+    "reviews": "6.5k+",
+    "distance": "3.7 mi",
+    "time": "24 min",
+    "deliveryFee": "$2.99 delivery fee",
+    "cuisine": ["Coffee", "Desserts"]
+}

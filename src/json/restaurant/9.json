@@ -1,0 +1,11 @@
+{
+    "id" : 9,
+    "name": "Wendy's",
+    "image": "https://example.com/wendys.png",
+    "rating": 4.1,
+    "reviews": "5.9k+",
+    "distance": "4.4 mi",
+    "time": "27 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": ["Burgers", "Fast Food"]
+}

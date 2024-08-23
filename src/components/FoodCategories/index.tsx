@@ -1,49 +1,59 @@
 import { Box, Typography, IconButton } from "@mui/material";
+import { FC } from "react";
+import LocalPizzaIcon from "@mui/icons-material/LocalPizza";
+import CakeIcon from "@mui/icons-material/Cake";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
+import LunchDiningIcon from "@mui/icons-material/LunchDining";
+import RamenDiningIcon from "@mui/icons-material/RamenDining";
+import SoupKitchenIcon from "@mui/icons-material/SoupKitchen";
+import SetMealIcon from "@mui/icons-material/SetMeal";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import FoodBankIcon from "@mui/icons-material/FoodBank";
 import BreakfastDiningIcon from "@mui/icons-material/BreakfastDining";
 import LocalCafeIcon from "@mui/icons-material/LocalCafe";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import LocalPizzaIcon from "@mui/icons-material/LocalPizza";
+import IcecreamIcon from "@mui/icons-material/Icecream";
+import LocalBarIcon from "@mui/icons-material/LocalBar";
 import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
-import CakeIcon from "@mui/icons-material/Cake";
-import HamburgerIcon from "@mui/icons-material/LunchDining";
-import ChickenIcon from "@mui/icons-material/EmojiFoodBeverage";
-import SandwichIcon from "@mui/icons-material/Dining";
-import MexicanIcon from "@mui/icons-material/EmojiFoodBeverage";
-import PhoIcon from "@mui/icons-material/RamenDining";
-import SmoothieIcon from "@mui/icons-material/EmojiFoodBeverage";
-import SushiIcon from "@mui/icons-material/RamenDining";
-import ChineseIcon from "@mui/icons-material/TakeoutDining";
-import SoupIcon from "@mui/icons-material/SoupKitchen";
-import SaladIcon from "@mui/icons-material/SoupKitchen";
-import { FC } from "react";
+import SaladIcon from "@mui/icons-material/EmojiFoodBeverage";
+import WineBarIcon from "@mui/icons-material/WineBar";
+import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
+
+interface FoodCategoriesProps {
+  onSelectCategory: (category: string) => void;
+  selectedCategory: string;
+}
 
 const categories = [
-  { icon: <BreakfastDiningIcon htmlColor="#FFA500" />, label: "Breakfast" }, // Orange color
-  { icon: <LocalCafeIcon htmlColor="#8B4513" />, label: "Coffee" }, // Brown color
-  { icon: <FastfoodIcon htmlColor="#FF0000" />, label: "Fast Food" }, // Red color
-  { icon: <LocalPizzaIcon htmlColor="#FF4500" />, label: "Pizza" }, // OrangeRed color
-  { icon: <EmojiNatureIcon htmlColor="#008000" />, label: "Healthy" }, // Green color
-  { icon: <CakeIcon htmlColor="#800080" />, label: "Desserts" }, // Purple color
-  { icon: <HamburgerIcon htmlColor="#A52A2A" />, label: "Burgers" }, // Brown color
-  { icon: <ChickenIcon htmlColor="#FFD700" />, label: "Chicken" }, // Gold color
-  { icon: <SandwichIcon htmlColor="#DAA520" />, label: "Sandwiches" }, // GoldenRod color
-  { icon: <MexicanIcon htmlColor="#FF6347" />, label: "Mexican" }, // Tomato color
-  { icon: <PhoIcon htmlColor="#32CD32" />, label: "Pho" }, // LimeGreen color
-  { icon: <SmoothieIcon htmlColor="#9370DB" />, label: "Smoothie" }, // MediumPurple color
-  { icon: <SushiIcon htmlColor="#4682B4" />, label: "Sushi" }, // SteelBlue color
-  { icon: <ChineseIcon htmlColor="#FF0000" />, label: "Chinese" }, // Red color
-  { icon: <SoupIcon htmlColor="#FF8C00" />, label: "Soup" }, // DarkOrange color
-  { icon: <SaladIcon htmlColor="#32CD32" />, label: "Salad" }, // LimeGreen color
+  { icon: <LocalPizzaIcon fontSize="large" htmlColor="#d82927"/>, label: "Pizza" },
+  { icon: <CakeIcon fontSize="large" htmlColor="#d82927"/>, label: "Desserts" },
+  { icon: <RamenDiningIcon fontSize="large" htmlColor="#d82927"/>, label: "Sushi" },
+  { icon: <LunchDiningIcon fontSize="large" htmlColor="#d82927"/>, label: "Burgers" },
+  { icon: <FastfoodIcon fontSize="large" htmlColor="#d82927"/>, label: "Fast Food" },
+  { icon: <SetMealIcon fontSize="large" htmlColor="#d82927"/>, label: "Mexican" },
+  { icon: <RestaurantIcon fontSize="large" htmlColor="#d82927"/>, label: "Chinese" },
+  { icon: <EmojiFoodBeverageIcon fontSize="large" htmlColor="#d82927"/>, label: "Chicken" },
+  { icon: <SoupKitchenIcon fontSize="large" htmlColor="#d82927"/>, label: "Healthy" },
+  { icon: <FoodBankIcon fontSize="large" htmlColor="#d82927"/>, label: "Italian" },
+  { icon: <FastfoodIcon fontSize="large" htmlColor="#d82927"/>, label: "Sandwiches" },
+  { icon: <BreakfastDiningIcon fontSize="large" htmlColor="#d82927"/>, label: "Breakfast" },
+  { icon: <LocalCafeIcon fontSize="large" htmlColor="#d82927"/>, label: "Coffee" },
+  { icon: <IcecreamIcon fontSize="large" htmlColor="#d82927"/>, label: "Ice Cream" },
+  { icon: <LocalBarIcon fontSize="large" htmlColor="#d82927"/>, label: "Bar" },
+  { icon: <EmojiNatureIcon fontSize="large" htmlColor="#d82927"/>, label: "Vegan" },
+  { icon: <SaladIcon fontSize="large" htmlColor="#d82927"/>, label: "Salads" },
+  { icon: <WineBarIcon fontSize="large" htmlColor="#d82927"/>, label: "Wine" },
+  { icon: <TakeoutDiningIcon fontSize="large" htmlColor="#d82927"/>, label: "Takeout" },
 ];
 
-export const FoodCategories: FC = () => {
+export const FoodCategories: FC<FoodCategoriesProps> = ({ onSelectCategory, selectedCategory }) => {
   return (
     <Box
       sx={{
-        overflowX: "scroll",
+        overflowX: "auto",
         display: "flex",
         whiteSpace: "nowrap",
-        padding: "10px",
+        padding: "10px 0",
         "&::-webkit-scrollbar": {
           display: "none",
         },
@@ -52,9 +62,40 @@ export const FoodCategories: FC = () => {
       }}
     >
       {categories.map((category, index) => (
-        <Box key={index} sx={{ textAlign: "center", padding: "10px" }}>
-          <IconButton>{category.icon}</IconButton>
-          <Typography variant="caption">{category.label}</Typography>
+        <Box
+          key={index}
+          sx={{
+            textAlign: "center",
+            padding: "10px",
+            cursor: "pointer",
+          }}
+          onClick={() => onSelectCategory(category.label)} // Handle click and send category label to parent
+        >
+          <IconButton
+            sx={{
+              fontSize: "2rem", // Larger icon size
+              display: "block",
+              margin: "0 auto",
+              transition: "transform 0.3s ease-in-out, background-color 0.3s ease-in-out",
+              transform: selectedCategory === category.label ? "rotate(-10deg)" : "none", // Tilt the icon if selected
+              backgroundColor: selectedCategory === category.label ? "#f0f0f0" : "transparent", // Add grey background if selected
+              "&:hover": {
+                backgroundColor: "#f0f0f0", // Grey background on hover
+                transform: "rotate(-10deg)", // Tilt the icon on hover
+              },
+              borderRadius: "50%", // To make the grey background circular
+            }}
+          >
+            {category.icon}
+          </IconButton>
+          <Typography 
+            variant="caption"
+            sx={{
+              color: selectedCategory === category.label ? "#d82927" : "#000000", // Change text color when selected
+            }}
+          >
+            {category.label}
+          </Typography>
         </Box>
       ))}
     </Box>

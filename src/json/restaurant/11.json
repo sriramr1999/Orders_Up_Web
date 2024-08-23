@@ -1,0 +1,11 @@
+{
+    "id" : 11,
+    "name": "Papa John's",
+    "image": "https://example.com/papajohns.png",
+    "rating": 4.2,
+    "reviews": "7.4k+",
+    "distance": "5.2 mi",
+    "time": "32 min",
+    "deliveryFee": "$4.49 delivery fee",
+    "cuisine": ["Pizza", "Takeout"]
+}

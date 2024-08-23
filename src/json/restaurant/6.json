@@ -1,0 +1,11 @@
+{
+    "id" : 6,
+    "name": "KFC",
+    "image": "https://example.com/kfc.png",
+    "rating": 4.0,
+    "reviews": "6.8k+",
+    "distance": "4.7 mi",
+    "time": "29 min",
+    "deliveryFee": "$4.29 delivery fee",
+    "cuisine": ["Chicken", "Fast Food"]
+}
