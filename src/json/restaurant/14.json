@@ -1,0 +1,14 @@
+{
+    "id": 14,
+    "name": "Panera Bread",
+    "image": "src/assets/images/Panera bread.jpg",
+    "rating": 4.5,
+    "reviews": "5.3k+",
+    "distance": "4.9 mi",
+    "time": "28 min",
+    "deliveryFee": "$3.49 delivery fee",
+    "cuisine": [
+        "Salads",
+        "Breakfast"
+    ]
+}

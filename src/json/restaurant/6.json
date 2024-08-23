@@ -1,7 +1,7 @@
 {
     "id" : 6,
     "name": "KFC",
-    "image": "https://example.com/kfc.png",
+    "image": "src/assets/images/KFC.jpg",
     "rating": 4.0,
     "reviews": "6.8k+",
     "distance": "4.7 mi",

@@ -1,12 +1,14 @@
 {
-  "id" : 1,
+  "id": 1,
   "name": "McDonald's",
-      "image":
-        "https://img.cdn4dd.com/cdn-cgi/image/fit=contain,format=auto,width=800,quality=50/https://doordash-static.s3.amazonaws.com/media/photos/98a6f342-aa36-453e-ab97-33e377f52cfb-retina-large-png",
-      "rating": 4.2,
-      "reviews": "8k+",
-      "distance": "5.3 mi",
-      "time": "33 min",
-      "deliveryFee": "$4.99 delivery fee",
-      "cuisine" : ["Pizza", "Burgers"]
+  "image": "src/assets/images/McDonald.jpg",
+  "rating": 4.2,
+  "reviews": "8k+",
+  "distance": "5.3 mi",
+  "time": "33 min",
+  "deliveryFee": "$4.99 delivery fee",
+  "cuisine": [
+    "Pizza",
+    "Burgers"
+  ]
 }

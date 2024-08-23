@@ -1,7 +1,7 @@
 {
   "id" : 2,
   "name": "Burger King",
-  "image": "https://example.com/burgerking.png",
+  "image": "src/assets/images/burger king.jpg",
   "rating": 4.0,
   "reviews": "6k+",
   "distance": "4.2 mi",

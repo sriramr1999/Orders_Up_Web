@@ -1,0 +1,14 @@
+{
+    "id": 21,
+    "name": "Panda Express",
+    "image": "src/assets/images/panda_express.jpg",
+    "rating": 4.3,
+    "reviews": "7.1k+",
+    "distance": "4.8 mi",
+    "time": "31 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": [
+        "Chinese",
+        "Fast Food"
+    ]
+}
