@@ -39,6 +39,7 @@ interface HeaderProps {
   selectedOption: "delivery" | "pickup";
   handleOptionChange: (option: "delivery" | "pickup") => void;
   onCartClick: () => void;
+  onAccountClick: () => void;
   onSearchChange: (query: string) => void; // New prop for handling search input
 }
 
@@ -46,15 +47,12 @@ export const Header: FC<HeaderProps> = ({
   selectedOption,
   handleOptionChange,
   onCartClick,
+  onAccountClick,
   onSearchChange, // Receiving the search change function
 }) => {
   const { storeId } = useParams();
   const [storedBasket, setStoreBasket] = useState("");
-  const totalItems = Object.values(storedBasket || {}).reduce(
-    (acc, items: any) =>
-      acc + items?.reduce((sum, item) => sum + item.quantity, 0),
-    0
-  );
+  const totalItems = Object.keys(storedBasket || {}).length;
 
   useEffect(() => {
     setStoreBasket(JSON.parse(localStorage.getItem("basket")));
@@ -140,7 +138,7 @@ export const Header: FC<HeaderProps> = ({
                 <ShoppingCartIcon sx={{ color: "black" }} />
               </Badge>
             </IconButton>
-            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onCartClick}>
+            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onAccountClick}>
               {/* <Badge badgeContent={totalItems} color="primary"> */}
               <AccountCircleIcon sx={{ color: "black" }} />
               {/* </Badge> */}
