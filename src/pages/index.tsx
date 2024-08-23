@@ -3,6 +3,7 @@ import { Home } from "./Home";
 import { PageNotFound } from "./PageNotFound";
 import { Menu } from "./Menu";
 import { Layout } from "./Layout";
+import { CheckoutPage } from "./Cart ";
 
 export const Routes = () => {
   return (
@@ -10,7 +11,7 @@ export const Routes = () => {
       <Route path="/" element={<Layout />}>
         {/* Public Routes */}
         <Route path="*" element={<PageNotFound />} />
-
+        <Route path="cart" element={<CheckoutPage />} />
         <Route path="stores">
           <Route index element={<Home />} />
           <Route path=":storeId/menu" element={<Menu />} />

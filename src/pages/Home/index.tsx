@@ -38,7 +38,7 @@ export const Home: FC = () => {
   const [restaurantData, setRestaurantData] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const scrollRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const { searchQuery } = useOutletContext<{ searchQuery: string }>(); // Use context to get searchQuery
 
   useEffect(() => {
@@ -58,23 +58,17 @@ export const Home: FC = () => {
     fetchRestaurantData();
   }, []);
 
-  const handleArrowClick = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: 200, // Scroll by 200px
-        behavior: "smooth",
-      });
-    }
-  };
-
   // Filter the restaurants based on selected category and search query
-  const filteredRestaurants = restaurantData.filter((restaurant) =>
-    restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-    (selectedCategory
-      ? restaurant.cuisine?.some((cuisine: string) =>
-          cuisine.trim().toLowerCase() === selectedCategory.trim().toLowerCase()
-        )
-      : true)
+  const filteredRestaurants = restaurantData.filter(
+    (restaurant) =>
+      restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (selectedCategory
+        ? restaurant.cuisine?.some(
+            (cuisine: string) =>
+              cuisine.trim().toLowerCase() ===
+              selectedCategory.trim().toLowerCase()
+          )
+        : true)
   );
 
   // Handle card click to navigate to the menu page

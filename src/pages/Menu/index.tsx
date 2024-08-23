@@ -27,13 +27,13 @@ import StarIcon from "@mui/icons-material/Star";
 import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
-import GroupsIcon from '@mui/icons-material/Groups';
+import GroupsIcon from "@mui/icons-material/Groups";
 import BikeScooterIcon from "@mui/icons-material/BikeScooter";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useParams } from "react-router-dom";
 import { ImageCard } from "../../components/ChickFilAHeader";
-import { AppLoader } from "../../components/AppLoader"
-import '../../assets/styles/cart.css'
+import { AppLoader } from "../../components/AppLoader";
+import "../../assets/styles/cart.css";
 
 export const Menu = () => {
   const { storeId } = useParams();
@@ -47,7 +47,7 @@ export const Menu = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isListening, setIsListening] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
-  const [isItemThrown, setIsItemThrown] = useState(false);  // New state for animation
+  const [isItemThrown, setIsItemThrown] = useState(false); // New state for animation
 
   const recognitionRef = useRef(null);
   const categoryRefs = useRef({});
@@ -174,8 +174,9 @@ export const Menu = () => {
     setQuantity((prev) => (increment ? prev + 1 : Math.max(prev - 1, 1)));
   };
 
-  const handleAddToBasket = (selectedItem, selectedModifiers) => {
+  const handleAddToBasket = (menuName, selectedItem, selectedModifiers) => {
     const basketItem = {
+      name: menuName,
       item: {
         id: selectedItem.id,
         name: selectedItem.name,
@@ -287,16 +288,18 @@ export const Menu = () => {
         <div
           className="thrown-item"
           style={{
-            top: '50%',
-            left: '50%',
-            backgroundImage: `url(${selectedItem?.image || 'https://images.app.goo.gl/TaSZYYUuJShMj8rv8'})`,
-            backgroundSize: 'cover',
-            width: '50px',
-            height: '50px',
-            position: 'fixed',
+            top: "50%",
+            left: "50%",
+            backgroundImage: `url(${
+              selectedItem?.image || "https://images.app.goo.gl/TaSZYYUuJShMj8rv8"
+            })`,
+            backgroundSize: "cover",
+            width: "50px",
+            height: "50px",
+            position: "fixed",
             zIndex: 1000,
-            pointerEvents: 'none',
-            animation: 'throwToCart 0.7s ease-in-out forwards',
+            pointerEvents: "none",
+            animation: "throwToCart 0.7s ease-in-out forwards",
           }}
         />
       )}
@@ -328,14 +331,14 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     transition: "background-color 0.2s ease",
                   }}
                   onClick={() => handleOrderTypeChange("delivery")}
                 >
-                   <BikeScooterIcon sx={{ marginRight: "8px" }} />
- Delivery
+                  <BikeScooterIcon sx={{ marginRight: "8px" }} />
+                  Delivery
                 </Button>
                 <Button
                   variant={orderType === "pickup" ? "contained" : "outlined"}
@@ -344,7 +347,7 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     marginLeft: "8px",
                     transition: "background-color 0.2s ease",
@@ -352,7 +355,7 @@ export const Menu = () => {
                   onClick={() => handleOrderTypeChange("pickup")}
                 >
                   <ShoppingBagIcon sx={{ marginRight: "8px" }} />
-  Pickup
+                  Pickup
                 </Button>
                 <Button
                   variant={orderType === "group" ? "contained" : "outlined"}
@@ -361,7 +364,7 @@ export const Menu = () => {
                     backgroundColor: "#d82927",
                     color: "#fff",
                     "&:hover": {
-                      backgroundColor: "#d82927" ,
+                      backgroundColor: "#d82927",
                     },
                     marginLeft: "8px",
                     transition: "background-color 0.2s ease",
@@ -369,7 +372,7 @@ export const Menu = () => {
                   onClick={() => handleOrderTypeChange("group")}
                 >
                   <GroupsIcon sx={{ marginRight: "8px" }} />
-  Group Order
+                  Group Order
                 </Button>
               </Box>
             </Grid>
@@ -735,7 +738,9 @@ const ItemDialog = ({
           </IconButton>
         </Box>
         <Button
-          onClick={() => handleAddToBasket(selectedItem, selectedModifiers)}
+          onClick={() =>
+            handleAddToBasket(menuData?.name, selectedItem, selectedModifiers)
+          }
           variant="contained"
           sx={{
             backgroundColor: canAddToBasket ? "#d82927" : "#ccc",
