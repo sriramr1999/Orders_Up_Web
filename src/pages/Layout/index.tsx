@@ -141,6 +141,12 @@ export const Layout: React.FC = () => {
     navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
   };
 
+  const handleDiscardMenu = (storeId) => {
+    const newBasket = { ...storedBasket };
+    delete newBasket[storeId]; // Remove all items for the store
+    updateLocalStorage(newBasket);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Header
@@ -224,10 +230,10 @@ export const Layout: React.FC = () => {
                   }}
                 >
                   <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls={`panel-${storeId}-content`}
-                    id={`panel-${storeId}-header`}
-                    sx={{
+  expandIcon={<ExpandMoreIcon />}
+  aria-controls={`panel-${storeId}-content`}
+  id={`panel-${storeId}-header`}
+  sx={{
     padding: 0,
     marginBottom: "8px",
     borderBottom: "none",
@@ -244,23 +250,29 @@ export const Layout: React.FC = () => {
       marginRight: "16px", // Add space between the expand icon and the border
     },
   }}
-                  >
-                    <Box>
-                      <Typography
-                        variant="subtitle1"
-                        sx={{ fontWeight: "bold", fontSize: "1rem", textAlign: "center"}}
-                      >
-                        {restaurantNames[storeId] || `Store ID: ${storeId}`}
-                      </Typography>
-                      <Button
-                        variant="text"
-                        sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
-                        onClick={() => handleViewEntireMenu(storeId)}
-                      >
-                        View Entire Menu
-                      </Button>
-                    </Box>
-                  </AccordionSummary>
+>
+  <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Typography
+      variant="subtitle1"
+      sx={{ fontWeight: "bold", fontSize: "1rem", textAlign: "center"}}
+    >
+      {restaurantNames[storeId] || `Store ID: ${storeId}`}
+    </Typography>
+    {/* <Button
+      variant="text"
+      sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
+      onClick={() => handleViewEntireMenu(storeId)}
+    >
+      View Entire Menu
+    </Button> */}
+  </Box>
+  <IconButton
+    onClick={() => handleDiscardMenu(storeId)} // New discard button
+    sx={{ marginLeft: "auto", color: "error.main" }}
+  >
+    <CloseIcon />
+  </IconButton>
+</AccordionSummary>
                   <AccordionDetails sx={{ padding: 0 }}>
                     {/* Items for the Store */}
                     <List>

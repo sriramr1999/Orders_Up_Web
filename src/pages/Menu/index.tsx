@@ -289,7 +289,7 @@ export const Menu = () => {
           style={{
             top: '50%',
             left: '50%',
-            backgroundImage: `url(${selectedItem?.image || 'https://via.placeholder.com/50'})`,
+            backgroundImage: `url(${selectedItem?.image || 'https://images.app.goo.gl/TaSZYYUuJShMj8rv8'})`,
             backgroundSize: 'cover',
             width: '50px',
             height: '50px',
