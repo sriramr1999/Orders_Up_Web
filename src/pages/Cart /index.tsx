@@ -77,7 +77,43 @@ export const Cart: FC = () => {
       <Grid container spacing={4}>
         {/* Left Side - Account & Shipping Details */}
         <Grid item xs={12} md={7}>
-          {!orderStatus ? (
+          {orderStatus ? (
+            <Box
+              textAlign="center"
+              mt={4}
+              sx={{
+                p: 4,
+              }}
+            >
+              <Box mt={4}>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2143/2143150.png" // Replace with a relevant image URL
+                  alt="Order Success"
+                  style={{
+                    borderRadius: "8px",
+                    maxWidth: "70px",
+                  }}
+                />
+              </Box>
+              <Typography
+                variant="h4"
+                color="success.main"
+                sx={{ mb: 2, mt: 3 }}
+              >
+                Order Successful!
+              </Typography>
+              <Typography variant="h6">
+                Your order has been placed successfully. Your order ID is:
+              </Typography>
+              <Typography variant="h5" sx={{ fontWeight: "bold", mt: 1 }}>
+                {orderId}
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 2 }}>
+                Thank you for shopping with us!
+              </Typography>
+              {/* Add an image to align with the text */}
+            </Box>
+          ) : (
             <>
               {/* Account Details */}
               <Box mb={4}>
@@ -123,21 +159,6 @@ export const Cart: FC = () => {
                 </Card>
               </Box>
             </>
-          ) : (
-            <Box textAlign="center" mt={4}>
-              <Typography variant="h4" color="success.main" sx={{ mb: 2 }}>
-                Order Successful!
-              </Typography>
-              <Typography variant="h6">
-                Your order has been placed successfully. Your order ID is:
-              </Typography>
-              <Typography variant="h5" sx={{ fontWeight: "bold", mt: 1 }}>
-                {orderId}
-              </Typography>
-              <Typography variant="body1" sx={{ mt: 2 }}>
-                Thank you for shopping with us!
-              </Typography>
-            </Box>
           )}
         </Grid>
 
