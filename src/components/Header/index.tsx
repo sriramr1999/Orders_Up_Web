@@ -45,15 +45,17 @@ export const Header: FC<HeaderProps> = ({
   onCartClick,
 }) => {
   const [storedBasket, setStoreBasket] = useState("");
-  const totalItems = Object.values(storedBasket || {}).reduce(
-    (acc, items: any) =>
-      acc + items?.reduce((sum:any, item:any) => sum + item.quantity, 0),
-    0
-  );
+  console.log(storedBasket, "storedBasket");
+  // Calculate the total number of items in the basket
+  const totalItems = Object.keys(storedBasket || {}).length;
 
   useEffect(() => {
-    setStoreBasket(JSON.parse(localStorage.getItem("basket")));
-  }, [JSON.parse(localStorage.getItem("basket"))]);
+    setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
+  }, [JSON.parse(localStorage.getItem("basket") as any)]);
+
+  // useEffect(() => {
+  //   setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
+  // }, []);
 
   return (
     <AppBar

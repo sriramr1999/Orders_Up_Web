@@ -28,7 +28,7 @@ export const Layout: React.FC = () => {
   );
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [storedBasket, setStoredBasket] = useState(
-    JSON.parse(localStorage.getItem("basket")) || {}
+    JSON.parse(localStorage.getItem("basket") as any) || {}
   );
 
   const handleOptionChange = (option: "delivery" | "pickup") => {
@@ -36,7 +36,7 @@ export const Layout: React.FC = () => {
   };
 
   const handleCartClick = () => {
-    setStoredBasket(JSON.parse(localStorage.getItem("basket")));
+    setStoredBasket(JSON.parse(localStorage.getItem("basket") as any));
     setIsDrawerOpen(true);
   };
 
@@ -46,12 +46,21 @@ export const Layout: React.FC = () => {
 
   const calculateTotal = () => {
     return (
-      Object.values(storedBasket).reduce((total, items: any) => {
-        return (
-          total +
-          items.reduce((sum, item) => sum + item.item.price * item.quantity, 0)
-        );
-      }, 0) / 100
+      Object.values(storedBasket as Record<string, any[]>).reduce(
+        (total: number, items: any[]) => {
+          return (
+            total +
+            items?.reduce(
+              (
+                sum: number,
+                item: { item: { price: number }; quantity: number }
+              ) => sum + item.item.price * item.quantity,
+              0
+            )
+          );
+        },
+        0
+      ) / 100
     );
   };
 
