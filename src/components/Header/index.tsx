@@ -52,11 +52,7 @@ export const Header: FC<HeaderProps> = ({
 }) => {
   const { storeId } = useParams();
   const [storedBasket, setStoreBasket] = useState("");
-  const totalItems = Object.values(storedBasket || {}).reduce(
-    (acc, items: any) =>
-      acc + items?.reduce((sum, item) => sum + item.quantity, 0),
-    0
-  );
+  const totalItems = Object.keys(storedBasket || {}).length;
 
   useEffect(() => {
     setStoreBasket(JSON.parse(localStorage.getItem("basket")));
