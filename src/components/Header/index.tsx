@@ -51,101 +51,124 @@ export const Header: FC<HeaderProps> = ({
   onSearchChange, // Receiving the search change function
 }) => {
   const { storeId } = useParams();
+
   const [storedBasket, setStoreBasket] = useState("");
   const totalItems = Object.keys(storedBasket || {}).length;
 
   useEffect(() => {
-    setStoreBasket(JSON.parse(localStorage.getItem("basket")));
-  }, [JSON.parse(localStorage.getItem("basket"))]);
+    setStoreBasket(JSON.parse(localStorage.getItem("basket") as any));
+  }, [JSON.parse(localStorage.getItem("basket") as any)]);
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        background: "#ffffff", // White background
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow for separation
-        color: "black", // Text and icon colors
-      }}
-    >
-      <Toolbar>
-        {/* Left-side Logo */}
-        <Grid container alignItems="center">
-          <Grid item xs={3}>
-            <Typography
-              variant="h6"
-              sx={{ fontWeight: "bold", color: "black" }}
-            >
-              <img
-                src="https://foodhub.co.uk/compressed_images/logo.svg"
-                alt="Logo"
-              />
-            </Typography>
-          </Grid>
+    <>
+      {window.location.pathname !== "/orderStatus" && (
+        <AppBar
+          position="fixed"
+          sx={{
+            background: "#ffffff", // White background
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow for separation
+            color: "black", // Text and icon colors
+          }}
+        >
+          <Toolbar>
+            {/* Left-side Logo */}
 
-          {/* Center Search Bar */}
-          <Grid item xs={4}>
-            {!storeId && (
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <InputBase
-                  placeholder="Search..."
-                  startAdornment={<SearchIcon sx={{ color: "black" }} />}
-                  sx={{
-                    bgcolor: "#f1f1f1", // Light grey background for the search bar
-                    borderRadius: "20px",
-                    padding: "5px 15px",
-                    width: "100%",
-                    maxWidth: 600,
-                    boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.1)",
-                  }}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                />
-              </Box>
-            )}
-          </Grid>
+            <Grid container alignItems="center">
+              <Grid item xs={3}>
+                <Typography
+                  variant="h6"
+                  sx={{ fontWeight: "bold", color: "black" }}
+                >
+                  <img
+                    src="https://foodhub.co.uk/compressed_images/logo.svg"
+                    alt="Logo"
+                  />
+                </Typography>
+              </Grid>
 
-          {/* Right-side Toggle and Cart */}
-          <Grid
-            item
-            xs={5}
-            container
-            justifyContent="flex-end"
-            alignItems="center"
-          >
-            {/* New Button with Location Icon */}
-            <HeaderButton onClick={() => console.log("New button clicked")}>
-              <LocationOnIcon htmlColor="#d82927" sx={{ mr: 1 }} />
-              <b>Stoke-on-Trent</b>
-            </HeaderButton>
-            <Box mx={1} />
-            {!storeId && (
-              <ButtonGroup variant="text" aria-label="delivery/pickup toggle">
-                <HeaderButton
-                  onClick={() => handleOptionChange("delivery")}
-                  selected={selectedOption === "delivery"}
-                >
-                  Delivery
+              {/* Center Search Bar */}
+              <Grid item xs={4}>
+                {!storeId && (
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <InputBase
+                      placeholder="Search..."
+                      startAdornment={<SearchIcon sx={{ color: "black" }} />}
+                      sx={{
+                        bgcolor: "#f1f1f1", // Light grey background for the search bar
+                        borderRadius: "20px",
+                        padding: "5px 15px",
+                        width: "100%",
+                        maxWidth: 600,
+                        boxShadow: "inset 0px 2px 4px rgba(0, 0, 0, 0.1)",
+                      }}
+                      onChange={(e) => onSearchChange(e.target.value)}
+                    />
+                  </Box>
+                )}
+              </Grid>
+
+              {/* Right-side Toggle and Cart */}
+              <Grid
+                item
+                xs={5}
+                container
+                justifyContent="flex-end"
+                alignItems="center"
+              >
+                {/* New Button with Location Icon */}
+                <HeaderButton onClick={() => console.log("New button clicked")}>
+                  <LocationOnIcon htmlColor="#d82927" sx={{ mr: 1 }} />
+                  <b>Stoke-on-Trent</b>
                 </HeaderButton>
-                <HeaderButton
-                  onClick={() => handleOptionChange("pickup")}
-                  selected={selectedOption === "pickup"}
+                <Box mx={1} />
+                {!storeId && (
+                  <ButtonGroup
+                    variant="text"
+                    aria-label="delivery/pickup toggle"
+                  >
+                    <HeaderButton
+                      onClick={() => handleOptionChange("delivery")}
+                      selected={selectedOption === "delivery"}
+                    >
+                      Delivery
+                    </HeaderButton>
+                    <HeaderButton
+                      onClick={() => handleOptionChange("pickup")}
+                      selected={selectedOption === "pickup"}
+                    >
+                      Pickup
+                    </HeaderButton>
+                  </ButtonGroup>
+                )}
+                {window.location.pathname !== "/cart" && (
+                  <IconButton
+                    color="inherit"
+                    sx={{ ml: 2 }}
+                    onClick={onCartClick}
+                  >
+                    <Badge badgeContent={totalItems} color="error">
+                      <ShoppingCartIcon sx={{ color: "black" }} />
+                    </Badge>
+                  </IconButton>
+                )}
+                <IconButton
+                  color="inherit"
+                  sx={{ ml: 2 }}
+                  onClick={onAccountClick}
                 >
-                  Pickup
-                </HeaderButton>
-              </ButtonGroup>
-            )}
-            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onCartClick}>
-              <Badge badgeContent={totalItems} color="error">
-                <ShoppingCartIcon sx={{ color: "black" }} />
-              </Badge>
-            </IconButton>
-            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onAccountClick}>
-              {/* <Badge badgeContent={totalItems} color="primary"> */}
-              <AccountCircleIcon sx={{ color: "black" }} />
-              {/* </Badge> */}
-            </IconButton>
-          </Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
+                  {/* <Badge badgeContent={totalItems} color="primary"> */}
+                  <AccountCircleIcon sx={{ color: "black" }} />
+                  {/* </Badge> */}
+                </IconButton>
+              </Grid>
+            </Grid>
+          </Toolbar>
+        </AppBar>
+      )}
+    </>
   );
 };

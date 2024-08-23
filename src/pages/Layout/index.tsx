@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -31,7 +31,9 @@ export const Layout: React.FC = () => {
     JSON.parse(localStorage.getItem("basket")) || {}
   );
   const [searchQuery, setSearchQuery] = useState<string>(""); // New state for search query
-  const [restaurantNames, setRestaurantNames] = useState<Record<string, string>>({}); // State for storing restaurant names
+  const [restaurantNames, setRestaurantNames] = useState<
+    Record<string, string>
+  >({}); // State for storing restaurant names
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,10 +41,15 @@ export const Layout: React.FC = () => {
       const names: Record<string, string> = {};
       for (const storeId of Object.keys(storedBasket)) {
         try {
-          const response = await import(`../../json/restaurant/${storeId}.json`);
+          const response = await import(
+            `../../json/restaurant/${storeId}.json`
+          );
           names[storeId] = response.name;
         } catch (error) {
-          console.error(`Failed to load restaurant data for storeId: ${storeId}`, error);
+          console.error(
+            `Failed to load restaurant data for storeId: ${storeId}`,
+            error
+          );
           names[storeId] = `Store ID: ${storeId}`; // Fallback to storeId if the fetch fails
         }
       }
@@ -57,7 +64,7 @@ export const Layout: React.FC = () => {
   };
 
   const handleCartClick = () => {
-    setStoredBasket(JSON.parse(localStorage.getItem("basket")));
+    setStoredBasket(JSON.parse(localStorage.getItem("basket") as any));
     setIsDrawerOpen(true);
   };
 
@@ -127,6 +134,10 @@ export const Layout: React.FC = () => {
     updateLocalStorage(newBasket);
   };
 
+  const onCheckout = () => {
+    navigate("/cart");
+    setIsDrawerOpen(false);
+  };
   const handleDeleteItem = (storeId, itemIndex) => {
     const newBasket = { ...storedBasket };
     newBasket[storeId].splice(itemIndex, 1);
@@ -136,10 +147,10 @@ export const Layout: React.FC = () => {
     updateLocalStorage(newBasket);
   };
 
-  const handleViewEntireMenu = (storeId) => {
-    handleCloseDrawer(); // Close the drawer
-    navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
-  };
+  // const handleViewEntireMenu = (storeId) => {
+  //   handleCloseDrawer(); // Close the drawer
+  //   navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
+  // };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -228,37 +239,41 @@ export const Layout: React.FC = () => {
                     aria-controls={`panel-${storeId}-content`}
                     id={`panel-${storeId}-header`}
                     sx={{
-    padding: 0,
-    marginBottom: "8px",
-    borderBottom: "none",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    borderRadius: "20px", // Apply rounded corners to summary
-    "&.Mui-expanded": {
-      minHeight: 0,
-      borderBottomLeftRadius: 0, // Remove bottom corners when expanded
-      borderBottomRightRadius: 0,
-    },
-    ".MuiAccordionSummary-expandIconWrapper": {
-      marginRight: "16px", // Add space between the expand icon and the border
-    },
-  }}
+                      padding: 0,
+                      marginBottom: "8px",
+                      borderBottom: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      borderRadius: "20px", // Apply rounded corners to summary
+                      "&.Mui-expanded": {
+                        minHeight: 0,
+                        borderBottomLeftRadius: 0, // Remove bottom corners when expanded
+                        borderBottomRightRadius: 0,
+                      },
+                      ".MuiAccordionSummary-expandIconWrapper": {
+                        marginRight: "16px", // Add space between the expand icon and the border
+                      },
+                    }}
                   >
                     <Box>
                       <Typography
                         variant="subtitle1"
-                        sx={{ fontWeight: "bold", fontSize: "1rem", textAlign: "center"}}
+                        sx={{
+                          fontWeight: "bold",
+                          fontSize: "1rem",
+                          textAlign: "center",
+                        }}
                       >
                         {restaurantNames[storeId] || `Store ID: ${storeId}`}
                       </Typography>
-                      <Button
+                      {/* <Button
                         variant="text"
                         sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
                         onClick={() => handleViewEntireMenu(storeId)}
                       >
                         View Entire Menu
-                      </Button>
+                      </Button> */}
                     </Box>
                   </AccordionSummary>
                   <AccordionDetails sx={{ padding: 0 }}>
@@ -378,6 +393,7 @@ export const Layout: React.FC = () => {
               variant="contained"
               disabled={Object.keys(storedBasket).length === 0}
               fullWidth
+              onClick={onCheckout}
               sx={{
                 padding: "12px",
                 borderRadius: "30px",
@@ -385,7 +401,7 @@ export const Layout: React.FC = () => {
                 color: "#fafafa",
                 backgroundColor: "#d82927",
                 "&:hover": {
-                  backgroundColor: "#d82927" ,
+                  backgroundColor: "#d82927",
                 },
               }}
             >

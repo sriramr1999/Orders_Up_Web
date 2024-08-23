@@ -4,6 +4,7 @@ import { PageNotFound } from "./PageNotFound";
 import { Menu } from "./Menu";
 import { Layout } from "./Layout";
 import { CheckoutPage } from "./Cart ";
+import { OrderStatus } from "./OrderStatus";
 
 export const Routes = () => {
   return (
@@ -12,6 +13,7 @@ export const Routes = () => {
         {/* Public Routes */}
         <Route path="*" element={<PageNotFound />} />
         <Route path="cart" element={<CheckoutPage />} />
+        <Route path="orderStatus" element={<OrderStatus />} />
         <Route path="stores">
           <Route index element={<Home />} />
           <Route path=":storeId/menu" element={<Menu />} />

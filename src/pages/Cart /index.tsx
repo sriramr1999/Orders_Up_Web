@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useNavigate } from "react-router-dom";
 
 const DELIVERY_FEE = 349; // in cents, adjust this value as needed
 const TAX_RATE = 0.1; // 10% tax rate, adjust this value as needed
@@ -38,21 +39,28 @@ const calculateSubtotal = (orders: any[]) => {
 };
 
 export const CheckoutPage = () => {
+  const nav = useNavigate();
   const [orderData, setOrderData] = useState(
     JSON.parse(localStorage.getItem("basket") as any) || {}
   );
+
   const [expanded, setExpanded] = useState<string | false>("panel0");
 
   useEffect(() => {
     setOrderData(JSON.parse(localStorage.getItem("basket") as any));
   }, []);
 
+  const handleOnclick = () => {
+    localStorage.removeItem("basket");
+    nav("/orderStatus");
+  };
+
   const handleAccordionChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
-  const overallTotal = Object.entries(orderData).reduce(
+  const overallTotal = Object?.entries(orderData as any)?.reduce(
     (total, [key, orders]) => {
       const subtotal = calculateSubtotal(orders as any);
       const feesAndTax = subtotal * TAX_RATE;
@@ -186,6 +194,7 @@ export const CheckoutPage = () => {
               variant="contained"
               color="primary"
               fullWidth
+              onClick={handleOnclick}
               sx={{
                 borderRadius: "50px",
                 padding: "10px 30px",
