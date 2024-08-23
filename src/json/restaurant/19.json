@@ -1,0 +1,14 @@
+{
+    "id": 19,
+    "name": "Dairy Queen",
+    "image": "src/assets/images/dairy-queen.jpg",
+    "rating": 4.3,
+    "reviews": "4.9k+",
+    "distance": "5.3 mi",
+    "time": "30 min",
+    "deliveryFee": "$3.99 delivery fee",
+    "cuisine": [
+        "Ice Cream",
+        "Desserts"
+    ]
+}

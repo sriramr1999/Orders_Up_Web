@@ -1,7 +1,7 @@
 {
     "id" : 9,
     "name": "Wendy's",
-    "image": "https://example.com/wendys.png",
+    "image": "src/assets/images/Wendy_s.png",
     "rating": 4.1,
     "reviews": "5.9k+",
     "distance": "4.4 mi",

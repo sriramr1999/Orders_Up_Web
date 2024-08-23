@@ -1,7 +1,7 @@
 {
     "id" : 12,
     "name": "Dunkin'",
-    "image": "https://example.com/dunkin.png",
+    "image": "src/assets/images/Dunkin.jpg",
     "rating": 4.3,
     "reviews": "6.5k+",
     "distance": "3.7 mi",

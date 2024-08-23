@@ -1,7 +1,7 @@
 {
     "id" : 7,
     "name": "Domino's Pizza",
-    "image": "https://example.com/dominos.png",
+    "image": "src/assets/images/Domino_s Pizza.jpg",
     "rating": 4.3,
     "reviews": "7.7k+",
     "distance": "5.1 mi",

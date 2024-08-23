@@ -1,7 +1,7 @@
 {
     "id" : 4,
     "name": "Pizza Hut",
-    "image": "https://example.com/pizzahut.png",
+    "image": "src/assets/images/pizza hut.png",
     "rating": 4.1,
     "reviews": "7.3k+",
     "distance": "4.9 mi",

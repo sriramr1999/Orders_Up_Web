@@ -1,7 +1,7 @@
 {
   "id" : 5,
   "name": "Taco Bell",
-  "image": "https://example.com/tacobell.png",
+  "image": "src/assets/images/taco bell.jpg",
   "rating": 4.2,
   "reviews": "9.1k+",
   "distance": "5.5 mi",

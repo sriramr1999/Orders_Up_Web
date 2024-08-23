@@ -1,0 +1,14 @@
+{
+    "id": 20,
+    "name": "Jack in the Box",
+    "image": "src/assets/images/jack-in-the-box.jpg",
+    "rating": 4.1,
+    "reviews": "6.4k+",
+    "distance": "5.4 mi",
+    "time": "33 min",
+    "deliveryFee": "$4.29 delivery fee",
+    "cuisine": [
+        "Burgers",
+        "Fast Food"
+    ]
+}

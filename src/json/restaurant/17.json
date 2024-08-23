@@ -1,0 +1,14 @@
+{
+    "id": 17,
+    "name": "Little Caesars",
+    "image": "src/assets/images/little seasers.jpg",
+    "rating": 4.0,
+    "reviews": "5.7k+",
+    "distance": "5.1 mi",
+    "time": "32 min",
+    "deliveryFee": "$4.49 delivery fee",
+    "cuisine": [
+        "Pizza",
+        "Takeout"
+    ]
+}
