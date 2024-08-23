@@ -40,6 +40,8 @@ export const Layout: React.FC = () => {
     setIsDrawerOpen(true);
   };
 
+  const handleAccountClick = () => {};
+
   const handleCloseDrawer = () => {
     setIsDrawerOpen(false);
   };
@@ -119,6 +121,7 @@ export const Layout: React.FC = () => {
         selectedOption={selectedOption}
         handleOptionChange={handleOptionChange}
         onCartClick={handleCartClick}
+        onAccountClick={handleAccountClick}
       />
       <Box sx={{ display: "flex", marginTop: "64px" }}>
         <Box

@@ -39,12 +39,14 @@ interface HeaderProps {
   selectedOption: "delivery" | "pickup";
   handleOptionChange: (option: "delivery" | "pickup") => void;
   onCartClick: () => void;
+  onAccountClick: () => void;
 }
 
 export const Header: FC<HeaderProps> = ({
   selectedOption,
   handleOptionChange,
   onCartClick,
+  onAccountClick,
 }) => {
   const { storeId } = useParams();
   const [storedBasket, setStoreBasket] = useState("");
@@ -138,7 +140,7 @@ export const Header: FC<HeaderProps> = ({
                 <ShoppingCartIcon sx={{ color: "black" }} />
               </Badge>
             </IconButton>
-            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onCartClick}>
+            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onAccountClick}>
               {/* <Badge badgeContent={totalItems} color="primary"> */}
               <AccountCircleIcon sx={{ color: "black" }} />
               {/* </Badge> */}

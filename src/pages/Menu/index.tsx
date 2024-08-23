@@ -284,14 +284,14 @@ export const Menu = () => {
 
   return (
     <>
-      <Box>
+      <Box sx={{ m: 3 }}>
         <Grid container alignItems="center" spacing={2}>
           <Grid item xs={12}>
             <ImageCard />
           </Grid>
         </Grid>
       </Box>
-      <Box>
+      <Box sx={{ m: 1 }}>
         <Box sx={{ padding: "16px", borderBottom: "1px solid #e0e0e0" }}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} md={3}>
