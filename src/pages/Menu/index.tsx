@@ -33,6 +33,7 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useParams } from "react-router-dom";
 import { ImageCard } from "../../components/ChickFilAHeader";
 import { AppLoader } from "../../components/AppLoader";
+import "../../assets/styles/cart.css";
 
 export const Menu = () => {
   const { storeId } = useParams();
@@ -46,6 +47,7 @@ export const Menu = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isListening, setIsListening] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [isItemThrown, setIsItemThrown] = useState(false); // New state for animation
 
   const recognitionRef = useRef(null);
   const categoryRefs = useRef({});
@@ -78,7 +80,7 @@ export const Menu = () => {
 
   useEffect(() => {
     const recognition = new window.webkitSpeechRecognition();
-    recognition.continuous = true; // Keeps listening until stopped
+    recognition.continuous = true;
     recognition.interimResults = false;
     recognition.lang = "en-US";
 
@@ -86,8 +88,6 @@ export const Menu = () => {
       const transcript = event.results[0][0].transcript.trim().toLowerCase();
       setSearchQuery(transcript);
       setIsListening(false);
-
-      // Stop the recognition after receiving the first result
       recognition.stop();
     };
 
@@ -185,29 +185,22 @@ export const Menu = () => {
       quantity,
       modifiers: Object.keys(selectedModifiers).map((groupId) => {
         const modifierId = selectedModifiers[groupId];
-
-        // Find the modifier group and modifier details
-        console.log(menuData.modifier_groups, "menuData.modifier_groups");
-        console.log(groupId, "groupId");
         const modifierGroup = menuData.modifier_groups.find(
           (group) => group.id === groupId
         );
-        console.log(modifierGroup, "modifier");
         const modifier = menuData.modifiers.find(
           (mod) => mod.id === modifierId
         );
 
-        console.log(modifier, "modifier");
         return {
           groupId,
           groupName: modifierGroup.name,
           modifierId,
           modifierName: modifier.name,
-          modifierPrice: modifier.price, // Assuming price is stored in cents
+          modifierPrice: modifier.price,
         };
       }),
-
-      orderType, // Add the selected order type to the basket item
+      orderType,
     };
 
     const storedBasket =
@@ -220,6 +213,9 @@ export const Menu = () => {
     setBasket(updatedBasket[storeId as any]);
     localStorage.setItem("basket", JSON.stringify(updatedBasket));
     setOpen(false);
+
+    setIsItemThrown(true);
+    setTimeout(() => setIsItemThrown(false), 700); // Duration of the animation
   };
 
   const handleCategoryClick = (categoryId) => {
@@ -234,7 +230,7 @@ export const Menu = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of the category is visible
+      threshold: 0.5,
     };
 
     (observerRef.current as any) = new IntersectionObserver((entries) => {
@@ -242,7 +238,6 @@ export const Menu = () => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute("data-id");
           setActiveCategory(id);
-          // Scroll the left side category list to the active item
           if (categoryListRefs.current[id]) {
             categoryListRefs.current[id].scrollIntoView({
               behavior: "smooth",
@@ -289,7 +284,26 @@ export const Menu = () => {
 
   return (
     <>
-      <Box sx={{ m: 3 }}>
+      {isItemThrown && (
+        <div
+          className="thrown-item"
+          style={{
+            top: "50%",
+            left: "50%",
+            backgroundImage: `url(${
+              selectedItem?.image || "https://via.placeholder.com/50"
+            })`,
+            backgroundSize: "cover",
+            width: "50px",
+            height: "50px",
+            position: "fixed",
+            zIndex: 1000,
+            pointerEvents: "none",
+            animation: "throwToCart 0.7s ease-in-out forwards",
+          }}
+        />
+      )}
+      <Box>
         <Grid container alignItems="center" spacing={2}>
           <Grid item xs={12}>
             <ImageCard />
@@ -566,7 +580,6 @@ const ItemDialog = ({
   const [selectedModifiers, setSelectedModifiers] = useState({});
   const [canAddToBasket, setCanAddToBasket] = useState(false);
 
-  // Handle modifier selection
   const handleModifierChange = (groupId, modifierId) => {
     setSelectedModifiers((prev) => ({
       ...prev,
@@ -574,7 +587,6 @@ const ItemDialog = ({
     }));
   };
 
-  // Validate if all required modifiers are selected
   useEffect(() => {
     const requiredModifiersMet = modifiers.every((modifierGroup) => {
       if (modifierGroup.min_permitted === 1) {
@@ -585,7 +597,6 @@ const ItemDialog = ({
     setCanAddToBasket(requiredModifiersMet);
   }, [selectedModifiers, modifiers]);
 
-  // Check if there are modifiers to display
   const hasModifiers = modifiers && modifiers.length > 0;
 
   return (
@@ -732,16 +743,16 @@ const ItemDialog = ({
           }
           variant="contained"
           sx={{
-            backgroundColor: canAddToBasket ? "#ff4c4c" : "#ccc",
+            backgroundColor: canAddToBasket ? "#d82927" : "#ccc",
             color: "#fff",
             borderRadius: "30px",
             padding: "10px 20px",
             fontWeight: "bold",
             "&:hover": {
-              backgroundColor: canAddToBasket ? "#ff3333" : "#bbb",
+              backgroundColor: canAddToBasket ? "#d82927" : "#bbb",
             },
           }}
-          disabled={!canAddToBasket} // Disable the button if not all required modifiers are selected
+          disabled={!canAddToBasket}
         >
           Add to Basket - ${((selectedItem?.price * quantity) / 100).toFixed(2)}
         </Button>

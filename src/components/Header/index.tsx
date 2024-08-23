@@ -134,7 +134,7 @@ export const Header: FC<HeaderProps> = ({
               </ButtonGroup>
             )}
             <IconButton color="inherit" sx={{ ml: 2 }} onClick={onCartClick}>
-              <Badge badgeContent={totalItems} color="primary">
+              <Badge badgeContent={totalItems} color="error">
                 <ShoppingCartIcon sx={{ color: "black" }} />
               </Badge>
             </IconButton>
