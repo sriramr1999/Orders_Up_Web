@@ -26,7 +26,6 @@ const HeaderButton = styled(Button, {
   fontWeight: selected ? "bold" : "normal",
   backgroundColor: selected ? "#d82927" : "transparent",
   color: selected ? "#fff" : theme.palette.text.primary,
-  // border: selected ? "1px solid #d82927" : "1px solid #ccc", // Add a border
   boxShadow:  "0px 4px 6px rgba(0, 0, 0, 0.1)", // Add subtle shadow
   "&:hover": {
     backgroundColor: selected ? "#b71c1c" : "rgba(0, 0, 0, 0.05)", // Darker background on hover
@@ -48,7 +47,7 @@ export const Header: FC<HeaderProps> = ({
   const [storedBasket, setStoreBasket] = useState("");
   const totalItems = Object.values(storedBasket || {}).reduce(
     (acc, items: any) =>
-      acc + items?.reduce((sum, item) => sum + item.quantity, 0),
+      acc + items?.reduce((sum:any, item:any) => sum + item.quantity, 0),
     0
   );
 
