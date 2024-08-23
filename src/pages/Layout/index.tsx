@@ -31,7 +31,9 @@ export const Layout: React.FC = () => {
     JSON.parse(localStorage.getItem("basket")) || {}
   );
   const [searchQuery, setSearchQuery] = useState<string>(""); // New state for search query
-  const [restaurantNames, setRestaurantNames] = useState<Record<string, string>>({}); // State for storing restaurant names
+  const [restaurantNames, setRestaurantNames] = useState<
+    Record<string, string>
+  >({}); // State for storing restaurant names
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,10 +41,15 @@ export const Layout: React.FC = () => {
       const names: Record<string, string> = {};
       for (const storeId of Object.keys(storedBasket)) {
         try {
-          const response = await import(`../../json/restaurant/${storeId}.json`);
+          const response = await import(
+            `../../json/restaurant/${storeId}.json`
+          );
           names[storeId] = response.name;
         } catch (error) {
-          console.error(`Failed to load restaurant data for storeId: ${storeId}`, error);
+          console.error(
+            `Failed to load restaurant data for storeId: ${storeId}`,
+            error
+          );
           names[storeId] = `Store ID: ${storeId}`; // Fallback to storeId if the fetch fails
         }
       }
@@ -225,149 +232,180 @@ export const Layout: React.FC = () => {
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Shadow effect
                     borderRadius: "20px", // Rounded corners
                     marginBottom: "8px", // Space between accordions
-                    marginTop: "8px", // Space between accordions
+                    marginTop: "20px", // Space between accordions
                     overflow: "hidden", // Prevent shadow clipping
                   }}
                 >
                   <AccordionSummary
-  expandIcon={<ExpandMoreIcon />}
-  aria-controls={`panel-${storeId}-content`}
-  id={`panel-${storeId}-header`}
-  sx={{
-    padding: 0,
-    marginBottom: "8px",
-    borderBottom: "none",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    borderRadius: "20px", // Apply rounded corners to summary
-    "&.Mui-expanded": {
-      minHeight: 0,
-      borderBottomLeftRadius: 0, // Remove bottom corners when expanded
-      borderBottomRightRadius: 0,
-    },
-    ".MuiAccordionSummary-expandIconWrapper": {
-      marginRight: "16px", // Add space between the expand icon and the border
-    },
-  }}
->
-  <Box sx={{ display: "flex", alignItems: "center" }}>
-    <Typography
-      variant="subtitle1"
-      sx={{ fontWeight: "bold", fontSize: "1rem", textAlign: "center"}}
-    >
-      {restaurantNames[storeId] || `Store ID: ${storeId}`}
-    </Typography>
-    {/* <Button
-      variant="text"
-      sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
-      onClick={() => handleViewEntireMenu(storeId)}
-    >
-      View Entire Menu
-    </Button> */}
-  </Box>
-  <IconButton
-    onClick={() => handleDiscardMenu(storeId)} // New discard button
-    sx={{ marginLeft: "auto", color: "error.main" }}
-  >
-    <CloseIcon />
-  </IconButton>
-</AccordionSummary>
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls={`panel-${storeId}-content`}
+                    id={`panel-${storeId}-header`}
+                    sx={{
+                      padding: 0,
+                      marginBottom: "8px",
+                      borderBottom: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      borderRadius: "50px", // Apply rounded corners to summary
+                      "&.Mui-expanded": {
+                        minHeight: 0,
+                        borderBottomLeftRadius: 0, // Remove bottom corners when expanded
+                        borderBottomRightRadius: 0,
+                      },
+                      ".MuiAccordionSummary-expandIconWrapper": {
+                        marginRight: "16px", // Add space between the expand icon and the border
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        flexGrow: 1,
+                      }}
+                    >
+                      <Avatar
+                        src={`/path/to/store-images/${storeId}.jpg`} // Adjust the path to your store images
+                        alt={`${restaurantNames[storeId]} logo`}
+                        sx={{
+                          width: 50, // Increased size of the store image
+                          height: 50, // Increased size of the store image
+                          marginLeft: "10px", // Small gap between image and border
+                          marginRight: "10px", // Space between the image and the store name
+                          borderRadius: 2,
+                        }}
+                      />
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            fontWeight: "bold",
+                            fontSize: "1rem",
+                            textAlign: "left", // Align the name to the left
+                          }}
+                        >
+                          {restaurantNames[storeId] || `Store ID: ${storeId}`}
+                        </Typography>
+                        <Button
+                          variant="text"
+                          sx={{
+                            textTransform: "none",
+                            color: "#d82927",
+                            marginTop: "2px", // Reduced space between the name and the button
+                            padding: 0, // Remove any padding to bring it closer
+                            minHeight: "unset", // Ensure it doesn't have extra height
+                          }}
+                          onClick={() => handleViewEntireMenu(storeId)}
+                        >
+                          View Menu
+                        </Button>
+                      </Box>
+                    </Box>
+                    <IconButton
+                      onClick={() => handleDiscardMenu(storeId)} // Discard button moved before the expand icon
+                      sx={{ color: "error.main" }}
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                  </AccordionSummary>
+
                   <AccordionDetails sx={{ padding: 0 }}>
                     {/* Items for the Store */}
                     <List>
                       {storedBasket[storeId].map((item, index) => (
                         <ListItem
-                          key={index}
+                        key={index}
+                        sx={{
+                          alignItems: "flex-start",
+                          paddingY: 2,
+                          borderBottom: "1px solid #e0e0e0",
+                        }}
+                      >
+                        <Avatar
+                          src={item.item.image || "/default-image.png"}
+                          alt={item.item.name}
+                          variant="rounded"
                           sx={{
-                            alignItems: "flex-start",
-                            paddingY: 2,
-                            borderBottom: "1px solid #e0e0e0",
+                            width: 40, // Smaller size for item image
+                            height: 40, // Smaller size for item image
+                            marginRight: 2,
+                            borderRadius: 2,
                           }}
-                        >
-                          <Avatar
-                            src={item.item.image || "/default-image.png"}
-                            alt={item.item.name}
-                            variant="rounded"
-                            sx={{
-                              width: 60,
-                              height: 60,
-                              marginRight: 2,
-                              borderRadius: 2,
-                            }}
-                          />
-                          <ListItemText
-                            primary={
-                              <Typography
-                                variant="subtitle1"
-                                sx={{
-                                  fontWeight: "bold",
-                                  fontSize: "1rem",
-                                }}
-                              >
-                                {item.item.name}
-                              </Typography>
-                            }
-                            secondary={
-                              <>
-                                {item.item.description && (
-                                  <Typography
-                                    component="span"
-                                    variant="body2"
-                                    color="text.secondary"
-                                  >
-                                    {item.item.description}
-                                  </Typography>
-                                )}
+                        />
+                        <ListItemText
+                          primary={
+                            <Typography
+                              variant="subtitle2"
+                              noWrap // Ensures the name is on one line
+                              sx={{
+                                overflow: "hidden", // Ensures overflow content is hidden
+                                textOverflow: "ellipsis", // Adds ellipsis at the end if content overflows
+                              }}
+                            >
+                              {item.item.name}
+                            </Typography>
+                          }
+                          secondary={
+                            <>
+                              {item.item.description && (
                                 <Typography
                                   component="span"
                                   variant="body2"
                                   color="text.secondary"
-                                  display="block"
                                 >
-                                  ${item.item.price / 100}
+                                  {item.item.description}
                                 </Typography>
-                              </>
-                            }
-                          />
-                          <Box
-                            display="flex"
-                            alignItems="center"
-                            sx={{ ml: 2 }}
+                              )}
+                              <Typography
+                                component="span"
+                                variant="body2"
+                                color="text.secondary"
+                                display="block"
+                              >
+                                ${item.item.price / 100}
+                              </Typography>
+                            </>
+                          }
+                        />
+                        <Box
+                          display="flex"
+                          alignItems="center"
+                          sx={{ ml: 2 }}
+                        >
+                          <IconButton
+                            size="small"
+                            onClick={() => handleRemoveItem(storeId, index)}
+                            sx={{ color: "primary.main" }}
                           >
-                            <IconButton
-                              size="small"
-                              onClick={() => handleRemoveItem(storeId, index)}
-                              sx={{ color: "primary.main" }}
-                            >
-                              <RemoveIcon />
-                            </IconButton>
-                            <Typography
-                              sx={{
-                                paddingX: 1,
-                                fontWeight: "bold",
-                                minWidth: "24px",
-                                textAlign: "center",
-                              }}
-                            >
-                              {item.quantity}
-                            </Typography>
-                            <IconButton
-                              size="small"
-                              onClick={() => handleAddItem(storeId, item.item)}
-                              sx={{ color: "primary.main" }}
-                            >
-                              <AddIcon />
-                            </IconButton>
-                            <IconButton
-                              size="small"
-                              sx={{ ml: 1, color: "error.main" }}
-                              onClick={() => handleDeleteItem(storeId, index)}
-                            >
-                              <DeleteIcon />
-                            </IconButton>
-                          </Box>
-                        </ListItem>
+                            <RemoveIcon />
+                          </IconButton>
+                          <Typography
+                            sx={{
+                              paddingX: 1,
+                              fontWeight: "bold",
+                              minWidth: "24px",
+                              textAlign: "center",
+                            }}
+                          >
+                            {item.quantity}
+                          </Typography>
+                          <IconButton
+                            size="small"
+                            onClick={() => handleAddItem(storeId, item.item)}
+                            sx={{ color: "primary.main" }}
+                          >
+                            <AddIcon />
+                          </IconButton>
+                          <IconButton
+                            size="small"
+                            sx={{ ml: 1, color: "error.main" }}
+                            onClick={() => handleDeleteItem(storeId, index)}
+                          >
+                            <DeleteIcon />
+                          </IconButton>
+                        </Box>
+                      </ListItem>
                       ))}
                     </List>
                   </AccordionDetails>
@@ -397,7 +435,7 @@ export const Layout: React.FC = () => {
                 color: "#fafafa",
                 backgroundColor: "#d82927",
                 "&:hover": {
-                  backgroundColor: "#d82927" ,
+                  backgroundColor: "#d82927",
                 },
               }}
             >
