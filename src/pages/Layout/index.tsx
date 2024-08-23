@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -32,6 +32,7 @@ export const Layout: React.FC = () => {
   );
   const [searchQuery, setSearchQuery] = useState<string>(""); // New state for search query
   const [restaurantNames, setRestaurantNames] = useState<Record<string, string>>({}); // State for storing restaurant names
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchRestaurantNames = async () => {
@@ -133,6 +134,11 @@ export const Layout: React.FC = () => {
     updateLocalStorage(newBasket);
   };
 
+  const handleViewEntireMenu = (storeId) => {
+    handleCloseDrawer(); // Close the drawer
+    navigate(`/stores/${storeId}/menu`); // Navigate to the store's menu
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Header
@@ -200,14 +206,17 @@ export const Layout: React.FC = () => {
               Object.keys(storedBasket).map((storeId) => (
                 <Accordion
                   key={storeId}
-                  defaultExpanded
                   disableGutters
                   elevation={0}
                   sx={{
                     "&:before": {
                       display: "none",
                     },
-                    borderBottom: "1px solid #e0e0e0", // Keep border only for Accordion
+                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Shadow effect
+                    borderRadius: "20px", // Rounded corners
+                    marginBottom: "8px", // Space between accordions
+                    marginTop: "8px", // Space between accordions
+                    overflow: "hidden", // Prevent shadow clipping
                   }}
                 >
                   <AccordionSummary
@@ -215,20 +224,38 @@ export const Layout: React.FC = () => {
                     aria-controls={`panel-${storeId}-content`}
                     id={`panel-${storeId}-header`}
                     sx={{
-                      padding: 0,
-                      marginBottom: "8px",
-                      "&.Mui-expanded": {
-                        minHeight: 0,
-                      },
-                      borderBottom: "none", // Removed borderBottom from Summary
-                    }}
+    padding: 0,
+    marginBottom: "8px",
+    borderBottom: "none",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderRadius: "20px", // Apply rounded corners to summary
+    "&.Mui-expanded": {
+      minHeight: 0,
+      borderBottomLeftRadius: 0, // Remove bottom corners when expanded
+      borderBottomRightRadius: 0,
+    },
+    ".MuiAccordionSummary-expandIconWrapper": {
+      marginRight: "16px", // Add space between the expand icon and the border
+    },
+  }}
                   >
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ fontWeight: "bold", fontSize: "1rem" }}
-                    >
-                      {restaurantNames[storeId] || `Store ID: ${storeId}`}
-                    </Typography>
+                    <Box>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{ fontWeight: "bold", fontSize: "1rem", textAlign: "center"}}
+                      >
+                        {restaurantNames[storeId] || `Store ID: ${storeId}`}
+                      </Typography>
+                      <Button
+                        variant="text"
+                        sx={{ textTransform: "none", color: "#d82927", padding: "0px 20px" }}
+                        onClick={() => handleViewEntireMenu(storeId)}
+                      >
+                        View Entire Menu
+                      </Button>
+                    </Box>
                   </AccordionSummary>
                   <AccordionDetails sx={{ padding: 0 }}>
                     {/* Items for the Store */}
@@ -345,13 +372,14 @@ export const Layout: React.FC = () => {
           >
             <Button
               variant="contained"
-              color="primary"
               disabled={Object.keys(storedBasket).length === 0}
               fullWidth
               sx={{
                 padding: "12px",
                 borderRadius: "30px",
                 fontWeight: "bold",
+                color: "#fafafa",
+                backgroundColor: "#d82927"
               }}
             >
               Checkout - ${calculateTotal().toFixed(2)}
