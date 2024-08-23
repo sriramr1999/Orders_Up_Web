@@ -291,7 +291,7 @@ export const Menu = () => {
             top: "50%",
             left: "50%",
             backgroundImage: `url(${
-              selectedItem?.image || "https://via.placeholder.com/50"
+              selectedItem?.image || "https://images.app.goo.gl/TaSZYYUuJShMj8rv8"
             })`,
             backgroundSize: "cover",
             width: "50px",
@@ -758,5 +758,6 @@ const ItemDialog = ({
         </Button>
       </DialogActions>
     </Dialog>
+    
   );
 };
