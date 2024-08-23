@@ -8,10 +8,11 @@ import {
   ButtonGroup,
   Button,
   IconButton,
+  Badge,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { styled } from "@mui/system";
 
 const HeaderButton = styled(Button, {
@@ -34,12 +35,27 @@ const HeaderButton = styled(Button, {
 interface HeaderProps {
   selectedOption: "delivery" | "pickup";
   handleOptionChange: (option: "delivery" | "pickup") => void;
+  onCartClick: () => void;
 }
 
 export const Header: FC<HeaderProps> = ({
   selectedOption,
   handleOptionChange,
+  onCartClick,
 }) => {
+  // const storedBasket = JSON.parse(localStorage.getItem("basket")) || {};
+  const [storedBasket, setStoreBasket] = useState("");
+  // Calculate the total number of items in the basket
+  const totalItems = Object.values(storedBasket || {}).reduce(
+    (acc, items: any) =>
+      acc + items?.reduce((sum, item) => sum + item.quantity, 0),
+    0
+  );
+
+  useEffect(() => {
+    setStoreBasket(JSON.parse(localStorage.getItem("basket")));
+  }, [JSON.parse(localStorage.getItem("basket"))]);
+
   return (
     <AppBar
       position="fixed"
@@ -57,7 +73,10 @@ export const Header: FC<HeaderProps> = ({
               variant="h6"
               sx={{ fontWeight: "bold", color: "black" }}
             >
-              <img src="https://foodhub.co.uk/compressed_images/logo.svg" />
+              <img
+                src="https://foodhub.co.uk/compressed_images/logo.svg"
+                alt="Logo"
+              />
             </Typography>
           </Grid>
 
@@ -101,8 +120,10 @@ export const Header: FC<HeaderProps> = ({
                 Pickup
               </HeaderButton>
             </ButtonGroup>
-            <IconButton color="inherit" sx={{ ml: 2 }}>
-              <ShoppingCartIcon sx={{ color: "black" }} />
+            <IconButton color="inherit" sx={{ ml: 2 }} onClick={onCartClick}>
+              <Badge badgeContent={totalItems} color="primary">
+                <ShoppingCartIcon sx={{ color: "black" }} />
+              </Badge>
             </IconButton>
           </Grid>
         </Grid>

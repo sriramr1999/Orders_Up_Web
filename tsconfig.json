@@ -10,6 +10,8 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
@@ -18,10 +20,7 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "declarationMap": true,
-    "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types"],
     "paths": {
       "/opt/nodejs/falcon-runtime": [
@@ -33,5 +32,6 @@
       "*": ["node_modules/*"]
     }
   },
+ 
   "exclude": ["cdk.out", "**/dist/**", "node_modules"]
 }
